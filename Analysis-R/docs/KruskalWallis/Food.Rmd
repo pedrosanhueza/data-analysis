@@ -12,7 +12,7 @@ output:
     df_print: paged
     highlight: tango
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding,
-  output_file = file.path(dirname(inputFile), 'index.html')) })
+  output_file = file.path(dirname(inputFile), 'index.html')) }) 
 ---
 
 ```{r, warning=FALSE, message=FALSE}
