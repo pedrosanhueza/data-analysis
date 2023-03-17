@@ -1,0 +1,107 @@
+---
+title: "Stephanie's Housing Request"
+output: 
+  html_document:
+    theme: cerulean
+    code_folding: hide
+    toc: true
+    toc_float: true
+---
+
+**Week 2 Analysis**
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+library(mosaic)
+library(tidyverse)
+library(pander)
+library(leaflet)
+library(plotly)
+library(DT)
+Rent <- read_csv("../Data/Rent.csv")
+```
+
+<br />
+
+## Background
+
+In this following analysis, I am supposing that Stephanie is a student that will be starting school at BYU-Idaho next semester and she sends me the following email:
+
+"Hi. My name is Stephanie. I would like to learn about what housing options I have for living at BYU-Idaho next semester. It will be my first semester there, so I would like to find something that is close to campus and around $300 a month in rent. I'm not too picky on roommates, but I would like somewhere that has a lot of people around so I can get to know as many people as possible. Thanks in advance!"
+
+This is my response using the Housing and Student Living Department's data (accurate to date 01/04/2021)
+
+----
+
+## Response
+
+Hi Stephanie, 
+
+I would love to help with your housing question, and which housing fits better for you on this, your first semester.
+
+In this analysis, I am going to be using the most recent database from the school's Housing & Living Department Services. All conclusions, graphs, and tables are based on that data.
+
+I have put together an interpretation of the data based on your petitions, which is to prioritize the distance to campus, rent price, and capacity out of any other variables.
+
+
+
+<!-- Hint, you should probably subset the Rent dataset to only show the "Approved Women's Housing" since Stephanie won't be interested in Male Housing options. Notice how this text in green doesn't show up in the HTML output because we used the HTML comment tags around this text. --> 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# 'R' code to filter and select the data needed.
+# 'R' code to create the graph
+
+# Filter data for Graph
+rent2 <- Rent %>% 
+    filter(Gender == 'F' & Price/3.5 < 300, (Capacity + 0.4) > median(Rent$Capacity)) %>% 
+    mutate(
+      Monthly_Price = Price/4,
+      MilesFromCampus = round(MilesToCampus,2)
+      ) %>% 
+    select(c(Apartment, Capacity, MilesFromCampus, Monthly_Price, Phone))
+
+# Graph
+plot_ly(rent2, 
+        x= ~Monthly_Price, 
+        y= ~MilesFromCampus,
+        color= ~Capacity, 
+        size= ~Capacity,
+#        hoverinfo = "text",
+        text= ~paste(" Apartment: ", Apartment, "\n", "Miles to Campus: ", MilesFromCampus),
+        colors=c("blue","red")) %>%
+           layout(title="Housing Options", 
+           xaxis=list(title="Monthly Rent ($)"),
+           yaxis=list(title="Miles to Campus"))
+```
+
+The red dots on the graph represent apartments largely populated, on the other hand, as the dots become blue, it means that the capacity decreases.
+
+You will want to look over the dots closer to the bottom left corner as those show apartments that are close to campus and have cheaper rent. You'll also want to look for a red large dot as the colors as well as the size represent the overall Capacity of the Apartment Complex..
+
+Here is a table with these summary:
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+# Filter data for table
+rent3 <- Rent %>% 
+    filter(Gender == 'F' & Price/3.5 < 300, Capacity > median(Rent$Capacity)) %>% 
+    mutate(
+      Monthly_Price = Price/4,
+      MilesFromCampus = round(MilesToCampus,2)
+      ) %>% 
+    select(c(Apartment, Capacity, MilesFromCampus, Monthly_Price, Phone))
+
+# Table Summary
+datatable(rent3, options=list(lengthMenu = c(10)), extensions="Buttons")
+```
+
+### Conclutions
+
+After filtering out the rent price, capacity, and walking distance, the graph and table was created. We can make the following conclusions:
+
+* The apartment complex with the biggest capacity and within your budget is '[Birch Plaza](https://birchplazarexburg.com/)'.
+
+* The apartment complex with the cheapest monthly rent and a capacity that you would want is '[Brooklyn Apartments](https://craiglandhousing.com/new/property/1)'.
+
+* All apartment complex are less than 10 minutes away from campus, which that variable might not really affect your decision, since most classes are held remotely these days.
+
+* The best pricing (cheapest rent) is the [Brooklyn Apartments](https://craiglandhousing.com/new/property/1) with a price of $217.5 per month.

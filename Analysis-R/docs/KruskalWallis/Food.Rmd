@@ -1,0 +1,204 @@
+---
+title: "Kruskal-Wallis Test"
+output:
+  html_document:
+    theme: cerulean
+    code_folding: hide
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    number_sections: false
+    fig_caption: true
+    df_print: paged
+    highlight: tango
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding,
+  output_file = file.path(dirname(inputFile), 'index.html')) })
+---
+
+```{r, warning=FALSE, message=FALSE}
+
+# Import packages
+library(mosaic) # for the favstats
+library(car)
+library(DT)
+library(pander)
+library(readr)
+library(ggplot2)
+
+# load data
+food <- read_csv("food.csv")
+```
+
+<center>
+![](Students-Eating-Healthy.webp)
+</center>
+
+
+## Background
+
+<br>
+
+The **Kruskal-Wallis Test** compares the median (middle values) of different groups of data that are not normally distributed. It works by **ranking all the data from all the groups together and then comparing the ranks between the groups.** This test is used when the data is not normally distributed and doesn't meet the requirements of the one-way analysis of variance (ANOVA) test.
+
+## Introduction
+
+In this case study, I am going to test if there is a **relation between the student's GPA score and the nutritional check group**, which is the frequency of when the students check nutritional facts of food.
+
+<br>
+
+Non-parametric test:
+
+$$
+  H_0: \text{The median GPA scores of students in all nutritional checking frequency groups are equal.}
+$$
+
+$$
+  H_a: \text{The median GPA scores of at least one nutritional checking frequency group are different from the others.}
+$$
+
+<br>
+
+Significance level for this study will be set at:
+
+$$
+  \alpha = 0.05
+$$
+
+Nutritional check categories - checking nutritional values frequency:
+1. never 
+2. on certain products only 
+3. very rarely 
+4. on most products 
+5. on everything
+
+Questions about the data:
+
+* Does having a higher nutritional value frequency result in a higher GPA score?
+
+* Is there a significant difference in the GPA scores based on the frequency of nutritional value checks?
+
+* Do students who check the nutritional facts more often have higher GPA scores?
+
+These inquiries are focused on a particular analysis that will be computed using the Kruskal-Wallis test.
+
+## Analysis
+
+```{r message=FALSE, warning=FALSE}
+
+# new dataset with columns I will be using
+food_analysis_selection <- food %>%
+  select(c('GPA', 'nutritional_check'))
+
+# fix the missing data and/or misspelling
+
+# value 'Personal'   on row 62  was changed to 'NA'   and it was ignored in the analysis.
+food_analysis_selection$GPA[62 ] = NA
+# value 'Unknown'    on row 105 was changed to 'NA'   and it was ignored in the analysis.
+food_analysis_selection$GPA[105] = NA
+# value '3.79 bitch' on row 74  was changed to '3.79' and it was part of    the analysis.
+food_analysis_selection$GPA[74 ] = 3.79
+
+# Label 'nutritional_check' groups
+food_analysis_noFactor <- food_analysis_selection %>% 
+  mutate(
+    nutritional_check = case_when(
+      nutritional_check == '1' ~ "Never",
+      nutritional_check == '2' ~ "Almost never",
+      nutritional_check == '3' ~ "Sometimes",
+      nutritional_check == '4' ~ "Almost always",
+      nutritional_check == '5' ~ "Always"
+    )
+  )
+
+# Convert nutritional_check column to qualitative values
+# Convert GPA               column to numerical   values 
+food_analysis_factor_and_numeric <-  food_analysis_noFactor %>% 
+  mutate(
+    nutritional_check = factor(nutritional_check, levels = c("Never", "Almost never", "Sometimes", "Almost always", "Always")),
+    GPA = as.numeric(GPA)
+  )
+
+food_analysis <-  food_analysis_factor_and_numeric %>% 
+  select(c('GPA', 'nutritional_check')) %>%
+  na.omit()
+```
+
+__Data Summary Table__
+
+```{r message=FALSE, warning=FALSE}
+# Kruskal-Test Analysis
+
+pander(favstats(GPA ~ nutritional_check, data = food_analysis)[,-10],
+       caption = "Summary Statistics for GPA by Nutritional Check Frequency",
+       split.tables = Inf,
+       keep.line.breaks = TRUE,
+       style = "rmarkdown")
+```
+
+This table suggests that there may be a **positive relationship** between nutritional check frequency and GPA, as higher mean GPAs are generally observed for levels with more frequent nutritional checks. However, further analysis would be needed to determine if this relationship is statistically significant and whether there are other factors at play.
+
+<br>
+
+__Box Plot Chat__
+
+```{r fig.width=10, message=FALSE, warning=FALSE}
+ggplot(food_analysis, aes(x=nutritional_check, y=GPA)) + 
+  geom_boxplot(fill = "lightblue") +
+  scale_x_discrete(labels=c("Never","Almost never","Sometimes","Almost always","Always")) +
+  geom_boxplot(data=subset(food_analysis, nutritional_check == "Almost always"), fill = "steelblue") +
+  geom_point(alpha = 0.7, size = 2) + 
+  labs(x = "Nutritional Check Frequency", y = "GPA", title = "GPA by Nutritional Check Frequency") +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(fill = "white"),
+        plot.title = element_text(size = 20, face = "bold", hjust = 0.5))
+```
+
+Students who always check nutritional values tend to have the highest median GPA score of 4.0, while those who never check tend to have the lowest GPA score. To confirm or reject these assumptions, we need to calculate the P-value and decide whether to reject or fail to reject the null hypothesis.
+
+<br>
+
+__Kruskal-Wallis Test Procedure__
+
+1. Rank the data from lowest to highest, combining all groups together.
+2. Calculate the sum of ranks for each group.
+3. Calculate the Kruskal-Wallis test statistic using the formula:
+
+<br>
+
+$$
+H = (12 / N(N+1)) * [∑(R_i^2 / n_i) - 3(N+1)]
+$$
+
+Where:
+
+  * H is the Kruskal-Wallis test statistic
+  * N is the total number of observations
+  * R_i is the sum of ranks for the i-th group
+  * n_i is the sample size of the i-th group
+
+4. Calculate the degrees of freedom using the formula:
+df = k - 1 where k is the number of groups.
+
+5. Compare the calculated test statistic to the chi-square distribution with df degrees of freedom, and calculate the p-value.
+
+<center>
+
+```{r message=FALSE, warning=FALSE}
+# Kruskal-Test Analysis
+pander(kruskal.test(GPA ~ nutritional_check, data = food_analysis))
+```
+
+</center>
+
+## Conclution
+
+The Kruskal-Wallis rank sum test was used to investigate whether there is a significant difference in the median GPA scores among students in different nutritional check frequency groups. The test yielded a test statistic of 9.188 with 4 degrees of freedom and a p-value of 0.05657.
+
+Since the p-value is greater than the significance level of 0.05, **we fail to reject the null hypothesis** that the median GPA scores of students in all nutritional checking frequency groups are equal.
+
+Therefore, **we do not have sufficient evidence to conclude that there is a significant difference in the median GPA scores among students in different nutritional check frequency groups.**
+
+However, it is worth noting that the p-value is relatively close to the significance level, suggesting that there may be a trend towards a difference in median GPA scores among the groups. Further investigation with a larger sample size may be necessary to confirm this.
+
+<br><br><br><br><br><br><br><br>

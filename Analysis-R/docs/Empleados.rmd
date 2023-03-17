@@ -1,0 +1,92 @@
+---
+title: "Health Insurance"
+output: 
+  html_document:
+    theme: simplex
+    code_folding: hide
+---
+
+## Background
+
+```{r, warning=FALSE, message=FALSE}
+# load packages
+library(mosaic)
+library(DT)
+library(pander)
+library(car)
+library(tidyverse)
+library(ggpubr)
+library(rstatix)
+
+# load data
+empleados <- read.csv("../Data/Empleados.csv", header=TRUE, fileEncoding="latin1") 
+empleados <- empleados %>%
+  filter(
+    ISAPRE == 'Cruz Blanca' | 
+    ISAPRE == 'Fonasa') %>% 
+  select(c(ISAPRE, Costo.Plan))
+names(empleados)[1]<-paste("Insurance")
+names(empleados)[2]<-paste("Cost")
+```
+
+In this analysis, a company of 250 employees is being studied, and a sample of 15 employees are being used to represent the population.
+
+The dataset has information for each worker, such as contract number, date of birth, address, bank account, health insurance account, etc. In this specific project, the health insurance company and the price they pay for it will be compared and analyzed.
+The analysis will be done with a Independent Samples t Test to discover if there is a significant difference between the average cost for each health insurance.
+
+## Hypotheses
+
+We are assuming tha both health insurance are the same. The analysis checks the factors of `Cruz Blanca` and `Fonasa` (the health insurance group). For this, there are three sets of hypotheses helping to know if the average price of health insurance is the same.
+
+$$
+  H_0: \mu_1 - \mu_2 = 0 \\
+  H_a: \mu_{i1} - \mu_{i2}\neq 0
+$$
+This hypothesis can also be applicable as follows:
+
+$$
+  H_0: \mu_{Cruz Blanca} - \mu_{Fonasa} = 0 \\ 
+  H_a: \mu_{Cruz Blanca} - \mu_{Fonasa} \neq 0
+$$
+
+## Analysis
+
+```{r message=FALSE, warning=FALSE}
+qqPlot(Cost ~ Insurance, data=empleados)
+```
+
+The above graph illustrates a visual difference of price range between the two health insurances.
+Now that we can see the graph, we would need to see the Test Statistic results to further determine the relevance of the differences.
+
+
+```{r message=FALSE, warning=FALSE}
+pander(t.test(Cost ~ Insurance, data=empleados, mu = 0, alternative = "two.sided", conf.level = 0.95))
+```
+
+With the Independent Sample t Test results we can find out if that difference is significant. Since the P-Value (`0.8094`) is higher than the confidene level (`0.05`), we fail to reject the null hypothesis, meaning that there is insufficient evidence to determine that the average of the insurances are significantly different.
+
+## Checking Assumptions
+
+```{r message=FALSE, warning=FALSE}
+empleados %>%
+  group_by(Insurance) %>%
+  identify_outliers(Cost)
+```
+There are no significant outliers in the two groups.
+```{r message=FALSE, warning=FALSE}
+empleados %>%
+  group_by(Insurance) %>%
+  shapiro_test(Cost)
+ggqqplot(empleados, x = "Cost", facet.by = "Insurance")
+```
+Each group should be approximately normally distributed. We can conclude this with both P-Values being greater than the significance level 0.05 indicating that the distribution of the data is not significantly different from the normal distribution. We can also see that the dots on the graph remain near and inside the gray area.
+```{r message=FALSE, warning=FALSE}
+empleados %>% levene_test(Cost ~ Insurance)
+```
+The variance of the outcome variable is be equal in each group. We can conlude this due to the P-Value not being significant.
+
+
+
+## Conclusion
+
+We can conclude that the average cost of insurance is not significantly different for each insurance group based on the analysis. We cannot assume this conclusion to be valid since the sample size is small.

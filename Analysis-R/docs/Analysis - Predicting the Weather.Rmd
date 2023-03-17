@@ -1,0 +1,287 @@
+---
+title: "Predicting the Weather"
+output:
+  html_document:
+    theme: cerulean
+    code_folding: hide
+---
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+
+library(pander)
+library(tidyverse)
+library(mosaic)
+library(car)
+library(DT)
+
+# load data
+weatherData <- read.csv(
+  "../../Data/WeatherPrediction.csv"
+  , header = TRUE) 
+
+# view data
+# View(weatherData)
+```
+
+
+# {.tabset .tabset-fade}
+
+## Introduction
+
+### Prediction and Graph
+
+My predicted highest  temperature in Fahrenheit for this Monday September 20th, 2021, is
+
+<br /><br />
+
+<center>
+
+<span style="font-family:segoe;font-size:4em;">
+82.33 &deg; F
+</span>
+
+</center>
+
+<br /><br />
+
+I collected weather data from the 10 days previous to this upcoming Monday, September 20th. The collected data points comes from  [www.timeanddate.com](https://www.timeanddate.com) and I extracted the day, time, temperature, weather, wind, humidity, barometer, and visibility.
+
+I transformed the database columns and rows so the humidity data is aligned with the temperature data from two days in advance.
+In other words, each row contains the temperature of the day and the humidity of the two previous days. This is done to use the humidity as a __explanatory__ variable for the Monday temperature from Saturday's humidity.
+
+```{r message=FALSE, warning=FALSE}
+
+# Visualizing Based-R
+
+lm.weather <- lm(Temp_X ~ Humidity_X, data = weatherData)
+
+plot ( Temp_X ~ Humidity_X
+     , data = weatherData
+     , xlab = "Humidity"
+     , ylab = "Temperature"
+     , main = "Temperature vs Humidity"
+     , col  = "skyblue"
+     , pch  = 16
+     , cex  = 3 ) # dot size
+
+abline(  lm.weather
+       , col = "skyblue"
+       , pch = 1
+       , lwd = 3   # line width
+       , lty = 2 ) # line type
+
+points(  16.3
+       , 82.33 # Humidity for Sep 18th (two days prior)
+       , col = "firebrick"
+       , pch =16
+       , cex = 3 ) # dot size
+
+text(  17
+     , 85
+     , "  Predicted Temperature \n (88.8 Fahrenheit)"
+     , pos=3
+     , cex=1.0
+     , col="firebrick") 
+
+```
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+## Data
+
+### Table and Analysis
+
+```{r message=FALSE, warning=FALSE}
+
+datatable( weatherData
+         ,extensions="Responsive"
+         ,options=list(lengthMenu=c(10,5,10))
+          ) 
+
+```
+
+Hypothesis:
+
+
+$$
+\left.\begin{array}{ll}
+H_0: \beta_1 = 0 \\  
+H_a: \beta_1 \neq 0
+\end{array}
+\right\} \ \text{Slope Hypotheses}
+$$
+
+$$
+\left.\begin{array}{ll}
+H_0: \beta_0 = 0 \\  
+H_a: \beta_0 \neq 0 \\
+\alpha =< 0.05
+\end{array}
+\right\} \ \text{Intercept Hypotheses}
+$$
+
+From the data collected, we get this estimated line representing the true regression model assumed by a regression analysis.
+
+$$
+\underbrace{\hat{Y_i}}_{Temperature}
+=
+\underbrace{\beta_0}_{Y-Intercept}
++
+\underbrace{\beta_1}_{Slope}
+\overbrace{X_i}^\text{Humidity}
+$$
+```{r message=FALSE, warning=FALSE}
+
+pander(summary(lm.weather))
+
+```
+
+After computing the linear model, we were able to estimate the Y-intercept and slope for the equation, along with other meaningful values.
+
+The y-intercept is __88.83__.
+This means that when the percentage of humidity is zero, we estimate the highest temperature to be 88.83 degrees.
+
+The slope has a value of __-0.4__.
+This means that For every one whole drop in humidity, the temperature increases 16.34 grades.
+Both variables have an indirectly proportional relation.
+
+The R-squared value is __0.092.5__.
+This is a really good value for our regression. This value represent the explanation capacity from the the linear model. This means that we have about 92.5% accuracy in our p-value.
+
+The P-value has a value of __0.043__.
+The P-Values is significant. This means that we reject the null hypothesis, accepting our hypothesis. 
+
+From the regression model summary, we obtain the values of the regression line. The equation is written as follow:
+
+<center>$\hat{Y_i}=88.83-0.4$ $X_i$</center>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+## Assumptions
+
+### Assumptions
+
+```{r message=FALSE, warning=FALSE}
+
+par(mfrow=c(1,3))
+plot(  lm.weather
+     , which = 1)
+qqPlot(  lm.weather$residuals
+       , id = FALSE
+       , main = "Q-Q Plot")
+plot(  lm.weather$residuals
+     , main = "Residuals vs Order")
+
+```
+
+* Residuals vs Fitted: This graph has no discernible patterns. The fitted-values are the points in the regression line predicted thought the linear model. The residual-values are the distance from the estimated-value and the actual-value, mathematically below. The relationship of these two values is not linearity in the graph, therefore this assumption is fulfilled.
+
+<br /><br />
+
+<center>$Residual_i = Y_i - \hat{Y}_1$ </center>
+
+<br /><br />
+
+* Q-Q Plot: The residuals appear to be normal and within one standard deviation away from the regression line. Therefore this assumption is fulfilled.
+
+* Residuals vs Order: This plot measures each residual and their order of occurrence. We are looking for no define trends in the plot. Since the plot show values with a slight down right-hand side trend, __this assumption is not fulfilled__.
+
+Now that we have analyzed the 3 assumptions, and fail to approve one of them, we can not rely on the results from the Prediction
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+## Prediction
+
+### Prediction
+
+In the regression line, the **Estimated Temperature** was used as the responsive variable, and the **Humidity** is used as the explanatory variable.
+
+In order to calculate the estimated maximum Temperature, the explanatory variable used is the pre-calculated **Humidity** value given to us in the data base. That **Humidity** is **16.3%**.
+
+The mathematical equation for the estimated slope goes as follows:
+
+$\underbrace{\hat{Y}_i}_\text{Temperature} = 88.83 - -0.4$ $\underbrace{X_i}_\text{Humidity}$
+
+```{r message=FALSE, warning=FALSE}
+
+pander(predict.lm(lm.weather, data.frame(Humidity_X=16.3)))
+
+# lm.weather <- lm(Temp_X ~ Humidity_X, data = weatherData)
+# predict.lm(lm.weather, data.frame(Humidity_X=16.3), interval="prediction")
+
+```
+
+After running a prediction model, the Temperature for two days from Monday September 20th, 2021, is __82.33__.
+
+<!--
+
+###Prediction update with transformation curve.
+
+```{r message=FALSE, warning=FALSE}
+
+# wrangling
+plot(Temp_X ~ Humidity_X
+     , data = weatherData
+     , xlab = "Humidity"
+     , ylab = "Temperature"
+     , main = "Maximum Temperature vs Humidity"
+     , col="blue"
+     , pch=16)
+
+lm.weather <- lm(Temp_X ~ Humidity_X
+                 , data = weatherData)
+b <- coef(lm.weather)
+curve(  b[1] + b[2]*x
+      , add=TRUE
+      , col="hotpink")
+
+pred.lm.weather <- predict(lm.weather                            , data.frame(Humidity_X = .53)
+          , interval = "prediction")
+abline(  h   = pred.lm.weather
+       , lty = 2
+       , col = "hotpink")
+abline(  v=0.53
+       , lty=2
+       , col="hotpink")
+# Fancier way to get predictions on the graph
+
+lines(  c(0.53,0.53)
+      , pred.lm.weather[2:3]
+      , lwd = 8
+      , col = rgb(1,0.41,.706,0.3))
+
+
+```
+
+-->
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+## Source
+
+### Source
+
+Data source: [https://www.timeanddate.com/weather/@5605242/historic?month=1&year=2020](https://www.timeanddate.com/weather/@5605242/historic?month=1&year=2020)
+
+Time and Date AS is based just outside Stavanger, Norway, where the team work together to operate [timeanddate.com](https://www.timeanddate.com/), the world's top-ranking website for time and time zones. With free online services.
+
+The German and Norwegian sites, [timeanddate.de](https://www.timeanddate.de/) and [timeanddate.no](https://www.timeanddate.no/), offer the same high level of accuracy and reliability as the English language site.
+
+
+
+```{r message=FALSE, warning=FALSE}
+# t.lm <- lm(  data = airquality
+#            , Temp ~ Wind)
+# summary(t.lm)
+# plot(  Temp ~ Wind
+#      , data= airquality
+#      , col = "ivory3"
+#      , pch = 18)
+# abline(t.lm)
+
+#
+```
+
+

@@ -1,0 +1,192 @@
+---
+title: "Predicting the Weather"
+author: "Pedro Sanhueza"
+output:
+  html_document:
+    theme: cerulean
+    code_folding: hide
+---
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+
+library(pander)
+library(tidyverse)
+library(mosaic)
+library(car)
+
+# load data
+weatherData <- read.csv(
+  "../../Data/WeatherPrediction.csv"
+  , header = TRUE)
+
+# view data
+# View(weatherData)
+```
+
+## Prediction
+
+The predicted max temperature for this Monday May 1st, 2021, is $15.2$.
+
+I have collected data from 10 days previous to this upcoming Monday, April 26th. The data contains the day, the time, the temperature for that day,	the weather, wind, humidity, barometer, and visibility.
+
+In the data frame, the humidity data is aligned with the temperature data from two days in advance, in other words, each row contains the temperature of the day and the humidity of the two days previous. This is done to use the humidity as a explanatory variable for the Monday temperature from Saturday's humidity.
+
+### Graphic
+
+```{r message=FALSE, warning=FALSE}
+
+# wrangling
+
+lm.weather <- lm(Temp_X ~ Humidity_X, data = weatherData)
+
+plot(Temp_X ~ Humidity_X, data = weatherData,
+     xlab = "Humidity",
+     ylab = "Temperature",
+     main = "Maximum Temperature vs Humidity",
+     col="blue",
+     pch=16)
+
+abline(lm.weather,
+       col = "green",
+       pch = 1)
+
+points(0.53,15.17084, col = "red", pch=16)
+
+text(0.63, 13.7, "  Predicted Temperature \n           (15.2 celsius)", pos=3, cex=1.0, col="firebrick") 
+
+```
+
+## {.tabset .tabset-fade}
+
+
+### Table
+
+Hypothesis:
+
+
+$$
+\left.\begin{array}{ll}
+H_0: \beta_1 = 0 \\  
+H_a: \beta_1 \neq 0
+\end{array}
+\right\} \ \text{Slope Hypotheses}
+$$
+
+$$
+\left.\begin{array}{ll}
+H_0: \beta_0 = 0 \\  
+H_a: \beta_0 \neq 0 \\
+\alpha =< 0.05
+\end{array}
+\right\} \ \text{Intercept Hypotheses}
+$$
+
+From the data collected, we get this estimated line representing the true regression model assumed by a regression analysis.
+
+$$
+\underbrace{\hat{Y_i}}_{Temperature}
+=
+\underbrace{\beta_0}_{Y-Intercept}
++
+\underbrace{\beta_1}_{Slope}
+\overbrace{X_i}^\text{Humidity}
+$$
+
+After computing the linear model, we were able to estimate the Y-intercept and slope for the equation, along with other meaningful values.
+
+The y-intercept is 23.83. This means that when the percentage of humidity is zero, we estimate the highest temperature to be 23.83 degrees.
+
+The slope has a value of -16.34. This means that both variables have an indirectly proportional relation. For every one whole drop in humidity, the temperature increases 16.34 grades.
+
+The R-squared value is 0.4204. This is a really good value for our regression. This value represent the explanation capacity from the the linear model. This means that we have about 42% accuracy in our p-value.
+
+The P-value is significant. This means that we reject the null hypothesis, accepting our hypothesis.
+
+
+```{r message=FALSE, warning=FALSE}
+
+pander(summary(lm.weather))
+
+```
+
+From the regression model summary, we obtain the values of the regression line. The equation is writen as follow:
+
+<center>$\hat{Y_i}=23.83-16.34$ $X_i$</center>
+
+### Assumptions
+
+```{r message=FALSE, warning=FALSE}
+
+par(mfrow=c(1,3))
+plot(lm.weather, which = 1)
+qqPlot(lm.weather$residuals, id = FALSE)
+plot(lm.weather$residuals, main = "Residuals vs Order")
+
+```
+
+* Residuals vs Fitted: This graph has no discernible patterns. The fitted-values are the points in the regression line predicted thought the linear model. The residual-values are the distance from the estimated-value and the actual-value, mathematically below. The relationship of these two values is not linearity in the graph, therefore this assumption is fulfilled.
+
+<center>$Residual_i = Y_i - \hat{Y}_1$ </center>
+
+
+* Q-Q Plot: The residuals appear to be normal and within one standard deviation away from the regression line. Therefore this assumption is fulfilled.
+
+* Residuals vs Order: This plot measures each residual and their order of occurrence. We are looking for no define trends in the plot. Since the plot show values with no trends, this assumption is fulfilled.
+
+Now that we have analyzed those 3 assumptions, we can rely on the results from the Prediction
+
+### Prediction
+
+In the regression line, the **Estimated Temperature** was used as the responsive variable, and the **Humidity** is used as the explanatory variable.
+
+In order to calculate the estimated maximum Temperature, the explanatory variable used is the pre-calculated **Humidity** value given to us in the data base. That **Humidity** is **53%**.
+
+The mathematical equation for the estimated slope goes as follows:
+
+$\underbrace{\hat{Y}_i}_\text{Temperature} = 23.83 - 16.34$ $\underbrace{X_i}_\text{Humidity}$
+
+```{r message=FALSE, warning=FALSE}
+
+pander(predict.lm(lm.weather, data.frame(Humidity_X=0.53)))
+
+```
+
+After running a prediction model, the Temperature for two days from Saturday April 24th, 2021, is 15.17.
+
+### Prediction udate with transformation curve.
+
+```{r message=FALSE, warning=FALSE}
+
+# wrangling
+plot(Temp_X ~ Humidity_X, data = weatherData,
+     xlab = "Humidity",
+     ylab = "Temperature",
+     main = "Maximum Temperature vs Humidity",
+     col="blue",
+     pch=16)
+lm.weather <- lm(Temp_X ~ Humidity_X, data = weatherData)
+b <- coef(lm.weather)
+curve(b[1] + b[2]*x, add=TRUE, col="hotpink")
+
+
+pred.lm.weather   <- predict(lm.weather,   data.frame(Humidity_X=.53), interval="prediction")
+
+abline(h=pred.lm.weather, lty=2, col="hotpink")
+abline(v=0.53, lty=2, col="hotpink")
+
+# Fancier way to get predictions on the graph
+
+lines(c(0.53,0.53), pred.lm.weather[2:3], lwd=8, col=rgb(1,0.41,.706,0.3))
+
+
+```
+
+## Source
+
+Data source: [https://www.timeanddate.com/weather/@5605242/historic?month=1&year=2020](https://www.timeanddate.com/weather/@5605242/historic?month=1&year=2020)
+
+
+
+
+

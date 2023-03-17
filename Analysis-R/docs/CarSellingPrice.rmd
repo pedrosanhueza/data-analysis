@@ -1,0 +1,221 @@
+---
+title: "Car Selling Price"
+date: "5/6/2021"
+output:
+  html_document:
+    theme: cerulean
+    code_folding: hide
+---
+
+```{r message=FALSE, warning=FALSE, messprice=FALSE}
+# load packages
+library(tidyverse)
+library(pander)
+library(ggplot2)
+library(car) # for boxCox
+library(DT)
+
+# load data
+cardata <- read.csv("../../Data/BMW3Series320i-1.csv")
+```
+
+
+## Background
+
+[comment]: <> (Perform an analysis that models the selling price of a vehicle according to the mileage of the vehicle. The more a car is driven, the less it is worth. So, is buying brand new worth it?)
+
+## Car Selling Price Analysis {.tabset .tabset-pills .tabset-fade}
+
+### Visualization
+
+```{r message=FALSE, warning=FALSE}
+# simple linear model
+c.lm <- lm(data = cardata, price ~ mileage)
+
+#margins of plot (plot parameters default = (5,4,4,2))
+par(mar=c(10,7,4,2)) 
+plot(price ~ mileage, data = cardata, 
+     pch = 20, col = "mediumpurple1",cex = 1, las = 1,
+     xlab = "Mileage (miles)",
+     ylab = "",
+     main = "Subaru Legacy Price to Mileage")
+
+#push the y-lab to the left to make room for the axis values 
+title(ylab = "Price (USD)", line = 3.7)
+abline(c.lm, col = "mediumturquoise")
+legend("topright", 
+       legend=c("Fitted Regression (Simple)", "Fitted Regression (Transformation)"),
+       lty = 1,
+       cex = 0.8,
+       col = c("mediumturquoise","darkgoldenrod1"),
+       bty="n")
+
+curve(exp(1.017e+01 - 7.386e-06*x), add=TRUE, col = "darkgoldenrod1")
+```
+
+
+### Technical Details
+
+[comment]: <> (your simple linear regression lm code)
+
+$$
+\hat{Y_i}
+=
+\underbrace{\beta_0}_{Y-Intercept}
++
+\underbrace{\beta_1}_{Slope}
+{X_i}
+$$
+
+$$
+\hat{Y_i}
+=
+33590
+-
+0.3518
+{X_i}
+$$
+
+
+```{r message=FALSE, warning=FALSE}
+# simple linear model
+c.lm <- lm(data = cardata, price ~ mileage)
+```
+
+[comment]: <> (summary, and diagnostic plots)
+
+```{r message=FALSE, warning=FALSE}
+#boxCox(c.lm) 
+```
+
+[comment]: <> (your boxCox transformation code with an explanation of what it shows)
+
+```{r message=FALSE, warning=FALSE}
+
+```
+
+[comment]: <> (your transformation lm code)
+
+```{r message=FALSE, warning=FALSE}
+ 
+```
+
+[comment]: <> (summary)
+
+```{r message=FALSE, warning=FALSE}
+#summary(c.lm) %>% pander()
+```
+
+[comment]: <> (diagnostic plots)
+
+```{r message=FALSE, warning=FALSE}
+
+```
+ 
+
+### Data
+
+```{r message=FALSE, warning=FALSE}
+#datatable(cardata, options=list(lengthMenu = c(10)), extensions="Buttons")
+```
+
+[comment]: <> (Include a datatable(...) of your data using library(DT). Be sure to cite the source and date of collection from where you collected the data.)
+
+
+### Data
+
+```{r message=FALSE, warning=FALSE}
+# simple linear model
+c.lm <- lm(data = cardata, price ~ mileage)
+
+
+#BoxCox
+# boxCox(c.lm) # lambda 0
+
+# transform linear model
+c.lm.t <- lm(data = cardata, log(price) ~ mileage)
+
+plot(price ~ mileage, data = cardata, 
+     pch = 20, col = "mediumpurple1",cex = 1, las = 1,
+     xlab = "Mileage (miles)",
+     ylab = "",
+     main = "Subaru Legacy Price to Mileage")
+title(ylab = "Price (USD)", line = 3.7)
+
+b.t <- coef(c.lm.t)
+curve(exp(b.t[1] + b.t[2]*x), add=TRUE, col="skyblue", lwd=2)
+
+pred.c.lm.t <- exp(predict(c.lm.t, data.frame(mileage=10000), interval="prediction"))
+
+# Quick way to get predictions on there
+abline(h=pred.c.lm.t, lty=2, col="skyblue")
+abline(v=10000, lty=2, col="skyblue")
+
+# Fancier way to get predictions on the graph
+lines(c(10000,10000), pred.c.lm.t[2:3], lwd=6, col=rgb(.53,.808,.92,.1))
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

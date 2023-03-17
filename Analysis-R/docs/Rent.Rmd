@@ -1,0 +1,107 @@
+---
+title: "Rent"
+output: 
+  html_document:
+    theme: cerulean
+    code_folding: hide
+    toc: true
+    toc_float: true
+---
+
+<!-- Welcome to the first Analysis for Math 325! 
+The goal of this first assignment is to have you produce a graphical summary and a numerical summary of the "Rent" data set. The fun part is that you get to decide what type of graph and what type of numerical summary to create! You will need to read through the "green text" instructions of this document to find the places where you are supposed to enter R-code in order to complete the assignment. -->
+
+
+**Week 1 Analysis**
+
+```{r, message=FALSE, warning=FALSE}
+# This gray area is called an "R-chunk". 
+# These library commands install some powerful functions for your use later on.
+library(mosaic)
+library(pander)
+library(tidyverse)
+library(DT)
+library(plotly)
+
+# This read_csv command reads in the "Rent" data set into an object called "Rent"
+Rent <- read_csv("../Data/Rent.csv")
+
+# To load this data set into your R-Console do the following:
+#  1. From your top file menu select "Session -> Set Working Directory -> To Source File Location"
+#  2. Press the green "play button" in the top right corner of this gray box (which is called an "R-chunk").
+#  3. Then in your "Console" window of 
+```
+
+<br />
+
+## Background
+
+Here are the analysis of a data set containing about 122 entries of approved housing for BYU-Idaho single students. With this data, we are visualizing weather or not there is a relation between the price for private bedroom and share bedroom. Are are also wanting to know if they have any correlation at all.
+
+```{r, warning=FALSE}
+# Code to get you started. 
+# View(...) works great in the Console, but datatable(...) must be
+# used instead within an R-chunk.
+datatable(Rent, options=list(lengthMenu = c(3,10,30)), extensions="Responsive")
+```
+
+
+## Graphic
+
+<!-- Present an interesting graphic using the Rent data set. Do not create the same graphics that are shown in the [Good Example Analysis](./Analyses/StudentHousing.html), but you can certainly use those graphics as a guide to inspire you on what to do yourself. -->
+
+
+```{r}
+# Use this R-chunk to...
+# ...Create an interesting graphic using the Rent data set.
+
+#plot(PrivateRoomPrice ~ Price, data = Rent, pch = 20, col='ivory3', ylab='Private Room Price')
+
+plot_ly(Rent, 
+        x= ~Price, 
+        y= ~PrivateRoomPrice, 
+        color= ~Gender, 
+        size= ~MilesToCampus,
+        mode   = 'markers',
+        #text= ~paste("Name:", name, "\n", "Birth-Month:", birthmonth),
+        colors=c("hotpink","skyblue")) %>%
+  layout(title="Rent dataset", 
+         xaxis=list(title="Share room price"),
+         yaxis=list(title="Private room price"))
+
+```
+
+
+<!-- Write a few statements here that explain your graphic and what it shows. -->
+
+The price of a housing and its private room price as a direct positive correlation.
+As the price of an appartment increases, the price of its private room also increases.
+The private room price for a certain Apartment is never below the price of share room in that apartment.
+
+
+```{r}
+# Use this R-chunk to...
+# ...compute and display a meaningful table of numerical summaries supporting your above graphic.
+
+library(tidyverse)
+library(pander)
+pander(Rent %>% 
+  group_by(Gender) %>% 
+  summarize(Share_Room_Price = mean(Price, na.rm = T),
+            Private_Room_Price = mean(PrivateRoomPrice, na.rm = T),
+            Number_Of_Appartments = n()
+            ), caption = 'Average Price by Room Type')
+```
+
+<!-- Write a few statements here that introduce your table of numerical summaries and what they show. -->
+
+Here is a table showing the average price for share and private rooms in approved BYU-Idaho housing.
+Based on the summary we can conclude that in average, private rooms are more expensive than share rooms and that male housing is not only more abundant, but is cheaper than female housing.
+
+
+## Conclusion
+
+Based on the table, graph, and our initial hypothesis, It can be conluded that BYU-Idaho Approved Housing will always have its private rooms more expensive than the share rooms, furthermore, the relation between share and private room price are directly proportional. Meaning that as the price of the share room increases, the price of private room also increases.
+As extra information from the graph, we can assume that the distance from campus remains fairly constant in all complexes.
+
+

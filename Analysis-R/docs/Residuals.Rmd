@@ -1,0 +1,199 @@
+---
+title: "Residuals, Sums of Squares, and R-Squared"
+output:
+  html_document:
+    theme: cerulean
+    code_folding: hide
+---
+
+
+
+## Introduction
+
+```{r message=FALSE, warning=FALSE}
+# load packages
+library(tidyverse)
+library(pander)
+library(ggplot2)
+
+# load data
+laptopData <- read.csv("../../Data/laptops-1.csv")
+
+# create new column with only numeric values
+laptopData$RamGB <- sub("GB", "", laptopData$Ram)
+
+# change column data type
+laptopData$RamGB <- as.numeric(laptopData$RamGB)
+
+# linear regression
+lm.laptop <- lm(Price_euros ~ RamGB, data = laptopData)
+
+```
+
+In this analysis, a data set called *laptopData* is used to perform a regression analysis. The data contains information about different computers and their characteristics, it also has 1303 entries and 13 columns.
+
+* Price in Euros    =   Response Variable
+* Ram Amount        =   Predictor Variable
+
+
+### Summary of Terms
+
+In order to analyze some key terms, we will use the graph as a reference.
+
+```{r message=FALSE, warning=FALSE}
+
+ggplot(lm.laptop, aes(x = RamGB, y = Price_euros))+
+  geom_point(color = "skyblue", size = 0.6)+
+#  geom_smooth(method = "lm", formula = y~x, se = FALSE, color = "pink") +
+  labs(title = "Price by Ram", x = "Ram (Random-access memory)", y = "Price in Euros", subtitle = "Raw graph")
+```
+
+* **Residual**: The residual is the distance from any dot to the line. In the graph, the dots represent a computer type from our data set, with a specific Ram and Price. The distance from each computer model and its estimated price based on the Ram is represented with the red line. Just as an example, if we select one computer type (a row in the data set), an Asus Windows 10 (specific dot) and we measure the distance from the actual location in the graph and it's predicted location, we will end us with a Residual of 1450.
+
+  $$
+  \text{Residual}_i = \underbrace{Y_i}_{\substack{\text{Observed} \\ \text{Y-value}}} - \underbrace{\hat{Y}_i}_{\substack{\text{Predicted} \\ \text{Y-value}}} \quad
+  $$
+  
+```{r message=FALSE, warning=FALSE}
+# Calculate Residual Value
+#predict.lm(lm.laptop, data.frame(RamGB=24))
+# 2718.954-1269.00
+
+# Residual Graph
+ggplot(lm.laptop, aes(x = RamGB, y = Price_euros)) +
+  geom_segment(x = 24, y = 1269, xend = 24, yend = 2720,
+               size = 0.3, color = "lightgreen") +
+  geom_point(color = "skyblue", size = 0.6) +
+  geom_smooth(method = "lm", formula = y~x, se = FALSE, color = "pink") +
+  labs(title = "Price by Ram", x = "Ram (Random-access memory)", y = "Price in Euros", subtitle = "Residual") +
+  annotate(geom = "text", x=32, y=2000, label="Residual (distance)", color="black") +
+  annotate(geom = "text", x=54, y=4550, label="Estimated Regression Line", color="black") +
+  annotate(geom = "text", x=54, y=4200, label="( Y = 160.1 + 0.15086 * X )", color="black")
+  #$\hat{Y}=160.1 + 0.15086$ $*$ $X$
+```
+
+* **SSR**: It stands for Sum Square Regression, and is the sum of the squares of the deviations of the predicted values from the mean value of a response variable.
+  * From the laptop data set, the SSR is 351206497.
+
+```{r message=FALSE, warning=FALSE}
+# find ssr
+ssr <- sum((fitted(lm.laptop) - mean(laptopData$Price_euros))^2)
+#      sum((lm.laptop$fit - mean(laptopData$Price_euros))^2 )
+
+# save average mean value
+average_mean_value <- mean(laptopData$Price_euros)
+
+# save the predicted values
+laptopData$predicted <- predict(lm.laptop)
+
+# start graph
+ggplot(laptopData, aes(x = RamGB, y = Price_euros)) +
+  
+# add labels
+  labs(title = "Price by Ram", x = "Ram (Random-access memory)", y = "Price in Euros", subtitle = "Sum Square Regression Plot") +
+  
+# add regression line
+  geom_smooth(method = "lm", formula = y~x, se = FALSE, color = "pink") +
+
+# add horizontal line
+  geom_hline(yintercept = average_mean_value, linetype="dashed", color = "gray", size=0.3) +
+
+# add text
+    annotate(geom = "text", x=42, y=1300, label="Average y-value", color="black") +
+# add data points
+  geom_point(color = "skyblue", size = 0.6)
+
+```
+
+  $$
+  \text{SSR} = \sum_{i=1}^n \left(\hat{Y}_i - \bar{Y}\right)^2
+  $$
+
+* **SSE**: The acronym stands for Sum Squares Error (Residual), and it measures the total deviation from the residuals and the line. This is done with the following mathematical calculation:
+
+  * From the laptop data set, the SSE is 284968465.
+
+```{r message=FALSE, warning=FALSE}
+sse <- sum((fitted(lm.laptop) - laptopData$Price_euros)^2)
+
+# find ssr
+ssr <- sum((fitted(lm.laptop) - mean(laptopData$Price_euros))^2)
+
+# save the predicted values
+laptopData$predicted <- predict(lm.laptop)
+
+ggplot(laptopData, aes(x = RamGB, y = Price_euros)) +
+# add labels
+  labs(title = "Price by Ram", x = "Ram (Random-access memory)", y = "Price in Euros", subtitle = "Sum Squares Error (Residual)") +
+  
+# add regression line
+  geom_smooth(method = "lm", se = FALSE, color = "pink") +
+  
+# add residual lines
+  geom_segment(aes(xend = RamGB, yend = predicted), alpha = .5, col = "lightgreen") +
+  
+# add data points
+  geom_point(color = "skyblue", size = 0.6)
+
+# # add the predicted values points
+# geom_point(aes(y = predicted), shape = 1)
+
+```
+
+  $$
+  \text{SSE} = \sum_{i=1}^n \left(Y_i - \hat{Y}_i\right)^2
+  $$
+
+* **SSTO**: The SSTO is calculated by summing each square from the residuals. In other words, is summing the squared of each residual from a data point. This number indicates how much each $Y_i$, vary around their mean, $\hat{Y}_i$. 
+
+  * From the laptop data set, the SSTO is 636174961.
+```{r message=FALSE, warning=FALSE}
+ssto <- ssr + sse
+```
+
+  $$
+  \text{SSTO} = \sum_{i=1}^n \left(Y_i - \bar{Y}\right)^2
+  $$
+
+* **R-Squared**: Is a coefficient that varies between 0 and 1. Since R-Squared is the proportion between SSR and SSTO, it explains to what extent the variance of one variable explains the variance of the second.
+
+  * From the laptop data set, the SSTO is 0.55.
+```{r message=FALSE, warning=FALSE}
+RSquared <- summary(lm.laptop)
+```
+
+  $$
+  R^2 = \frac{SSR}{SSTO} = 1 - \frac{SSE}{SSTO}
+  $$
+
+### SSTO, SSR, and SSE relatation
+
+* The Sum of Squares Error, Sum of Squares Regression, and Sum of Square Total, are interrelated.
+
+  * The SRR is a proportion between the SRR and the SSE.
+  
+<p>&nbsp;</p>
+
+* There is a difference between R-Squared and the P-Value.
+
+  * The P-Value indicates if there is a significant relationship in the model. On the other hand, the R-Squared measures the degree to which the data is explained by the model. An R-squared of 0.90 indicates that 90% of the variability in the dependent variable is explained by the model. In the laptop example, our R-Squared was 0.55, which indicates that 55% of the variability in the Gigabyte of a computer is properly explained in the regression line.
+  
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+

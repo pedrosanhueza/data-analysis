@@ -1,0 +1,77 @@
+---
+title: "Chi Squared Analysis"
+output: 
+  html_document:
+    theme: cerulean
+    code_folding: hide
+---
+
+<!-- A good rule of thumb is 10 observations per "combination-group" in your data -->
+
+## Background
+
+The "HELP study" was a clinical trial for adult inpatients recruited from a detoxification unit. Patients with no primary care physician were randomized to receive a multidisciplinary assessment and a brief motivational intervention or usual care, with the goal of linking them to primary medical care.
+
+A randomized controlled trial of a multi-disciplinary health intervention in a detoxification unit was collected for this dataset.
+
+One of the collected data was the home status (homeless or housed) and their sex (male or female). From this database, I want to analyze and see if there is a significant correlation between sex and house status.
+
+$$
+  H_0: \ \text{The biological sex and house situation are independent.}
+$$
+$$
+  H_a: \ \text{The biological sex and house situation are associated (not idependent).}
+$$
+
+
+```{r message=FALSE, warning=FALSE}
+#load package with date set
+library(mosaic)
+#select columns and create table
+sexHouse <- table(HELPrct$homeless, HELPrct$sex)
+#
+```
+
+## Analysis
+
+From the large dataset, I would need to filter the columns "Housing Status" and "Sex" to make a summary table and analyze its content. Here is a summary table with its values added up:
+
+```{r message=FALSE, warning=FALSE}
+#load package
+library(pander)
+#display the table
+pander(sexHouse)
+```
+
+Another helpful visualization will be a chart, we can see how the barplot shows strong differences in the sex, males seem to highly predominate in number for both housed and homeless status. However, there has to be a test to get a p-value to validate there is sufficient data to reject or fail to reject the independence of sex and housing status.
+
+```{r message=FALSE, warning=FALSE}
+#display graph
+barplot(t(sexHouse), beside=TRUE, col=c("lightpink","lightblue"),legend.text=TRUE,args.legend = list(x="topleft",bty="n",title="Sex"),xlab="Housing Status",main="Housing Staus and Sex")
+```
+
+Based on the obtained P-Value, we can conclude that there is relation between Sex and Housing Status. Males are predominantly homeless and housed at the same time.
+
+```{r message=FALSE, warning=FALSE}
+#display chi-squared analysis
+sexHouseTest<-chisq.test(sexHouse)
+pander(sexHouseTest)
+```
+
+The Chi-Squared Test is showing that the requirements are met by having all expected counts to be greater than 5 as seen below.
+
+```{r message=FALSE, warning=FALSE}
+#display residuals
+pander(sexHouseTest$expected)
+```
+
+ Based on the residuals, in both cases the male sex is closer to '0' than the female column, this is an indication that the column and rows are dependent from each other.
+
+```{r message=FALSE, warning=FALSE}
+#display residuals
+pander(sexHouseTest$residuals)
+```
+
+## Conclution
+
+I can interpret that the homeless and housing situation of a random person in the detoxification unit tends to reflect the male sex more than the female, this can also indicate that there was more males in the sample, therefore in the population by inference.

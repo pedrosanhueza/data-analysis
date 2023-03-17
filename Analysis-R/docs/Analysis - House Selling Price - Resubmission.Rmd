@@ -1,0 +1,274 @@
+---
+title: "House Selling Prices"
+output: 
+  html_document:
+    theme: cerulean
+    code_folding: hide
+    df_print: paged
+---
+
+# {.tabset .tabset-pills}
+
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+# library(car)
+library(ggpubr)
+library(pander)
+library(DT)
+```
+
+## Analysis
+
+### Introduction
+
+This analysis accurately predicts the house "SalePrice" base on a Kaggle dataset based on a regression model.
+
+For this, I created made some data cleaning and fitted a regression into it.
+
+__The Adjusted R^2 is 0.8219 with an R^2 of 0.809.__
+
+
+```{r message=FALSE, warning=FALSE}
+
+dat <- read.csv("train.csv")
+
+# datatable(dat, options=list(lengthMenu = c(10)), extensions="Buttons")
+# 
+# datatable(head(dat, 20), options = list(
+#   columnDefs = list(list(className = 'dt-center', targets = 5)),
+#   pageLength = 5,
+#   lengthMenu = c(5, 10, 15, 20)))
+
+
+set.seed(121)
+
+num_rows <- 1000 #1460 total
+keep <- sample(1:nrow(dat), num_rows)
+
+dat2 <- dat %>% 
+  mutate(
+    TotalSF = `X1stFlrSF` + `X2ndFlrSF` + `TotalBsmtSF`,
+    OverallQual = case_when(
+           OverallQual >= 9 ~ "Qual9Up",
+           OverallQual <= 4 ~ "Qual4Less",
+           TRUE ~ as.character(paste0("Qual",OverallQual))),
+    SalePriceLog = log(SalePrice),
+    MSZoning2 = case_when(
+        MSZoning %in% c("RH", "RL", "RM", "RP") ~ "ZoningR",
+        MSZoning == "C (all)" ~ "ZoningC",
+        TRUE ~paste0("Zoning", MSZoning)),
+    GarageCars = case_when(
+        GarageCars >= 3 ~ "Garage3Up",
+        TRUE ~ as.character(paste0("Garage", GarageCars))),
+    TotalSF = ifelse(TotalSF > 7000, base::mean(TotalSF), TotalSF),
+    OverallQual = as.factor(OverallQual),
+    GarageCars = as.factor(GarageCars),
+    MSZoning2 = as.factor(MSZoning2)) %>% 
+  select(TotalSF, SalePriceLog,SalePrice, MSZoning2, GarageCars, OverallQual) %>% 
+  mutate(
+    rownum = 1:n(), value = 1) %>% 
+    spread(OverallQual, value, fill = 0) %>% 
+    mutate(value = 1) %>% 
+    spread(MSZoning2, value, fill = 0) %>% 
+    mutate(value = 1) %>% 
+    spread(GarageCars, value, fill = 0)
+
+mytrain <- dat2[keep, ] #Use this in the lm(..., data=mytrain)
+
+mytest <- dat2[-keep, ] #Use this in the predict(..., newdata=mytest)
+
+lm1 <- lm(SalePriceLog~
+TotalSF
++Qual4Less
++Qual5
++Qual6 
++Qual7 
++Qual8 
++Qual4Less:Garage2:TotalSF
++Qual5:Garage1:TotalSF 
++Qual5:Garage2 
++Qual6:Garage2 
++Qual8:Garage3Up:TotalSF
+,data = mytrain)
+
+yht <- predict(lm1, newdata = mytest)
+
+# Compute y-bar
+ybar <- mean(mytest$SalePriceLog) #Yi is given by Ynew from the new sample of data
+  
+# Compute SSTO
+SSTO <- sum( (mytest$SalePriceLog - ybar)^2 )
+  
+# Compute SSE for each model using y - yhat
+SSEt <- sum( (mytest$SalePriceLog - yht)^2 )
+
+  # Compute R-squared for each
+  rst <- 1 - SSEt/SSTO
+  
+# Compute adjusted R-squared for each
+n <- length(mytest$SalePriceLog) #sample size
+pt <- length(coef(lm1)) #num. parameters in model
+rsta <- 1 - (n-1)/(n-pt)*SSEt/SSTO
+
+my_output_table <- data.frame(
+    `Original R2`           = summary(lm1)$r.squared,
+    `Orig. Adj. R-squared` = summary(lm1)$adj.r.squared,
+    `Validation R-squared` = rst,
+    `Validation Adj. R^2`  = rsta)
+
+colnames(my_output_table) <- c("Original $R^2$", "Original Adj. $R^2$", "Validation $R^2$", "Validation Adj. $R^2$")
+
+b <- coef(lm1)
+
+dat3 <- dat2 %>% 
+  pivot_longer(cols = starts_with("Qual"), names_to = "OverallQual") %>% 
+  filter(value == 1) %>% 
+  select(-value) %>% 
+  pivot_longer(cols = starts_with("Garage"), names_to = "GarageCars") %>% 
+  filter(value == 1)%>% 
+  select(-value) %>% 
+  pivot_longer(cols = starts_with("Zoning"), names_to = "MSZoning") %>% 
+  filter(value == 1) %>% 
+  select(-value)
+
+dat3 %>% 
+  mutate(GarageCars = case_when(
+    GarageCars %in% c("Garage0", "Garage1", "Garage3Up") ~ "Garage013",
+    TRUE ~ GarageCars
+  )) %>% 
+  ggplot(aes(TotalSF, SalePriceLog))+
+  geom_point()
+
+```
+
+### Interpretation
+
+Per each increase unit in square footage, the sale price increases by 0.0232% as an overall average.
+The change in square footage is related to the slope value, which is 0.000232.
+
+With the help of a graphing system, we are able to identify patterns in the data. Each of the graphs represent different situations based on the house rating and garage status.
+
+The houses with a quality rating of 4 and 2 car garage, have a percentage change of 0.00774 per unit of total square footage which puts the total percent change at 0.031% per unit change in total square footage.
+
+The houses with a quality rating of 5 and 1 car garage, have a percentage change of 0.029% per unit of total square footage.
+
+The houses with a quality rating of 8 and 3 car garage, have a percentage change of 0.027% per unit of total square footage.
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+## Model Summary
+
+### R-Squared Comparisson
+
+```{r message=FALSE, warning=FALSE}
+
+pander(my_output_table)
+
+
+```
+
+### Regression Summary
+
+```{r message=FALSE, warning=FALSE}
+
+pander(summary(lm1))
+
+```
+
+## graphing the model 
+
+```{r message=FALSE, warning=FALSE}
+
+
+
+p1 <- dat3 %>% 
+  mutate(GarageCars = case_when(
+    GarageCars %in% c("Garage0", "Garage1", "Garage3Up") ~ "Garage013",
+    TRUE ~ GarageCars
+  )) %>% 
+  ggplot(aes(TotalSF, SalePriceLog, color = GarageCars))+
+  geom_point()+
+  stat_function(fun = function(x) (b[1] + b[3]) + b[2] * x + b[10] * x, color = "skyblue")+
+  stat_function(fun = function(x) (b[1] + b[3]) + b[2] * x, color = "red")+
+  labs(title = "Quality Rating 4 or Less")
+
+p2 <- dat3%>% 
+  mutate(GarageCars = case_when(
+    GarageCars %in% c("Garage0",  "Garage3Up") ~ "Garage03",
+    TRUE ~ GarageCars
+  )) %>% 
+  ggplot(aes(TotalSF, SalePriceLog, color = GarageCars))+
+  geom_point()+
+  stat_function(fun = function(x) (b[1] + b[4]) + b[2] * x + b[11] * x, color = "green")+
+  stat_function(fun = function(x) (b[1] + b[4]) + b[2] * x, color = "firebrick")+
+  stat_function(fun = function(x) (b[1] + b[4] + b[8]) + b[2] * x, color = "skyblue")+
+  labs(title = "Quality Rating 5")
+  
+p3 <- dat3 %>% 
+  mutate(GarageCars = case_when(
+    GarageCars %in% c("Garage0", "Garage1",  "Garage3Up") ~ "Garage013",
+    TRUE ~ GarageCars
+  )) %>% 
+  ggplot(aes(TotalSF, SalePriceLog, color = GarageCars))+
+  geom_point()+
+  stat_function(fun = function(x) (b[1] + b[5]) + b[2] * x + b[9], color = "skyblue")+
+  stat_function(fun = function(x) (b[1] + b[5]) + b[2] * x, color = "firebrick")+
+  labs(title = "Quality Rating 6")
+
+ p4 <- dat3 %>% 
+  mutate(GarageCars = case_when(
+    GarageCars %in% c("Garage0", "Garage1","Garage2",  "Garage3Up") ~ "AllGarageTypes",
+    TRUE ~ GarageCars
+  )) %>%  
+  ggplot(aes(TotalSF, SalePriceLog, color = GarageCars))+
+  geom_point()+
+  stat_function(fun = function(x) (b[1] + b[6]) + b[2] * x, color = "firebrick")+
+  labs(title = "Quality Rating 7")
+
+p5 <- dat3 %>% 
+  mutate(GarageCars = case_when(
+    GarageCars %in% c("Garage0", "Garage1","Garage2") ~ "Garage012",
+    TRUE ~ GarageCars
+  )) %>% 
+  ggplot(aes(TotalSF, SalePriceLog, color = GarageCars))+
+  geom_point()+
+  stat_function(fun = function(x) (b[1] + b[7]) + b[2] * x, color = "firebrick")+
+  stat_function(fun = function(x) (b[1] + b[7]) + b[2] * x + b[12] * x, color = "skyblue")+
+  labs(title = "Quality Rating 8")
+
+p1
+p2
+p3
+p4
+p5
+
+# dat3 %>% 
+#   ggplot(aes(TotalSF, SalePriceLog, color = GarageCars))+
+#   geom_point()+
+#   labs(title = "Quality Rating 4 or Less")+
+#   facet_wrap(~interaction(
+#      OverallQual
+#     ,GarageCars
+#     ,MSZoning
+#   ))#, labeller="label_both"))
+
+```
+
+## Data
+
+### Raw Data
+
+```{r message=FALSE, warning=FALSE}
+
+dat
+
+```
+
+### Clean Data
+
+```{r message=FALSE, warning=FALSE}
+
+dat2
+
+```

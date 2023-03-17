@@ -1,0 +1,40 @@
+---
+title: "Analysis - House Selling Prices"
+output: 
+  html_document:
+    theme: cerulean
+    code_folding: hide
+---
+
+```{r, include=FALSE}
+# load packages
+library(tidyverse)
+library(pander)
+library(DT)
+library(dplyr)
+library(car)
+# load dataset
+train <- read.csv("../../Data/train copy.csv", header=TRUE)
+#View(train)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+
+train <- train %>%
+  mutate(TotalArea = GrLivArea + TotalBsmtSF,
+         LotShape2 = as.factor(ifelse(LotShape %in% c("IR1","IR2"), 1, 0)))
+
+summary(lm(SalePrice ~ TotalArea, data=train))
+
+```
+
+```{r message=FALSE, warning=FALSE}
+plot(SalePrice ~ TotalArea, data=train, col=as.factor(LotShape))
+lm1 <- lm(SalePrice ~ TotalArea, data=train)
+abline(lm1)
+```
+
+```{r message=FALSE, warning=FALSE}
+pander(summary(lm(SalePrice ~ TotalArea, data=train)))
+```
+

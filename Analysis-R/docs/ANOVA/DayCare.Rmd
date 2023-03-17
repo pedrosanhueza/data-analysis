@@ -1,0 +1,249 @@
+---
+title: "Day Care Fines"
+output: 
+  html_document:
+    theme: cerulean
+    code_folding: hide
+---
+
+
+```{r, warning=FALSE, message=FALSE}
+library(mosaic)
+# library(DT)
+library(pander)
+library(car)
+library(tidyverse)
+
+# To get the "late" dataset into your R Console, 
+# you need to go to your file menu of R-Studio and select
+# "Session, Set working directory, To source file location"
+# Then click the green "play" arrow in 
+# the top right corner of this gray R-Chunk. 
+
+## Wide data from original article:
+late <- read.csv("late.csv", header=TRUE) 
+
+## Change to "long" data for use in R:
+Late <- pivot_longer(late, #Start with wide data set late
+               cols = starts_with("Week"), #Find columns to gather from long data
+               names_to = "Week", #New column name of Weeks in long data
+               names_prefix = "Week", #Remove prefix of Week from Week1, Week2, ...
+               names_transform = list(Week= ~as.numeric(.x)), #Make Week a numeric column of data
+               values_to = "NumberofLateChildren") #Name of data column in long data
+
+```
+
+
+
+----
+
+<!--If you want to give your critiquers some ideas about what you have questions on and would like help with, place those details here.-->
+
+**Comments to Critiquers:** 
+
+
+
+<!--End your comments to your critiquers before this line.-->
+
+----
+
+
+## Background {.tabset .tabset-fade}
+
+### Overview
+<!-- Be sure to add your own background here before beginning the Analysis. -->
+
+
+
+
+
+
+
+<!--End your background before here.-->
+<!--Click the little black arrow to 
+the left to expand/hide these next sections.-->
+### Study Details
+
+<div style="color:#a8a8a8;">
+This background is quoted directly from the article ["A Fine is a Price"](http://rady.ucsd.edu/faculty/directory/gneezy/pub/docs/fine.pdf). 
+</div>
+
+<div style="padding-left:30px; padding-right:30px;">
+
+There are two types of day-care centers in Israel: private and public. A study was conducted in 10 private day-care centers in the city of Haifa from January to June 1998. All of these centers are located in the same part of town, and there is no important difference among them. During the day children are organized into groups according to age, from 1 to 4 years old. Each day-care center is allowed to hold a maximum of 35 children. In some exceptional cases a few additional children are allowed. The fee for each child is NIS 1,400 per month. (The NIS is the New Israeli Shekel.) At the time of the study, a U.S. dollar was worth approximately NIS 3.68, so the fee was about $380 at that time. 
+
+The contract signed at the beginning of the year states that the day-care
+center operates between 0730 and 1600. There is no mention of what happens if parents come late to pick up their children. In particular, before the beginning of the study, there was no fine for coming late. When parents did not come on time, one of the teachers had to wait with the children concerned. Teachers would rotate in this task, which is considered part of the job of a teacher, a fact that is clearly explained when a teacher is hired. Parents rarely came after 1630. 
+
+A natural option [to fix the problem of parents showing up late] is to introduce a fine: every time a parent comes late, [they] will have to pay a fine. Will that reduce the number of parents who come late? If the fine is removed, will things revert back to the way they were originally?
+
+The overall period of the study was 20 weeks. In the first 4 weeks we
+simply recorded the number of parents who arrived late each week. At the
+beginning of the fifth week, we introduced a fine in six of the 10 day-care centers, which had been selected randomly. The announcement of the fine was made with a note posted on the bulletin board of the day-care center. Parents tend to look at this board every day, since important announcements are posted there. The announcement specified that the fine would be NIS 10 for a delay of 10 minutes or more. The fine was per child; thus, if parents had two children in the center and they came late, they had to pay NIS 20. Payment was made to the principal of the day-care center at the end of the month. Since monthly payments are made to the owner during the year, the fines were added to those amounts. The money was paid to the owner, rather then to the teacher who was staying late (and did not get any additional money). The teachers were informed of the fine but not of the study. Registering the names of parents who came late was a common practice in any case.
+
+At the beginning of the seventeenth week, the fine was removed with no explanation. Notice of the cancellation was posted on the board. If parents asked why the fines were removed, the principals were instructed to reply that the fine had been a trial for a limited time and that the results of this trial were now being evaluated.
+
+A comparison with other fines in Israel may give an idea of the size of
+the penalty that was introduced. A fine of NIS 10 is relatively small but not insignificant. In comparison, the fine for illegal parking is NIS 75; the fine for driving through a red light is NIS 1,000 plus penalties; the fine for not collecting the droppings of a dog is NIS 360. For many of these violations, however, detection and enforcement are low or, as in the case of dog dirt, nonexistent in practice. A baby-sitter earns between NIS 15 and NIS 20 per hour. The average gross salary per month in Israel at the time of the study was NIS 5,595.
+
+</div>
+
+
+### The Data (Wide)
+
+
+The `late` Day Care Center data is shown here in the "wide data format". 
+
+```{r, out.width=300}
+#Show the full width of the "Wide" version of the late data:
+pander(late, split.tables = Inf)
+```
+
+
+### The Data (Long)
+
+The `Late` Day Care Center data is shown here in the "long data format".
+
+```{r}
+pander(Late)
+```
+
+
+ 
+##  
+<!-- You can begin writing again after here.-->
+
+## Analysis
+
+In this analysis I am studying the number of parents that come late to pick up their children, before a fee, with a fee, and after the fee.
+
+For this study, I am going to make sure to check the following assumptions about the data:
+
+1 ) The samples of data can be considered to be representative of their population.
+2 ) The data is normally distributed in each group.
+3 ) The population variance of each group can be assumed to be the same.
+
+
+
+### Hypotheses
+
+This analysis will use a two-way ANOVA with the factors of `Treatment` and `Center` and their interaction. Thus, we have three sets of hypotheses that need to be stated in order to understand the effect of each on the average number of late children.
+
+1. Does the type of `Treatment` affect the avereage number of late children?
+
+Factor: `Treatment` with levels $A$ and $B$.
+$$
+  H_0: \mu_A = \mu_B = \mu
+$$
+$$
+  H_a: \mu_A \neq \mu_B 
+$$
+
+2. Does the `Group Type` affect the average number of late children?
+
+Factor: `Group Type` with levels 1 through 4, 5 through 16, and 17 through 20 representing each group type.
+$$
+  H_0: \mu_L = \mu_M = \mu_H = \mu
+$$
+$$
+  H_a: \mu_i \neq \mu \ \text{for at least one}\ i\in\{1-4,5-16,17-20\}
+$$
+
+
+3. Does the effect of `Treatment` change for different types of `Week Group`?
+
+(Does the effect of `Week Group` change for different levels of `Treatment`?) In other words, is there an interaction between `Week Group` and `Treatment`?
+
+$$
+  H_0: \text{The effect of Treatment is the same for all types of Week Group}
+$$
+$$
+  H_a: \text{The effect of Treatment is not the same for all types of Week Group}
+$$
+
+A significance level of $\alpha = 0.05$ will be used for this study.
+
+
+### Two-way ANOVA
+
+To perform the analysis I compute the following Two-way ANOVA. 
+
+```{r message=FALSE, warning=FALSE}
+
+# Group weeks by fine alteration
+
+Late <- Late %>%
+mutate(Week = case_when(
+Week > 0 & Week <= 4  ~ "No-Fine",
+Week > 4 & Week <= 16 ~ "Late-Fine",
+Week > 16 & Week <= 20 ~ "Fine-Removed"),
+WeekGroup = factor(Week, levels=c("No-Fine", "Late-Fine", "Fine-Removed"), ordered=TRUE))
+
+```
+
+```{r message=FALSE, warning=FALSE}
+# Calculate Two-way ANOVA
+# Factors: Treatment & WeekGroup
+daycare.aov <- aov(NumberofLateChildren ~ Treatment + WeekGroup + Treatment:WeekGroup, data = Late)
+summary(daycare.aov) %>% pander()
+```
+
+The ANOVA table listed in the above output contains three p-values, one for each hypothesis test that was stated previously. The conclusions are that the Week Groups are not a significant factor (p = 5.456e-06 ≈ 0), and Treatment does not have a significant effect on the number of late children as well (p = 4.925e-12 ≈ 0), and the effect of Treatment seems to depend on the type of Weekly Group because the interaction term is also significant (p = 4.162e-06 ≈ 0).
+
+#### Diagnostic Plots
+
+The validity of the above ANOVA could be questionable, as shown in the following plot.
+The "Residuals vs Fitted" values (graph in the left) seems to have differences in the length of the value sets, nevertheless, we can assume that the variance change is not significantly big to invalid the ANOVA, therfore, we can assume that the results of the test can be considered valid.
+
+```{r message=FALSE, warning=FALSE}
+par(mfrow=c(1,2))
+plot(daycare.aov, which=1:2, pch=16)
+```
+
+### Plots Summary and Conclutions
+
+
+
+#### Treatment Type
+
+```{r message=FALSE, warning=FALSE}
+xyplot(NumberofLateChildren ~ as.factor(Treatment), data=Late, type=c("p","a"), main="Treatment Type") 
+
+Late %>%
+  group_by(Treatment) %>%
+  summarise(`Mean Number of Late Children`=mean(Treatment, na.rm = True)) %>%
+  pander(caption="Mean Treatment according to Treatment Type")
+
+```
+
+
+#### Week Group Type
+
+
+```{r message=FALSE, warning=FALSE}
+xyplot(NumberofLateChildren ~ as.factor(WeekGroup), data=Late, type=c("p","a"), main="Treatment Type") 
+
+Late %>%
+  group_by(WeekGroup) %>%
+  summarise("Mean Number of Late Children"=mean(as.factor(Treatment))) %>%
+  pander(caption="Mean Treatment according to the Week Group")
+```
+
+#### Treatment Type Depending on Week Group Type
+
+
+```{r message=FALSE, warning=FALSE}
+xyplot(NumberofLateChildren ~ as.factor(Treatment), data=Late, groups=WeekGroup, type=c("p","a"), main="Significance of the Interaction", auto.key=list(corner=c(1,1)))
+
+Late %>%
+  group_by(WeekGroup, Treatment) %>%
+  summarise(ave=mean(NumberofLateChildren)) %>%
+  spread(Treatment, ave) %>%
+  pander(caption="Mean late times parents pick up their childrean according to Week Group Type (No-Fine, Late-Fine, Fine-Removed,B) and Treatment Level (Fine, Control)")
+```
+
+## Final Thoughts
+
+Based on the data, the effect of adding a late fine caused an increment in the number of parent that picked up their children late. Removing the fine help increasing the number as well.
+
+We could assume that parents rather pay about 10 to 20 NIS than picking up their children on time. If a day-care in Haifa, Israel, I recommend not adding a late fee at all, or adding one that is high enough to discourage parents to make that payment.

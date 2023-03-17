@@ -1,0 +1,153 @@
+---
+title: "Simple Linear Regression"
+output:
+  html_document:
+    theme: cerulean
+    code_folding: hide
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    number_sections: false
+    fig_caption: true
+    df_print: paged
+    highlight: tango
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding,
+  output_file = file.path(dirname(inputFile), 'index.html')) })
+---
+
+```{r, message=FALSE, warning=FALSE}
+# Load libraries
+library(tidyverse)
+library(pander)
+library(ggplot2)
+library(dplyr)
+
+# Read the data into R
+billionaires <- read.csv("Billionaires.csv", header=TRUE)
+
+# Filter out NA values in the "Children" and "NetWorth" columns
+billionaires <- billionaires %>%
+  drop_na(Age, Real.Time.Net.Worth) %>%
+  rename(NetWorth = Real.Time.Net.Worth)
+
+# Convert Net Worth column to numeric
+billionaires$NetWorth <- ifelse(grepl("B", billionaires$NetWorth),
+                                as.numeric(gsub("\\$|B", "", billionaires$NetWorth)) * 1e9,
+                                as.numeric(gsub("\\$|M", "", billionaires$NetWorth)) * 1e6)
+
+
+```
+
+<!-- Directions
+
+Come up with a simple linear regression of your own creation. 
+
+* Write the Background and clearly state your question. Then collect data and perform the linear regression analysis in order to answer your question. Use the proper order of first, ask the question, then second, figure out the answer.
+
+* You should collect both the quantitative response variable and the quantitative explanatory variable yourself. This can be data you collect from 
+    - the internet (like weather data, Facebook data, or sports data) 
+    - your own experiment 
+    - your own observational study
+* However,     
+    - The data should not be a single pre-existing dataset. It must be something that you piece together yourself.
+
+* You need at least $n=3$ $(X,Y)$ pairs to perform the regression. However, your regression will only be useful if you can get around $n=10$ or more observations.
+
+-->
+
+<br>
+
+<center>
+
+![](billionaires-graphic.png)
+
+</center>
+
+<br>
+
+## Introduction
+
+In this case study, I will be examining the relationship between age and net worth in a dataset of billionaires. The analysis involves fitting a simple linear regression model to the data and examining the resulting statistical measures. The insights gained from the analysis can inform our understanding of how age impacts net worth in this particular population.
+
+## Hypothesis
+
+I think that there may be a connection between **age** and **net worth** of billionaires, indicating that the older they are, the higher their net worth.
+
+To explore this, I'll create a linear regression model with net worth as the dependent variable and age as the independent variable.
+
+$$
+  H_0: \text{Age is not a predictor of net worth among billionaires}
+$$ 
+
+$$
+  H_a: \text{Age is a significant predictor of net worth among billionaires}
+$$
+
+I will use a simple linear regression model to determine the linear relationship between age and net worth. The formula for the model is:
+
+$$
+  \underbrace{Y_i}_\text{Net Worth} = \beta_0 + \beta_1 \underbrace{X_i}_\text{Age} + \epsilon_i \quad \text{where} \ \epsilon_i \sim N(0, \sigma^2) 
+$$
+
+## Analysis
+
+I'll start by visualizing the **connection between age and net worth** on a scatter plot. This way, I can see how these variables interact visually and spot any peculiarities or oddities.
+
+<div style="display:block;margin-left:auto;margin-right:auto;width: 80%;">
+
+```{r message=FALSE, warning=FALSE}
+# Fit a linear regression model to the data
+billionaires_regression <- lm(NetWorth ~ Age, data = billionaires)
+
+# Calculate the z-score for net worth
+billionaires$z_score <- abs(scale(billionaires$NetWorth))
+
+# Filter out the outliers
+billionaires_filtered <- filter(billionaires, z_score <= 3)
+
+# Create a scatterplot with outliers removed and linear regression line
+ggplot(billionaires_filtered, aes(x = Age, y = NetWorth)) +
+  geom_point(aes(color = "Inliers"), size = 1.5, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE, color = "#003333", size = 1) +
+  annotate("text", x = 50, y = 80, label = "Linear Regression Line",
+           size = 4, fontface = "bold", color = "#003333") +
+  theme_classic() +
+  labs(x = "Age (years)", y = "Net Worth (billion USD)", color = ' ') +
+  ggtitle("Relationship between Age and Net Worth among Billionaires") +
+  scale_y_continuous(labels = scales::dollar_format(scale = 1e-9, suffix = "B")) +
+  scale_color_manual(values=c("#008080")) +
+  theme(plot.title = element_text(size = 14, hjust = 0.5),
+        plot.subtitle = element_text(size = 12, hjust = 0.5, color = "grey40"),
+        axis.title = element_text(size = 12),
+        axis.text = element_text(size = 10),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 10)) +
+  labs(subtitle = "Outliers removed (|z-score| > 3)")
+
+```
+
+</div>
+
+Since the scatter plot has many data points, it can be confusing to draw conclusions from. To better understand the strength and significance of the relationship, I will compute the p-value and R-squared.
+
+```{r message=FALSE, warning=FALSE}
+pander(summary(billionaires_regression))
+```
+
+## Conclusion
+
+These statistical measures show computations on how well the model fits the data and how strong the relationship is. After analyzing them, this are some of the insights I conclude:
+
+* The intercept of the linear regression model is estimated to be 2.808 billion USD.
+* The coefficient for the Age variable is estimated to be 31.95 million USD per year of age.
+* The t-value for the Age variable is 1.992, which is statistically significant at the 5% level.
+* **The p-value for the Age variable is 0.0465, which is below the 0.05 threshold and indicates that there is evidence to suggest that age is a significant predictor of net worth.**
+* The residual standard error is 1.065 billion USD, which measures the variability of the data around the fitted line.
+* The R-squared value is 0.001626, indicating that only a very small proportion of the variability in net worth is explained by age.
+* The adjusted R-squared value is 0.001216, which takes into account the number of variables in the model and penalizes the R-squared value for including irrelevant variables.
+
+<br><br><br>
+
+
+
+<br><br><br><br><br><br><br><br><br>
