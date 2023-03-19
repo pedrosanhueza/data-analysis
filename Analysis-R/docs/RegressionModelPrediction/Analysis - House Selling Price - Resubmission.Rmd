@@ -4,7 +4,6 @@ output:
   html_document:
     theme: cerulean
     code_folding: hide
-    toc: false
     number_sections: false
     fig_caption: true
     df_print: paged
@@ -28,9 +27,9 @@ library(DT)
 
 ### Introduction
 
-This analysis accurately predicts the house "SalePrice" base on a Kaggle dataset based on a regression model.
+This analysis predicts house prices using a Kaggle dataset and a regression model.
 
-For this, I created made some data cleaning and fitted a regression into it.
+I cleaned the data and fitted the model.
 
 __The Adjusted R^2 is 0.8219 with an R^2 of 0.809.__
 
@@ -150,16 +149,15 @@ dat3 %>%
 
 ### Interpretation
 
-Per each increase unit in square footage, the sale price increases by 0.0232% as an overall average.
-The change in square footage is related to the slope value, which is 0.000232.
+For each **incremental unit** in square footage, there is an average overall increase of **0.0232%** in the sale price. The correlation between the change in square footage and the slope value is **0.000232.**
 
-With the help of a graphing system, we are able to identify patterns in the data. Each of the graphs represent different situations based on the house rating and garage status.
+Through the utilization of a graphing system, patterns in the data can be identified. The various graphs represent different scenarios based on the property's **quality rating** and **garage status.**
 
-The houses with a quality rating of 4 and 2 car garage, have a percentage change of 0.00774 per unit of total square footage which puts the total percent change at 0.031% per unit change in total square footage.
+Properties with a quality rating of **4** and a **two-car garage** exhibit a percentage change of **0.00774** per unit of total square footage, resulting in a total percentage change of **0.031%** per unit change in total square footage.
 
-The houses with a quality rating of 5 and 1 car garage, have a percentage change of 0.029% per unit of total square footage.
+Properties with a quality rating of **5** and a **one-car garage** exhibit a percentage change of **0.029%** per unit of total square footage.
 
-The houses with a quality rating of 8 and 3 car garage, have a percentage change of 0.027% per unit of total square footage.
+Properties with a quality rating of **8** and a **three-car garage** exhibit a percentage change of **0.027%** per unit of total square footage.
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 

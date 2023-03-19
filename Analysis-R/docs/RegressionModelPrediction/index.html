@@ -1803,10 +1803,9 @@ display: none;
 <h2>Analysis</h2>
 <div id="introduction" class="section level3">
 <h3>Introduction</h3>
-<p>This analysis accurately predicts the house “SalePrice” base on a
-Kaggle dataset based on a regression model.</p>
-<p>For this, I created made some data cleaning and fitted a regression
-into it.</p>
+<p>This analysis predicts house prices using a Kaggle dataset and a
+regression model.</p>
+<p>I cleaned the data and fitted the model.</p>
 <p><strong>The Adjusted R^2 is 0.8219 with an R^2 of 0.809.</strong></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;train.csv&quot;</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1920,20 +1919,25 @@ into it.</p>
 </div>
 <div id="interpretation" class="section level3">
 <h3>Interpretation</h3>
-<p>Per each increase unit in square footage, the sale price increases by
-0.0232% as an overall average. The change in square footage is related
-to the slope value, which is 0.000232.</p>
-<p>With the help of a graphing system, we are able to identify patterns
-in the data. Each of the graphs represent different situations based on
-the house rating and garage status.</p>
-<p>The houses with a quality rating of 4 and 2 car garage, have a
-percentage change of 0.00774 per unit of total square footage which puts
-the total percent change at 0.031% per unit change in total square
-footage.</p>
-<p>The houses with a quality rating of 5 and 1 car garage, have a
-percentage change of 0.029% per unit of total square footage.</p>
-<p>The houses with a quality rating of 8 and 3 car garage, have a
-percentage change of 0.027% per unit of total square footage.</p>
+<p>For each <strong>incremental unit</strong> in square footage, there
+is an average overall increase of <strong>0.0232%</strong> in the sale
+price. The correlation between the change in square footage and the
+slope value is <strong>0.000232.</strong></p>
+<p>Through the utilization of a graphing system, patterns in the data
+can be identified. The various graphs represent different scenarios
+based on the property’s <strong>quality rating</strong> and
+<strong>garage status.</strong></p>
+<p>Properties with a quality rating of <strong>4</strong> and a
+<strong>two-car garage</strong> exhibit a percentage change of
+<strong>0.00774</strong> per unit of total square footage, resulting in
+a total percentage change of <strong>0.031%</strong> per unit change in
+total square footage.</p>
+<p>Properties with a quality rating of <strong>5</strong> and a
+<strong>one-car garage</strong> exhibit a percentage change of
+<strong>0.029%</strong> per unit of total square footage.</p>
+<p>Properties with a quality rating of <strong>8</strong> and a
+<strong>three-car garage</strong> exhibit a percentage change of
+<strong>0.027%</strong> per unit of total square footage.</p>
 <p><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 </div>
 </div>
