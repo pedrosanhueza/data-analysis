@@ -4,6 +4,7 @@ output:
   html_document:
     theme: cerulean
     code_folding: hide
+    toc: false
     number_sections: false
     fig_caption: true
     df_print: paged
