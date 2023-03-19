@@ -1,10 +1,18 @@
 ---
 title: "House Selling Prices"
-output: 
+output:
   html_document:
     theme: cerulean
     code_folding: hide
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    number_sections: false
+    fig_caption: true
     df_print: paged
+    highlight: tango
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding,
+  output_file = file.path(dirname(inputFile), 'index.html')) }) 
 ---
 
 # {.tabset .tabset-pills}
