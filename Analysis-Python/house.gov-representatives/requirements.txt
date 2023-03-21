@@ -1,0 +1,7 @@
+streamlit
+bs4
+seaborn
+plotly
+scipy
+kaleido
+vega_datasets
