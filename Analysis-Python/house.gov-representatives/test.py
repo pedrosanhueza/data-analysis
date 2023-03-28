@@ -5,7 +5,7 @@ st.write("Hello")
 st.markdown('''
 <head>
 	<title>US House of Representatives</title>
-	
+	<link rel="stylesheet" type="text/css" href="style.css">
     <style>
 		img {
 			width: 100%;
