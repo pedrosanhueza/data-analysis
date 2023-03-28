@@ -7,5 +7,5 @@ kaleido
 vega_datasets
 requests
 pandas
-matplotlib.pyplot
+matplotlib
 altair
