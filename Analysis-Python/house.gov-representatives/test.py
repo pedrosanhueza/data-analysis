@@ -1,7 +1,5 @@
 import streamlit as st
 
-st.write("Hello")
-
 st.markdown('''
 <head>
 	<title>US House of Representatives</title>
