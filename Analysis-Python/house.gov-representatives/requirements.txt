@@ -1,11 +1,7 @@
 streamlit
-bs4
-seaborn
-plotly
-scipy
-kaleido
-vega_datasets
 requests
+bs4
 pandas
 matplotlib
 altair
+plotly
