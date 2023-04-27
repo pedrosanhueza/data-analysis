@@ -1,0 +1,792 @@
+Destination,Destination Code,Departure,Flight,Airline,Terminal,Status,Date,Reference Day,url
+Panama City,(PTY),00:26,CM118,Copa Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Bogota,(BOG),00:30,LA572,LATAM Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Bogota,(BOG),00:30,DL7387,Delta Air Lines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Bogota,(BOG),00:30,QF4207,Qantas,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Auckland,(AKL),00:35,LA801,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Auckland,(AKL),00:35,CX7801,Cathay Pacific,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Auckland,(AKL),00:35,MH9781,Malaysia Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Auckland,(AKL),00:35,QF3876,Qantas,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Bogota,(BOG),00:40,AV240,Avianca,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Bogota,(BOG),00:40,AC6153,Air Canada,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Panama City,(PTY),00:47,CM276,Copa Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Antofagasta,(ANF),02:20,LA1296,LATAM Airlines,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Panama City,(PTY),02:34,CM475,Copa Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Campinas,(VCP),03:36,M38491,LATAM Cargo Brasil,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Rio De Janeiro,(GIG),04:00,H2620,Sky Airline,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Calama,(CJC),04:07,H2240,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Lima,(LIM),04:15,LA654,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Antofagasta,(ANF),04:31,LA128,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Iquique,(IQQ),04:31,LA174,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Puerto Montt,(PMC),04:31,LA99,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Puerto Montt,(PMC),04:31,DL6137,Delta Air Lines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Panama City,(PTY),04:31,CM396,Copa Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Calama,(CJC),04:33,LA392,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Cartagena,(CTG),04:33,AV132,Avianca,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Punta Arenas,(PUQ),04:45,H21,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Calama,(CJC),04:56,LA140,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Antofagasta,(ANF),05:00,LA126,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Iquique,(IQQ),05:00,JA110,JetSMART,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Lima,(LIM),05:00,H2802,Sky Airline,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Lima,(LIM),05:06,JZ7501,JetSMART Airlines Peru,2,Landed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Iquique,(IQQ),05:18,LA162,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Antofagasta,(ANF),05:19,LA136,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Calama,(CJC),05:25,LA146,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Concepcion,(CCP),05:38,H21163,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Antofagasta,(ANF),05:40,H2280,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Iquique,(IQQ),05:43,H2320,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+La Paz,(LPB),05:48,LA892,LATAM Airlines,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Concepcion,(CCP),05:50,LA11,LATAM Airlines,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Sao Paulo,(GRU),05:55,H2600,Sky Airline,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Puerto Montt,(PMC),05:58,LA59,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=0
+Arica,(ARI),06:00,H2300,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Sao Paulo,(GRU),06:00,LA8133,LATAM Airlines,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Sao Paulo,(GRU),06:00,BA4301,British Airways,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Sao Paulo,(GRU),06:00,DL6176,Delta Air Lines,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Sao Paulo,(GRU),06:00,QF3913,Qantas,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Montevideo,(MVD),06:00,JA700,JetSMART,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Bogota,(BOG),06:10,AV98,Avianca,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Lima,(LIM),06:10,LA528,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Punta Arenas,(PUQ),06:10,LA1161,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Calama,(CJC),06:13,LA142,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Buenos Aires,(AEP),06:24,JA1001,JetSMART,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Antofagasta,(ANF),06:30,H2274,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Antofagasta,(ANF),06:34,JA20,JetSMART,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Iquique,(IQQ),06:58,LA160,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Antofagasta,(ANF),07:00,LA122,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Balmaceda,(BBA),07:00,LA271,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Concepcion,(CCP),07:00,LA17,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Copiapo,(CPO),07:14,LA118,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Antofagasta,(ANF),07:15,LA124,LATAM Airlines,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Lima,(LIM),07:20,LA534,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Lima,(LIM),07:20,CX7834,Cathay Pacific,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Lima,(LIM),07:20,DL6129,Delta Air Lines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Lima,(LIM),07:20,QF3930,Qantas,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Calama,(CJC),07:43,LA388,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Calama,(CJC),07:49,JA2,JetSMART,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Lima,(LIM),07:50,LA650,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Lima,(LIM),07:50,DL7393,Delta Air Lines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Lima,(LIM),07:50,QF3931,Qantas,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Iquique,(IQQ),07:58,LA906,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Mexico City,(MEX),08:15,LA622,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Puerto Montt,(PMC),08:17,H2401,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+La Serena,(LSC),08:25,LA108,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Balmaceda,(BBA),08:35,H231,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Buenos Aires,(EZE),08:35,LA653,LATAM Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Mendoza,(MDZ),08:35,LA434,LATAM Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Mendoza,(MDZ),08:35,IB7151,Iberia,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Castro,(MHC),08:43,JA315,JetSMART,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Temuco,(ZCO),08:43,JA201,JetSMART,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Concepcion,(CCP),08:45,H2173,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Cordoba,(COR),08:45,LA492,LATAM Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Cordoba,(COR),08:45,IB7173,Iberia,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Antofagasta,(ANF),08:59,LA358,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Osorno,(ZOS),09:00,H21103,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Montevideo,(MVD),09:05,LA404,LATAM Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Montevideo,(MVD),09:05,DL7394,Delta Air Lines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Montevideo,(MVD),09:05,QF4209,Qantas,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Temuco,(ZCO),09:16,LA25,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Copiapo,(CPO),09:27,H2220,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Rio De Janeiro,(GIG),09:47,LA770,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Rio De Janeiro,(GIG),09:47,DL6334,Delta Air Lines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Rio De Janeiro,(GIG),09:47,QF3891,Qantas,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Buenos Aires,(EZE),09:50,KL702,KLM Royal Dutch Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Temuco,(ZCO),09:53,H2141,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Sao Paulo,(GRU),09:55,LA630,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Sao Paulo,(GRU),09:55,BA4309,British Airways,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Sao Paulo,(GRU),09:55,DL7399,Delta Air Lines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Sao Paulo,(GRU),09:55,QF3907,Qantas,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Concepcion,(CCP),10:07,LA219,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Concepcion,(CCP),10:07,IB7119,Iberia,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Castro,(MHC),10:11,LA69,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Valdivia,(ZAL),10:29,LA241,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Antofagasta,(ANF),10:30,LA350,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Antofagasta,(ANF),10:30,IB7125,Iberia,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Puerto Montt,(PMC),10:30,LA79,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Calama,(CJC),10:38,LA148,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Calama,(CJC),10:38,DL6179,Delta Air Lines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Calama,(CJC),10:38,IB7075,Iberia,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Copiapo,(CPO),10:43,LA112,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Copiapo,(CPO),10:43,IB7078,Iberia,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Puerto Montt,(PMC),10:45,H2421,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Iquique,(IQQ),11:04,LA168,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Iquique,(IQQ),11:04,IB7253,Iberia,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Calama,(CJC),11:20,LA370,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Madrid,(MAD),11:20,IB6830,Iberia,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Madrid,(MAD),11:20,BA4250,British Airways,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Madrid,(MAD),11:20,LA5410,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Madrid,(MAD),11:20,LY9210,El Al Israel Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Madrid,(MAD),11:20,QR5355,Qatar Airways,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+La Serena,(LSC),11:28,LA104,LATAM Airlines,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+La Serena,(LSC),11:28,IB7080,Iberia,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Sao Paulo,(GRU),11:30,LA752,LATAM Airlines,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Sao Paulo,(GRU),11:30,BA4303,British Airways,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Sao Paulo,(GRU),11:30,QF3905,Qantas,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+La Serena,(LSC),11:41,H2206,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Valdivia,(ZAL),11:41,H2121,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Panama City,(PTY),11:44,CM498,Copa Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Panama City,(PTY),11:44,KL3058,KLM Royal Dutch Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Panama City,(PTY),11:44,TK9657,Turkish Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Puerto Montt,(PMC),11:45,H2433,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Concepcion,(CCP),11:47,LA5,LATAM Airlines,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Concepcion,(CCP),11:47,DL6288,Delta Air Lines,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Paris,(CDG),11:55,AF401,Air France,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Paris,(CDG),11:55,KL2259,KLM Royal Dutch Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Calama,(CJC),11:55,LA390,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Osorno,(ZOS),11:57,LA49,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=6
+Iquique,(IQQ),12:07,H2480,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Iquique,(IQQ),12:25,LA1260,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Antofagasta,(ANF),12:29,H2270,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+La Serena,(LSC),12:42,LA316,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Trujillo,(TRU),12:50,JA494,JetSMART,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Antofagasta,(ANF),12:55,LA132,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Antofagasta,(ANF),12:55,DL7391,Delta Air Lines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Antofagasta,(ANF),12:55,QF3882,Qantas,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Arica,(ARI),13:17,LA180,LATAM Airlines,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Arica,(ARI),13:17,IB7068,Iberia,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Iquique,(IQQ),13:17,LA1262,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Buenos Aires,(AEP),13:20,AR1285,Aerolineas Argentinas,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Buenos Aires,(AEP),13:20,AM7513,Aeromexico,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Buenos Aires,(AEP),13:20,AZ4657,ITA Airways,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Buenos Aires,(AEP),13:20,KL9220,KLM Royal Dutch Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+La Serena,(LSC),13:20,H2460,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Antofagasta,(ANF),13:25,JA26,JetSMART,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Sydney,(SYD),13:40,QF28,Qantas,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Sydney,(SYD),13:40,LA807,LATAM Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Calama,(CJC),13:45,H2244,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Concepcion,(CCP),13:52,LA207,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Antofagasta,(ANF),14:02,LA360,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Punta Arenas,(PUQ),14:14,LA87,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Punta Arenas,(PUQ),14:14,DL6183,Delta Air Lines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Punta Arenas,(PUQ),14:14,IB7113,Iberia,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Punta Arenas,(PUQ),14:14,QF3947,Qantas,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Valdivia,(ZAL),14:20,H2123,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Curitiba,(CWB),14:27,LA782,LATAM Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Curitiba,(CWB),14:27,DL6320,Delta Air Lines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Osorno,(ZOS),14:30,H2101,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Concepcion,(CCP),14:33,LA9,LATAM Airlines,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Puerto Montt,(PMC),14:37,LA57,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Puerto Montt,(PMC),14:37,DL6136,Delta Air Lines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Puerto Montt,(PMC),14:37,IB7251,Iberia,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Calama,(CJC),14:43,LA380,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Buenos Aires,(AEP),14:45,WJ3013,Jetsmart Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Sao Paulo,(GRU),14:50,LA750,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Sao Paulo,(GRU),14:50,DL6124,Delta Air Lines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Sao Paulo,(GRU),14:50,QF3908,Qantas,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Iquique,(IQQ),14:57,JA116,JetSMART,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Buenos Aires,(EZE),15:00,H2507,Sky Airline,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Lima,(LIM),15:00,LA520,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Lima,(LIM),15:00,DL6282,Delta Air Lines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Lima,(LIM),15:00,QF3934,Qantas,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Bogota,(BOG),15:05,AV116,Avianca,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+London,(LHR),15:05,BA250,British Airways,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+London,(LHR),15:05,IB7716,Iberia,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Antofagasta,(ANF),15:09,LA134,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Antofagasta,(ANF),15:09,QF3883,Qantas,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+La Serena,(LSC),15:13,JA126,JetSMART,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Valdivia,(ZAL),15:18,LA41,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Calama,(CJC),15:20,H2250,Sky Airline,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Concepcion,(CCP),15:25,LA211,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Buenos Aires,(EZE),15:29,LA477,LATAM Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Miami,(MIA),15:34,UC1608,LATAM Cargo Chile,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Miami,(MIA),15:46,D51560,DHL Aero Expreso,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Calama,(CJC),15:50,LA156,LATAM Airlines,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Copiapo,(CPO),15:54,H2224,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Bogota,(BOG),16:00,LA576,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Bogota,(BOG),16:00,DL7389,Delta Air Lines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Bogota,(BOG),16:00,QF4206,Qantas,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Sao Paulo,(GRU),16:25,LA702,LATAM Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Sao Paulo,(GRU),16:25,DL6100,Delta Air Lines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Sao Paulo,(GRU),16:25,QF3910,Qantas,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Antofagasta,(ANF),16:51,LA362,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Calama,(CJC),17:08,LA374,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Puerto Montt,(PMC),17:10,LA261,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Copiapo,(CPO),17:13,LA116,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Temuco,(ZCO),17:13,LA23,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Temuco,(ZCO),17:13,IB7159,Iberia,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Concepcion,(CCP),17:28,LA213,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Antofagasta,(ANF),17:30,LA130,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Antofagasta,(ANF),17:30,H2272,Sky Airline,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Lima,(LIM),17:35,LA2696,LATAM Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Buenos Aires,(AEP),17:38,LA425,LATAM Airlines,2,Landed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Puerto Montt,(PMC),17:47,LA265,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+La Serena,(LSC),17:52,H2474,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+La Serena,(LSC),17:58,LA318,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=12
+Sao Paulo,(GRU),18:00,LA8131,LATAM Airlines,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Sao Paulo,(GRU),18:00,QF3906,Qantas,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Miami,(MIA),18:07,5Y8236,Atlas Air,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Buenos Aires,(AEP),18:20,H2535,Sky Airline,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Temuco,(ZCO),18:20,LA27,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Calama,(CJC),18:26,JA6,JetSMART,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Concepcion,(CCP),18:29,LA1261,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Iquique,(IQQ),18:37,LA164,LATAM Airlines,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Temuco,(ZCO),18:38,H2147,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Concepcion,(CCP),19:03,LA3,LATAM Airlines,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Arica,(ARI),19:04,H2304,Sky Airline,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Calama,(CJC),19:22,LA378,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Iquique,(IQQ),19:48,LA178,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Lima,(LIM),19:55,LA524,LATAM Airlines,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Lima,(LIM),19:55,DL6336,Delta Air Lines,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Lima,(LIM),19:55,QF3932,Qantas,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Los Angeles,(LSQ),20:00,LA9952,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Lima,(LIM),20:25,H2808,Sky Airline,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Buenos Aires,(EZE),20:30,LA471,LATAM Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Houston,(IAH),20:30,UA846,United Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Houston,(IAH),20:30,NH7253,ANA All Nippon Airways,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Miami,(MIA),20:55,AA912,American Airlines,2,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Concepcion,(CCP),21:00,H2167,Sky Airline,1,Landed - On-time [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Madrid,(MAD),21:20,LA706,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Madrid,(MAD),21:20,IB7109,Iberia,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Arica,(ARI),21:22,LA186,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Guayaquil,(GYE),21:26,LA1446,LATAM Airlines,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Punta Arenas,(PUQ),21:27,LA95,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Punta Arenas,(PUQ),21:27,QF3946,Qantas,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Puerto Montt,(PMC),21:29,LA255,LATAM Airlines,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Puerto Montt,(PMC),21:31,JA157,JetSMART,1,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Lima,(LIM),21:45,H25802,Sky Airline,2,En Route [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Buenos Aires,(AEP),21:55,AR1283,Aerolineas Argentinas,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Buenos Aires,(AEP),21:55,AZ4655,ITA Airways,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Buenos Aires,(AEP),21:55,KL9225,KLM Royal Dutch Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Buenos Aires,(AEP),21:55,UX3057,Air Europa,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Concepcion,(CCP),22:21,JA107,JetSMART,1,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Atlanta,(ATL),22:30,DL146,Delta Air Lines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Atlanta,(ATL),22:30,KE7300,Korean Air,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Atlanta,(ATL),22:30,LA6358,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+New York,(JFK),22:55,LA532,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+New York,(JFK),22:55,CX7822,Cathay Pacific,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+New York,(JFK),22:55,DL6061,Delta Air Lines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+New York,(JFK),22:55,JL7627,JAL Japan Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Miami,(MIA),23:20,LA500,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Miami,(MIA),23:20,DL6056,Delta Air Lines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Los Angeles,(LAX),23:35,LA602,LATAM Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Los Angeles,(LAX),23:35,CX7812,Cathay Pacific,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Los Angeles,(LAX),23:35,DL6063,Delta Air Lines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Los Angeles,(LAX),23:35,JL7623,JAL Japan Airlines,2,Landed - Delayed [+],2023-04-25,yesterday,https://www.santiago-airport.com/scl-departures?day=yesterday&tp=18
+Panama City,(PTY),00:26,CM118,Copa Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Bogota,(BOG),00:30,LA572,LATAM Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Bogota,(BOG),00:30,DL7387,Delta Air Lines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Bogota,(BOG),00:30,QF4207,Qantas,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Auckland,(AKL),00:35,LA801,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Auckland,(AKL),00:35,CX7801,Cathay Pacific,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Auckland,(AKL),00:35,MH9781,Malaysia Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Auckland,(AKL),00:35,QF3876,Qantas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Bogota,(BOG),00:40,AV240,Avianca,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Bogota,(BOG),00:40,AC6153,Air Canada,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Panama City,(PTY),00:47,CM276,Copa Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Buenos Aires,(EZE),00:50,H25577,Sky Airline,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Miami,(MIA),02:00,ET3509,Ethiopian Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Antofagasta,(ANF),02:20,LA1296,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Panama City,(PTY),02:34,CM475,Copa Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Sao Paulo,(GRU),03:36,M38491,LATAM Cargo Brasil,2,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Rio De Janeiro,(GIG),04:00,H2620,Sky Airline,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Lima,(LIM),04:15,LA654,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Lima,(LIM),04:15,DL6136,Delta Air Lines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Antofagasta,(ANF),04:31,LA342,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Arica,(ARI),04:31,LA180,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Panama City,(PTY),04:31,CM396,Copa Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Calama,(CJC),04:34,LA140,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Iquique,(IQQ),04:34,LA916,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Santa Cruz,(VVI),04:36,LA864,LATAM Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Lima,(LIM),05:00,H2802,Sky Airline,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Lima,(LIM),05:06,JZ7501,JetSMART Airlines Peru,2,Landed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Puerto Montt,(PMC),05:06,LA99,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Concepcion,(CCP),05:17,JA101,JetSMART,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Iquique,(IQQ),05:18,LA918,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Calama,(CJC),05:20,LA146,LATAM Airlines,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Antofagasta,(ANF),05:21,LA124,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Arica,(ARI),05:30,H2300,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Rio De Janeiro,(GIG),05:30,JA570,JetSMART,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Puerto Montt,(PMC),05:30,LA57,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Calama,(CJC),05:40,LA390,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Sao Paulo,(GRU),05:45,JA580,JetSMART,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Antofagasta,(ANF),05:49,H2280,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Calama,(CJC),05:51,H2240,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Bogota,(BOG),05:55,AV98,Avianca,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Sao Paulo,(GRU),05:55,H2600,Sky Airline,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Iquique,(IQQ),05:55,H2320,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=0
+Antofagasta,(ANF),06:00,LA120,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Concepcion,(CCP),06:00,LA205,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Sao Paulo,(GRU),06:00,LA8133,LATAM Airlines,2,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Sao Paulo,(GRU),06:00,BA4301,British Airways,2,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Sao Paulo,(GRU),06:00,QF3913,Qantas,2,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Calama,(CJC),06:02,JA2,JetSMART,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Lima,(LIM),06:10,LA2378,LATAM Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Calama,(CJC),06:20,LA148,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Concepcion,(CCP),06:25,H2161,Sky Airline,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Iquique,(IQQ),06:44,LA160,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Buenos Aires,(AEP),06:45,JA1001,JetSMART,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Concepcion,(CCP),06:45,LA211,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Calama,(CJC),06:55,LA150,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Puerto Montt,(PMC),07:02,LA257,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Copiapo,(CPO),07:03,LA114,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Punta Arenas,(PUQ),07:10,LA1161,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Balmaceda,(BBA),07:12,LA71,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Lima,(LIM),07:20,LA534,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Lima,(LIM),07:20,CX7834,Cathay Pacific,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Lima,(LIM),07:20,DL7389,Delta Air Lines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Lima,(LIM),07:20,QF3930,Qantas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Temuco,(ZCO),07:24,LA225,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Antofagasta,(ANF),07:26,LA126,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Temuco,(ZCO),07:31,JA355,JetSMART,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+La Serena,(LSC),07:45,LA108,LATAM Airlines,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Lima,(LIM),07:50,LA650,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Lima,(LIM),07:50,DL6302,Delta Air Lines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Lima,(LIM),07:50,QF3931,Qantas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Buenos Aires,(AEP),07:54,WJ3015,Jetsmart Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Castro,(MHC),08:05,H2191,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Mexico City,(MEX),08:15,LA622,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Copiapo,(CPO),08:17,H2220,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Iquique,(IQQ),08:21,LA172,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Puerto Montt,(PMC),08:24,H2401,Sky Airline,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Temuco,(ZCO),08:33,H2141,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Buenos Aires,(AEP),08:35,LA421,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Calama,(CJC),08:55,LA388,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Concepcion,(CCP),09:17,LA11,LATAM Airlines,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Concepcion,(CCP),09:17,DL7374,Delta Air Lines,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Antofagasta,(ANF),09:19,JA20,JetSMART,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Puerto Montt,(PMC),09:28,JA157,JetSMART,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Antofagasta,(ANF),09:38,LA128,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Antofagasta,(ANF),09:38,DL7365,Delta Air Lines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Antofagasta,(ANF),09:38,IB7125,Iberia,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Buenos Aires,(AEP),09:45,AR1281,Aerolineas Argentinas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Buenos Aires,(AEP),09:45,DL7615,Delta Air Lines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Rio De Janeiro,(GIG),09:47,LA770,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Rio De Janeiro,(GIG),09:47,DL7362,Delta Air Lines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Rio De Janeiro,(GIG),09:47,QF3891,Qantas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Buenos Aires,(EZE),09:50,KL702,KLM Royal Dutch Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Sao Paulo,(GRU),09:55,LA630,LATAM Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Sao Paulo,(GRU),09:55,BA4309,British Airways,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Sao Paulo,(GRU),09:55,DL7370,Delta Air Lines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Sao Paulo,(GRU),09:55,QF3907,Qantas,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Puerto Montt,(PMC),10:00,LA79,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Valdivia,(ZAL),10:02,H2121,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+La Serena,(LSC),10:24,H2206,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Castro,(MHC),10:25,LA69,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Iquique,(IQQ),10:49,LA168,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Iquique,(IQQ),10:49,IB7253,Iberia,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Sao Paulo,(GRU),10:50,LA752,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Sao Paulo,(GRU),10:50,QF3905,Qantas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Puerto Montt,(PMC),10:50,H2433,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Antofagasta,(ANF),10:54,LA352,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+La Serena,(LSC),10:57,LA100,LATAM Airlines,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+La Serena,(LSC),10:57,IB7080,Iberia,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Calama,(CJC),11:00,LA152,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Calama,(CJC),11:00,DL7383,Delta Air Lines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Calama,(CJC),11:00,IB7075,Iberia,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Concepcion,(CCP),11:09,LA17,LATAM Airlines,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Concepcion,(CCP),11:09,IB7119,Iberia,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Copiapo,(CPO),11:14,LA112,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Copiapo,(CPO),11:14,IB7078,Iberia,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Antofagasta,(ANF),11:16,LA358,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Madrid,(MAD),11:20,IB6830,Iberia,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Madrid,(MAD),11:20,BA4250,British Airways,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Madrid,(MAD),11:20,LA5410,LATAM Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Madrid,(MAD),11:20,LY9210,El Al Israel Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Madrid,(MAD),11:20,QR5355,Qatar Airways,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Osorno,(ZOS),11:21,H2103,Sky Airline,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Valdivia,(ZAL),11:34,LA241,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+La Serena,(LSC),11:40,LA110,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Panama City,(PTY),11:44,CM498,Copa Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Panama City,(PTY),11:44,KL3058,KLM Royal Dutch Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Panama City,(PTY),11:44,TK9657,Turkish Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Miami,(MIA),11:54,UC1514,LATAM Cargo Chile,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Paris,(CDG),11:55,AF401,Air France,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Paris,(CDG),11:55,KL2259,KLM Royal Dutch Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Quito,(UIO),11:55,MP7122,Martinair,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=6
+Buenos Aires,(EZE),12:00,LA451,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Osorno,(ZOS),12:04,LA49,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+La Serena,(LSC),12:13,H2472,Sky Airline,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Calama,(CJC),12:19,LA142,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Calama,(CJC),12:25,H2244,Sky Airline,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Antofagasta,(ANF),12:27,H2270,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Concepcion,(CCP),12:35,LA201,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Copiapo,(CPO),12:48,LA116,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Temuco,(ZCO),12:48,LA23,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Temuco,(ZCO),12:48,IB7159,Iberia,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Antofagasta,(ANF),12:53,LA132,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Iquique,(IQQ),13:02,LA1260,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Concepcion,(CCP),13:15,LA7,LATAM Airlines,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Buenos Aires,(AEP),13:20,AR1285,Aerolineas Argentinas,2,Landed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Buenos Aires,(AEP),13:20,AM7513,Aeromexico,2,Landed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Buenos Aires,(AEP),13:20,AZ4657,ITA Airways,2,Landed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Buenos Aires,(AEP),13:20,KL9220,KLM Royal Dutch Airlines,2,Landed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+La Serena,(LSC),13:35,H2460,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Iquique,(IQQ),13:44,H2322,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Iquique,(IQQ),14:04,LA1258,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Antofagasta,(ANF),14:06,JA26,JetSMART,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Mendoza,(MDZ),14:24,H2523,Sky Airline,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Porto Alegre,(POA),14:28,LA740,LATAM Airlines,2,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Porto Alegre,(POA),14:28,DL6170,Delta Air Lines,2,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Porto Alegre,(POA),14:28,QF8299,Qantas,2,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Antofagasta,(ANF),14:36,LA340,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Rio De Janeiro,(GIG),14:49,LA772,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Rio De Janeiro,(GIG),14:49,QF3890,Qantas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Sao Paulo,(GRU),14:50,LA750,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Sao Paulo,(GRU),14:50,DL7372,Delta Air Lines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Sao Paulo,(GRU),14:50,QF3908,Qantas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Calama,(CJC),14:55,JA6,JetSMART,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Buenos Aires,(EZE),15:00,H2507,Sky Airline,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Lima,(LIM),15:00,LA520,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Lima,(LIM),15:00,DL7364,Delta Air Lines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Lima,(LIM),15:00,QF3934,Qantas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Lima,(LIM),15:00,JA400,JetSMART,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Madrid,(MAD),15:00,LA708,LATAM Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Madrid,(MAD),15:00,IB7181,Iberia,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Bogota,(BOG),15:05,AV116,Avianca,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Asuncion,(ASU),15:10,LA1325,LATAM Airlines,2,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Puerto Montt,(PMC),15:14,LA59,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Puerto Montt,(PMC),15:14,DL6274,Delta Air Lines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Puerto Montt,(PMC),15:14,IB7251,Iberia,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Osorno,(ZOS),15:14,H2101,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Buenos Aires,(EZE),15:29,LA477,LATAM Airlines,2,Landed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Temuco,(ZCO),15:29,LA33,LATAM Airlines,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Punta Arenas,(PUQ),15:31,H21,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Iquique,(IQQ),15:41,LA900,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Montevideo,(MVD),15:46,LA406,LATAM Airlines,2,Landed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Montevideo,(MVD),15:46,DL7393,Delta Air Lines,2,Landed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Montevideo,(MVD),15:46,QF4208,Qantas,2,Landed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Concepcion,(CCP),15:53,LA5,LATAM Airlines,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Bogota,(BOG),16:00,LA576,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Bogota,(BOG),16:00,DL7369,Delta Air Lines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Bogota,(BOG),16:00,QF4206,Qantas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Copiapo,(CPO),16:01,H2224,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Sao Paulo,(GRU),16:25,LA702,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Sao Paulo,(GRU),16:25,DL7391,Delta Air Lines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Sao Paulo,(GRU),16:25,QF3910,Qantas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Iquique,(IQQ),16:31,LA166,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Antofagasta,(ANF),16:35,LA354,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Antofagasta,(ANF),16:35,QF3882,Qantas,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Calama,(CJC),16:36,LA372,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Iquique,(IQQ),16:53,JA116,JetSMART,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Cali,(CLO),17:05,JA650,JetSMART,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Puerto Montt,(PMC),17:06,LA61,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Calama,(CJC),17:08,LA144,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Copiapo,(CPO),17:10,LA330,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Iquique,(IQQ),17:11,LA1242,LATAM Airlines,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Cordoba,(COR),17:12,LA486,LATAM Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Cordoba,(COR),17:12,IB7108,Iberia,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Buenos Aires,(AEP),17:14,JA1005,JetSMART,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Copiapo,(CPO),17:14,H2226,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Antofagasta,(ANF),17:25,LA344,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+La Serena,(LSC),17:33,JA126,JetSMART,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Lima,(LIM),17:35,LA2696,LATAM Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Temuco,(ZCO),17:48,H2147,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+La Serena,(LSC),17:58,LA316,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=12
+Sao Paulo,(GRU),18:00,LA8131,LATAM Airlines,2,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Sao Paulo,(GRU),18:00,QF3906,Qantas,2,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Buenos Aires,(AEP),18:05,H2535,Sky Airline,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Buenos Aires,(EZE),18:09,LA657,LATAM Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Temuco,(ZCO),18:11,LA31,LATAM Airlines,1,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Mendoza,(MDZ),18:16,LA436,LATAM Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Mendoza,(MDZ),18:16,IB7104,Iberia,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Iquique,(IQQ),19:02,H21326,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Calama,(CJC),19:10,LA374,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Punta Arenas,(PUQ),19:17,LA81,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Punta Arenas,(PUQ),19:17,DL6278,Delta Air Lines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Punta Arenas,(PUQ),19:17,IB7113,Iberia,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Punta Arenas,(PUQ),19:17,QF3946,Qantas,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Arica,(ARI),19:27,LA184,LATAM Airlines,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Arica,(ARI),19:27,IB7068,Iberia,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Concepcion,(CCP),19:33,LA215,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Calama,(CJC),19:38,H2252,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Iquique,(IQQ),19:39,LA920,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Lima,(LIM),19:50,LA522,LATAM Airlines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Lima,(LIM),19:50,DL7390,Delta Air Lines,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Lima,(LIM),19:50,QF3936,Qantas,2,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Arica,(ARI),19:57,H2304,Sky Airline,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Los Angeles,(LSQ),20:00,LA9952,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Concepcion,(CCP),20:06,LA1255,LATAM Airlines,1,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Lima,(LIM),20:25,H2808,Sky Airline,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Houston,(IAH),20:30,UA846,United Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Houston,(IAH),20:30,NH7253,ANA All Nippon Airways,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Concepcion,(CCP),20:38,H2167,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Miami,(MIA),20:55,AA912,American Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Antofagasta,(ANF),21:10,H2274,Sky Airline,1,Landed - On-time [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Madrid,(MAD),21:20,LA706,LATAM Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Madrid,(MAD),21:20,IB7109,Iberia,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Guayaquil,(GYE),21:26,LA1446,LATAM Airlines,2,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Punta Arenas,(PUQ),21:35,LA295,LATAM Airlines,1,Unknown [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Lima,(LIM),21:45,H25802,Sky Airline,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Buenos Aires,(AEP),21:55,AR1283,Aerolineas Argentinas,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Buenos Aires,(AEP),21:55,AZ4655,ITA Airways,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Buenos Aires,(AEP),21:55,KL9225,KLM Royal Dutch Airlines,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Buenos Aires,(AEP),21:55,UX3057,Air Europa,2,Landed - Delayed [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Atlanta,(ATL),22:30,DL146,Delta Air Lines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Atlanta,(ATL),22:30,KE7300,Korean Air,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Atlanta,(ATL),22:30,LA6358,LATAM Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Miami,(MIA),22:35,QT4094,Avianca Cargo,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Miami,(MIA),22:51,5Y34,Atlas Air,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+New York,(JFK),22:55,LA532,LATAM Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+New York,(JFK),22:55,DL6061,Delta Air Lines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+New York,(JFK),22:55,JL7627,JAL Japan Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Miami,(MIA),23:20,LA500,LATAM Airlines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Miami,(MIA),23:20,DL6064,Delta Air Lines,2,En Route [+],2023-04-26,today,https://www.santiago-airport.com/scl-departures?day=today&tp=18
+Panama City,(PTY),00:26,CM118,Copa Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Bogota,(BOG),00:30,LA578,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Bogota,(BOG),00:30,DL7387,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Bogota,(BOG),00:30,QF4207,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Auckland,(AKL),00:35,LA801,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Auckland,(AKL),00:35,CX7801,Cathay Pacific,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Auckland,(AKL),00:35,MH9781,Malaysia Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Auckland,(AKL),00:35,QF3876,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Bogota,(BOG),00:40,AV240,Avianca,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Bogota,(BOG),00:40,AC6153,Air Canada,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Panama City,(PTY),00:47,CM276,Copa Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Miami,(MIA),01:05,ET3511,Ethiopian Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Antofagasta,(ANF),02:25,LA1296,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Panama City,(PTY),02:34,CM475,Copa Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Sao Paulo,(GRU),03:36,M38493,LATAM Cargo Brasil,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Rio De Janeiro,(GIG),04:00,H2620,Sky Airline,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Lima,(LIM),04:15,LA654,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Lima,(LIM),04:15,DL6043,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Iquique,(IQQ),04:24,H2320,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Puerto Montt,(PMC),04:31,LA57,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Panama City,(PTY),04:31,CM396,Copa Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Punta Arenas,(PUQ),04:31,LA291,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Calama,(CJC),04:32,LA148,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Antofagasta,(ANF),04:36,LA120,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Arica,(ARI),04:38,LA180,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Lima,(LIM),04:41,JA402,JetSMART,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Iquique,(IQQ),04:44,LA172,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Lima,(LIM),05:00,H2802,Sky Airline,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Puerto Montt,(PMC),05:10,LA99,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Calama,(CJC),05:27,JA2,JetSMART,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Arica,(ARI),05:30,H2300,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Calama,(CJC),05:30,LA140,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Puerto Montt,(PMC),05:33,LA261,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Iquique,(IQQ),05:40,LA162,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Calama,(CJC),05:44,H2240,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Antofagasta,(ANF),05:45,LA126,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Concepcion,(CCP),05:45,H21163,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Antofagasta,(ANF),05:49,H2280,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Bogota,(BOG),05:55,AV98,Avianca,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Sao Paulo,(GRU),05:55,H2600,Sky Airline,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Concepcion,(CCP),05:59,LA215,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=0
+Sao Paulo,(GRU),06:00,LA8133,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Sao Paulo,(GRU),06:00,BA4303,British Airways,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Sao Paulo,(GRU),06:00,QF3913,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Montevideo,(MVD),06:00,JA700,JetSMART,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Lima,(LIM),06:10,LA528,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Antofagasta,(ANF),06:14,JA20,JetSMART,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Calama,(CJC),06:20,LA146,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Buenos Aires,(AEP),06:24,JA1001,JetSMART,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Antofagasta,(ANF),06:35,LA128,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Concepcion,(CCP),06:44,LA211,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Punta Arenas,(PUQ),07:00,H21,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Balmaceda,(BBA),07:12,LA71,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Copiapo,(CPO),07:14,LA112,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Iquique,(IQQ),07:19,JA112,JetSMART,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Lima,(LIM),07:20,LA534,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Lima,(LIM),07:20,CX7834,Cathay Pacific,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Lima,(LIM),07:20,DL6136,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Lima,(LIM),07:20,QF3930,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Calama,(CJC),07:30,LA144,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Copiapo,(CPO),07:39,H2220,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Antofagasta,(ANF),07:45,LA134,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Antofagasta,(ANF),07:45,DL7397,Delta Air Lines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Lima,(LIM),07:50,LA650,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Lima,(LIM),07:50,DL7393,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Lima,(LIM),07:50,QF3931,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+La Serena,(LSC),07:55,LA108,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Puerto Montt,(PMC),07:57,JA151,JetSMART,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Temuco,(ZCO),07:57,LA25,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Toronto,(YYZ),08:00,AC93,Air Canada,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Iquique,(IQQ),08:02,LA906,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Mexico City,(MEX),08:15,LA622,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Puerto Montt,(PMC),08:17,H2421,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Buenos Aires,(EZE),08:35,LA653,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Mendoza,(MDZ),08:35,LA434,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Mendoza,(MDZ),08:35,IB7151,Iberia,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Bogota,(BOG),08:40,LA580,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Bogota,(BOG),08:40,DL7389,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Bogota,(BOG),08:40,QF4205,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Cordoba,(COR),08:45,LA492,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Cordoba,(COR),08:45,IB7173,Iberia,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Concepcion,(CCP),08:47,LA7,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Concepcion,(CCP),08:47,DL6311,Delta Air Lines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Lima,(LIM),09:01,JZ7501,JetSMART Airlines Peru,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Montevideo,(MVD),09:05,LA404,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Montevideo,(MVD),09:05,DL7373,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Montevideo,(MVD),09:05,QF4209,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Valdivia,(ZAL),09:07,H2121,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Punta Arenas,(PUQ),09:10,LA1161,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Punta Arenas,(PUQ),09:10,DL6289,Delta Air Lines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+La Serena,(LSC),09:25,LA316,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+La Serena,(LSC),09:25,IB7080,Iberia,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Iquique,(IQQ),09:30,H2332,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Buenos Aires,(AEP),09:45,AR1281,Aerolineas Argentinas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Buenos Aires,(AEP),09:45,DL7615,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Rio De Janeiro,(GIG),09:47,LA770,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Rio De Janeiro,(GIG),09:47,DL6334,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Rio De Janeiro,(GIG),09:47,QF3891,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Temuco,(ZCO),09:48,H2141,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Concepcion,(CCP),09:49,H21161,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Buenos Aires,(EZE),09:50,KL702,KLM Royal Dutch Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Calama,(CJC),09:52,LA150,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Calama,(CJC),09:52,DL6126,Delta Air Lines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Calama,(CJC),09:52,IB7075,Iberia,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Sao Paulo,(GRU),09:55,LA758,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Sao Paulo,(GRU),09:55,BA4301,British Airways,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Sao Paulo,(GRU),09:55,DL6283,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Sao Paulo,(GRU),09:55,QF3908,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+La Serena,(LSC),10:20,H2202,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Temuco,(ZCO),10:21,LA23,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Temuco,(ZCO),10:21,IB7159,Iberia,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Valdivia,(ZAL),10:27,LA241,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Antofagasta,(ANF),10:43,LA348,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Antofagasta,(ANF),10:43,IB7125,Iberia,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Miami,(MIA),11:00,LA502,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Miami,(MIA),11:00,DL6067,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Puerto Montt,(PMC),11:00,H2433,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Osorno,(ZOS),11:04,H2101,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Puerto Montt,(PMC),11:06,LA79,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Iquique,(IQQ),11:10,LA904,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Iquique,(IQQ),11:10,IB7071,Iberia,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Madrid,(MAD),11:20,IB6830,Iberia,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Madrid,(MAD),11:20,BA4250,British Airways,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Madrid,(MAD),11:20,CX1920,Cathay Pacific,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Madrid,(MAD),11:20,LA5410,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Madrid,(MAD),11:20,LY9210,El Al Israel Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Madrid,(MAD),11:20,QR5355,Qatar Airways,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Concepcion,(CCP),11:23,JA291,JetSMART,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Calama,(CJC),11:28,LA386,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Antofagasta,(ANF),11:30,LA352,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Sao Paulo,(GRU),11:30,LA752,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Sao Paulo,(GRU),11:30,BA4305,British Airways,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Sao Paulo,(GRU),11:30,QF3905,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Copiapo,(CPO),11:31,LA328,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Copiapo,(CPO),11:31,IB7078,Iberia,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Calama,(CJC),11:36,H2244,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Panama City,(PTY),11:44,CM498,Copa Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Panama City,(PTY),11:44,KL3058,KLM Royal Dutch Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Panama City,(PTY),11:44,TK9657,Turkish Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Concepcion,(CCP),11:45,LA3,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Concepcion,(CCP),11:45,DL7399,Delta Air Lines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Concepcion,(CCP),11:45,IB7119,Iberia,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Concepcion,(CCP),11:49,H2161,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Calama,(CJC),11:50,LA390,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Paris,(CDG),11:55,AF401,Air France,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Paris,(CDG),11:55,KL2259,KLM Royal Dutch Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Antofagasta,(ANF),11:57,LA354,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=6
+Buenos Aires,(EZE),12:00,LA451,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Valdivia,(ZAL),12:18,H2123,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Antofagasta,(ANF),12:22,LA360,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Concepcion,(CCP),12:36,LA217,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Temuco,(ZCO),12:44,JA207,JetSMART,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+La Serena,(LSC),12:46,LA102,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Trujillo,(TRU),12:50,JA494,JetSMART,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Iquique,(IQQ),12:55,LA918,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Calama,(CJC),13:01,LA370,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Antofagasta,(ANF),13:05,H2270,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Buenos Aires,(AEP),13:20,AR1285,Aerolineas Argentinas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Buenos Aires,(AEP),13:20,AM7513,Aeromexico,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Buenos Aires,(AEP),13:20,AZ4657,ITA Airways,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Buenos Aires,(AEP),13:20,KL9220,KLM Royal Dutch Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Iquique,(IQQ),13:23,LA1258,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Balmaceda,(BBA),13:40,H231,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Calama,(CJC),14:05,LA388,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Concepcion,(CCP),14:11,LA201,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Curitiba,(CWB),14:27,LA782,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Curitiba,(CWB),14:27,DL6320,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Iquique,(IQQ),14:31,H2322,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Antofagasta,(ANF),14:37,LA362,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Buenos Aires,(EZE),14:45,WJ3013,Jetsmart Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Sao Paulo,(GRU),14:50,LA750,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Sao Paulo,(GRU),14:50,DL7391,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Sao Paulo,(GRU),14:50,QF3907,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+London,(LHR),14:55,BA250,British Airways,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+London,(LHR),14:55,IB7716,Iberia,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Calama,(CJC),14:56,JA6,JetSMART,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Buenos Aires,(EZE),15:00,H2507,Sky Airline,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Lima,(LIM),15:00,LA520,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Lima,(LIM),15:00,DL6282,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Lima,(LIM),15:00,QF3934,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Antofagasta,(ANF),15:02,JA26,JetSMART,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Bogota,(BOG),15:05,AV116,Avianca,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Asuncion,(ASU),15:10,LA1325,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Copiapo,(CPO),15:23,LA118,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Temuco,(ZCO),15:24,H2147,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Buenos Aires,(EZE),15:29,LA477,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Florianopolis,(FLN),15:45,H2630,Sky Airline,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Calama,(CJC),15:46,LA380,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Temuco,(ZCO),15:51,LA29,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Copiapo,(CPO),16:01,H2224,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Puerto Montt,(PMC),16:05,LA59,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Puerto Montt,(PMC),16:05,DL7365,Delta Air Lines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Puerto Montt,(PMC),16:05,IB7251,Iberia,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Antofagasta,(ANF),16:06,LA122,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Antofagasta,(ANF),16:06,DL6335,Delta Air Lines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Antofagasta,(ANF),16:06,QF3882,Qantas,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Calama,(CJC),16:08,H2250,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Iquique,(IQQ),16:23,LA176,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Sao Paulo,(GRU),16:25,LA702,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Sao Paulo,(GRU),16:25,DL7390,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Sao Paulo,(GRU),16:25,QF3910,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Iguassu Falls,(IGU),16:30,JA560,JetSMART,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Calama,(CJC),16:33,LA378,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Antofagasta,(ANF),16:51,H2272,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Antofagasta,(ANF),16:53,LA342,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Copiapo,(CPO),16:56,H2232,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Calama,(CJC),17:08,LA376,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+La Serena,(LSC),17:08,LA106,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Copiapo,(CPO),17:19,LA332,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+La Serena,(LSC),17:26,JA126,JetSMART,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Concepcion,(CCP),17:33,LA5,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Antofagasta,(ANF),17:35,LA132,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Lima,(LIM),17:35,LA2696,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Buenos Aires,(AEP),17:38,LA425,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=12
+Sao Paulo,(GRU),18:00,LA8131,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Sao Paulo,(GRU),18:00,QF3906,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Temuco,(ZCO),18:06,H21149,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Iquique,(IQQ),18:12,LA900,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Buenos Aires,(AEP),18:20,H2535,Sky Airline,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Temuco,(ZCO),18:20,LA31,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Arica,(ARI),18:24,H2304,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Concepcion,(CCP),18:35,LA17,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Antofagasta,(ANF),18:39,LA344,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Arica,(ARI),18:39,LA196,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Arica,(ARI),18:39,IB7068,Iberia,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Concepcion,(CCP),19:13,LA207,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Iquique,(IQQ),19:16,H2326,Sky Airline,1,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Concepcion,(CCP),19:32,LA1259,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Calama,(CJC),19:37,LA152,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Lima,(LIM),19:50,LA522,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Lima,(LIM),19:50,DL6312,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Lima,(LIM),19:50,QF3936,Qantas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Punta Arenas,(PUQ),19:58,LA95,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Punta Arenas,(PUQ),19:58,IB7113,Iberia,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Punta Arenas,(PUQ),19:58,QF3946,Qantas,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Los Angeles,(LSQ),20:00,LA9952,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Puerto Montt,(PMC),20:00,LA255,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Antofagasta,(ANF),20:17,H21274,Sky Airline,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Lima,(LIM),20:25,H2808,Sky Airline,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Puerto Montt,(PMC),20:28,JA157,JetSMART,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Buenos Aires,(EZE),20:30,LA471,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Houston,(IAH),20:30,UA846,United Airlines,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Houston,(IAH),20:30,NH7253,ANA All Nippon Airways,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Miami,(MIA),20:55,AA912,American Airlines,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Puerto Montt,(PMC),21:08,LA265,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Concepcion,(CCP),21:12,H2491,Sky Airline,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Iquique,(IQQ),21:19,LA168,LATAM Airlines,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Madrid,(MAD),21:20,LA706,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Madrid,(MAD),21:20,IB7109,Iberia,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Guayaquil,(GYE),21:26,LA1446,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Concepcion,(CCP),21:33,JA107,JetSMART,1,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Lima,(LIM),21:45,H25802,Sky Airline,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Buenos Aires,(AEP),21:55,AR1283,Aerolineas Argentinas,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Buenos Aires,(AEP),21:55,AZ4655,ITA Airways,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Buenos Aires,(AEP),21:55,KL9225,KLM Royal Dutch Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Buenos Aires,(AEP),21:55,UX3057,Air Europa,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Dallas,(DFW),21:55,AA940,American Airlines,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Atlanta,(ATL),22:30,DL146,Delta Air Lines,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Atlanta,(ATL),22:30,KE7300,Korean Air,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Atlanta,(ATL),22:30,LA6358,LATAM Airlines,2,Scheduled - On-time [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+New York,(JFK),22:55,LA532,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+New York,(JFK),22:55,CX7822,Cathay Pacific,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+New York,(JFK),22:55,DL6063,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+New York,(JFK),22:55,JL7627,JAL Japan Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Miami,(MIA),23:20,LA500,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Miami,(MIA),23:20,DL6064,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Los Angeles,(LAX),23:35,LA602,LATAM Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Los Angeles,(LAX),23:35,DL6053,Delta Air Lines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
+Los Angeles,(LAX),23:35,JL7623,JAL Japan Airlines,2,Scheduled [+],2023-04-27,tomorrow,https://www.santiago-airport.com/scl-departures?day=tomorrow&tp=18
