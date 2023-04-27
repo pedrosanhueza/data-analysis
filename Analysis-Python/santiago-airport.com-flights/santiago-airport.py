@@ -23,7 +23,13 @@ st.markdown('''
 	<h1><strong>SANTIAGO DE CHILE AIRPORT (SCL)</strong></h1>
 	<img src="https://www.santiago-airport.com/images/entrance-santiago-de-chile-airport.jpg" alt="Arturo Merino Benítez International Airport (SCL) is the busiest airport in Chile.">
 	</center><br>
-    <p>The <span class="key"><strong style="color: blue;">Santiago Airport</strong></span>, alongside the U.S. Senate, concoct federal laws that govern the land.\nThe code, a fine tool of extraction, fetches Congressmen's data from <a href="https://www.house.gov/representatives" target="_blank"><span class="key"><strong style="color: blue;">house.gov/representatives</strong></span></a> to form a handy table. It's got their name, district, party, and committee assignment. The data, ripe for the plucking, can be used for a spot of exploratory analysis.</p></body>
+    <p>
+        The
+        <a href="https://www.house.gov/representatives" target="_blank"><span class="key"><strong style="color: blue;">Santiago Airport</strong></span></a>
+        also known as Arturo Merino Benítez International Airport is the largest and busiest airport in Chile.
+        to form a handy table. It's got their name, district, party, and committee assignment. The data, ripe for the plucking, can be used for a spot of exploratory analysis.
+    </p>
+</body>
 ''',unsafe_allow_html=True)
 
 # script_scrape = '''
