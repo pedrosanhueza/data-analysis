@@ -21,11 +21,11 @@ st.markdown('''
 <body>
     <center>
 	<h1><strong>SANTIAGO DE CHILE AIRPORT (SCL)</strong></h1>
-	<img src="https://www.santiago-airport.com/images/entrance-santiago-de-chile-airport.jpg" alt="Arturo Merino Benítez International Airport (SCL) is the busiest airport in Chile.">
+	<img src="https://www.swissasiatrading.com/wp-content/uploads/2018/04/72-min-1.jpg" alt="Arturo Merino Benítez International Airport (SCL) is the busiest airport in Chile.">
 	</center><br>
     <p>
         The
-        <a href="https://www.house.gov/representatives" target="_blank"><span class="key"><strong style="color: blue;">Santiago Airport</strong></span></a>
+        <a href="https://www.santiago-airport.com/" target="_blank"><span class="key"><strong style="color: blue;">Santiago Airport</strong></span></a>
         also known as Arturo Merino Benítez International Airport is the largest and busiest airport in Chile.
         
     </p>
