@@ -24,18 +24,23 @@ st.markdown('''
 	<img src="https://www.swissasiatrading.com/wp-content/uploads/2018/04/72-min-1.jpg" alt="Arturo Merino Benítez International Airport (SCL) is the busiest airport in Chile.">
 	</center>
     <br>
-        <a href="https://www.santiago-airport.com" target="_blank"><span class="key"><strong style="color: blue;">Santiago-Airport.com/</strong></span></a>
-        has live data about the airport flights, specifically their 
+        <a href="https://www.santiago-airport.com" target="_blank"><span class="key"><strong style="color: blue;">Santiago-Airport.com</strong></span></a>
+        has live data about flights in the Santiago Airport, particularly the 
         <a href="https://www.santiago-airport.com/scl-departures" target="_blank"><span class="key"><strong style="color: blue;">departure</strong></span></a>
         and
         <a href="https://www.santiago-airport.com/scl-arrivals" target="_blank"><span class="key"><strong style="color: blue;">arrival</strong></span></a>
-        flights. With data points such as their Flight Status, Terminal Location, Departure and Arrival Time, Destination/Origen, and more.
+        data such as Flight Status, Terminal Location, Departure/Arrival Time, Destination/Origen, and more.
 </body>
 ''',unsafe_allow_html=True)
 
 st.markdown('''
 <h2>Data Extraction Code</h2>
-<p>This code loops over all pages from santiago-airport extracting the data </p>
+<p>This code:
+	<ol>
+	<li> Loops over all pages from santiago-airport extracting the data. </li>
+    <li> Structures the data into a dataframe. </li>
+	</ol>
+</p>
 ''',unsafe_allow_html=True)
 
 script_scrape = '''
