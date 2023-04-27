@@ -27,82 +27,43 @@ st.markdown('''
         The
         <a href="https://www.house.gov/representatives" target="_blank"><span class="key"><strong style="color: blue;">Santiago Airport</strong></span></a>
         also known as Arturo Merino Benítez International Airport is the largest and busiest airport in Chile.
-        to form a handy table. It's got their name, district, party, and committee assignment. The data, ripe for the plucking, can be used for a spot of exploratory analysis.
+        
     </p>
 </body>
 ''',unsafe_allow_html=True)
 
-# script_scrape = '''
-# # Import necessary libraries
-# import requests
-# from bs4 import BeautifulSoup
-# import pandas as pd
+st.markdown('''
+<h2>Data Extraction Code</h2>
+<p>This code loops over all pages from santiago-airport extracting the data about the <a href="https://www.santiago-airport.com/scl-departures" target="_blank"><span class="key"><strong style="color: blue;">departure</strong></span></a> and <a href="https://www.santiago-airport.com/scl-arrivals" target="_blank"><span class="key"><strong style="color: blue;">arrival</strong></span></a> of flights.</p>
+''',unsafe_allow_html=True)
 
-# # Define URL and user-agent headers
-# url = "https://www.house.gov/representatives"
-# headers = {'user-agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"}
+script_scrape = '''
+departure
+'''
 
-# # Send a request to the website and get the HTML response
-# response = requests.get(url, headers=headers)
-
-# # Parse the HTML response using BeautifulSoup
-# soup = BeautifulSoup(response.text, 'html.parser')
-
-# # Extract all tables from the HTML page
-# tables = soup.select('table')
-
-# # Loop through each table and extract relevant information
-# rows = []
-# for table in tables[:56]:
-#     # Extract information from table and store it in a dictionary
-#     row = {}
-#     row['District'] = [x.text.strip() for x in table.select('td')][0::6]
-#     row['Name'] = [x.text.strip() for x in table.select('td')][1::6]
-#     row['Party'] = [x.text.strip() for x in table.select('td')][2::6]
-#     row['Office Room'] = [x.text.strip() for x in table.select('td')][3::6]
-#     row['Phone'] = [x.text.strip() for x in table.select('td')][4::6]
-#     row['Committee Assignment'] = [x.text.strip() for x in table.select('td')][5::6]
-#     row['State'] = table.select_one('caption').text.strip()
-
-#     # Convert the dictionary to a DataFrame and append to a list
-#     df_state = pd.DataFrame(row)
-#     rows.append(df_state)
-
-# # Concatenate all DataFrames into one
-# df = pd.concat(rows)
-# '''
-
-# st.markdown('''
-# <h2>Code Explanation: Web Scrape</h2>
-# <p>This code extracts US House of Representatives' district representatives' information from the government website using BeautifulSoup and stores it in a table format using pandas.</p>
-# ''',unsafe_allow_html=True)
 
 # # with st.expander("Python Data Extraction Code 🐍"):
-# st.code(script_scrape,language="python")
+st.code(script_scrape,language="python")
 
-# url = "https://www.house.gov/representatives"
-# headers = {'user-agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"}
-# response = requests.get(url, headers=headers)
-# soup = BeautifulSoup(response.text, 'html.parser')
-# tables = soup.select('table')
-# rows = []
-# for table in tables[:56]:
-#     row = {}
-#     row['District']             = [x.text.strip() for x in table.select('td')][0::6]
-#     row['Name']                 = [x.text.strip() for x in table.select('td')][1::6]
-#     row['Party']                = [x.text.strip() for x in table.select('td')][2::6]
-#     row['Office Room']          = [x.text.strip() for x in table.select('td')][3::6]
-#     row['Phone']                = [x.text.strip() for x in table.select('td')][4::6]
-#     row['Committee Assignment'] = [x.text.strip() for x in table.select('td')][5::6]
-#     row['State']                = table.select_one('caption').text.strip()
-#     df_state = pd.DataFrame(row)
-#     rows.append(df_state)
-# df = pd.concat(rows)
+st.markdown('''
+<h2>Descriptive statistics</h2>
+<p>Calculate the mean, median, mode, variance, standard deviation, and other measures of central tendency and dispersion to gain insights into the distribution of different variables.</p>
+''',unsafe_allow_html=True)
 
-# st.markdown('''
-# <h2>Data Overview</h2>
-# <p>Now that we have we've got some awesome data to work with! Let's dive in and uncover some cool insights!</p>
-# ''',unsafe_allow_html=True)
+st.markdown('''
+<h2>Time Series Analysis</h2>
+<p>Plot the number of flights over time and identify seasonal variations, trends, and anomalies.</p>
+''',unsafe_allow_html=True)
+
+st.markdown('''
+<h2>Hypothesis Testing</h2>
+<p>Test whether the average delay time of different airlines is statistically significant or not.</p>
+''',unsafe_allow_html=True)
+
+st.markdown('''
+<h2>Regression analysis</h2>
+<p>Explore the relationship between the departure time and the delay time or the relationship between the airline and the status of the flight.</p>
+''',unsafe_allow_html=True)
 
 # # ---------------------------------------- KPI 1 ----------------------------------------
 
