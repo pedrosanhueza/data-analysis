@@ -135,12 +135,12 @@ st.markdown('''
 
 fig, ax = plt.subplots()
 ax.bar(df_arrivals.Origin.value_counts().index, df_arrivals.Origin.value_counts())
-ax.set_xlabel('Fruit')
-ax.set_ylabel('Sales')
-ax.set_title('Sales by Fruit')
+ax.set_xlabel('Origin')
+ax.set_ylabel('Amount of flights')
+ax.set_title('Origin of flights')
 
 # show the plot in Streamlit
-st.pyplot(fig,  use_container_width=True)
+st.plotly_chart(fig,  use_container_width=True)
 
 col1, col2, col3 = st.beta_columns(3)
 
