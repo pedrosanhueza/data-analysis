@@ -139,12 +139,18 @@ df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='C
 chart = alt.Chart(df_grouped_arrivals).mark_bar().encode(
     y=alt.Y('Origin:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
     x='Count:Q',                     # specify the x-axis as Count
-    # color=alt.Color('Airline:N', scale=alt.Scale(scheme='dark2')),   # use different colors for each airline
-    tooltip=['Origin', 'Count']   # add a tooltip that shows the Origin, Airline, and Count
+    tooltip=['Origin', 'Count'],   # add a tooltip that shows the Origin and Count
+    text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
 ).properties(
     width=800,
-    height=1000,
+    height=500,
     title='Number of Flights by Origin Frequency'   # set the chart title
+)
+
+# remove the x-axis
+chart.configure_axisX(
+    tickOpacity=0,
+    labelOpacity=0
 )
 
 # display the chart using Streamlit
