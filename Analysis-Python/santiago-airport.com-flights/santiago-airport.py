@@ -134,7 +134,7 @@ st.markdown('''
 ''',unsafe_allow_html=True)
 
 fig, ax = plt.subplots()
-ax.bar(df_arrivals.Origin.value_counts().index, df_arrivals.Origin.value_counts())
+ax.bar(df_arrivals.Origin.value_counts().index)
 ax.set_xlabel('Origin')
 ax.set_ylabel('Amount of flights')
 ax.set_title('Origin of flights')
