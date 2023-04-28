@@ -143,7 +143,7 @@ chart = alt.Chart(df_grouped_arrivals).mark_bar().encode(
     tooltip=['Origin', 'Count']   # add a tooltip that shows the Origin, Airline, and Count
 ).properties(
     width=800,
-    height=500,
+    height=1000,
     title='Number of Flights by Origin Frequency'   # set the chart title
 )
 
