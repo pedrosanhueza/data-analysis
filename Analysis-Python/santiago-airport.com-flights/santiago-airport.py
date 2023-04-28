@@ -135,13 +135,13 @@ st.markdown('''
 
 col1, col2, col3 = st.beta_columns(3)
 
-n_airlines_yesterday = df_arrivals[df_arrivals.Reference_Day == 'yesterday'].Airline.nunique()
-n_airlines_today = df_arrivals[df_arrivals.Reference_Day == 'today'].Airline.nunique()
-n_airlines_tomorrow = df_arrivals[df_arrivals.Reference_Day == 'tomorrow'].Airline.nunique()
+n_airlines_yesterday = df_arrivals[df_arrivals['Reference Day'] == 'yesterday'].Airline.nunique()
+n_airlines_today = df_arrivals[df_arrivals['Reference Day'] == 'today'].Airline.nunique()
+n_airlines_tomorrow = df_arrivals[df_arrivals['Reference Day'] == 'tomorrow'].Airline.nunique()
 
-date_yesterday = df_arrivals[df_arrivals.Reference_Day == 'yesterday'].Date.unique()[0]
-date_today = df_arrivals[df_arrivals.Reference_Day == 'today'].Date.unique()[0]
-date_tomorrow = df_arrivals[df_arrivals.Reference_Day == 'tomorrow'].Date.unique()[0]
+date_yesterday = df_arrivals[df_arrivals['Reference Day'] == 'yesterday'].Date.unique()[0]
+date_today = df_arrivals[df_arrivals['Reference Day'] == 'today'].Date.unique()[0]
+date_tomorrow = df_arrivals[df_arrivals['Reference Day'] == 'tomorrow'].Date.unique()[0]
 
 with col1:
     st.metric(f"Airlines on {date_yesterday}",f"{n_airlines_today}")
