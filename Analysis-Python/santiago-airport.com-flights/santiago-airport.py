@@ -125,9 +125,10 @@ for day in filterDay:
 st.code(script_scrape,language="python")
 
 df_arrivals = pd.read_csv('Analysis-Python/santiago-airport.com-flights/arrivals.csv')
-df_departures = pd.read_csv('departures.csv')
+df_departures = pd.read_csv('Analysis-Python/santiago-airport.com-flights/departures.csv')
 
 st.markdown('''
+
 <h2>Descriptive statistics</h2>
 <p>Calculate the mean, median, mode, variance, standard deviation, and other measures of central tendency and dispersion to gain insights into the distribution of different variables.</p>
 ''',unsafe_allow_html=True)
