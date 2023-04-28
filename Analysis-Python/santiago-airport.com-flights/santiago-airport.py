@@ -1,7 +1,7 @@
 import streamlit as st
 # import requests
 # from bs4 import BeautifulSoup
-# import pandas as pd
+import pandas as pd
 # import matplotlib.pyplot as plt
 # import altair as alt
 # import plotly.express as px
@@ -25,11 +25,11 @@ st.markdown('''
 	</center>
     <br>
         <a href="https://www.santiago-airport.com" target="_blank"><span class="key"><strong style="color: blue;">Santiago-Airport.com</strong></span></a>
-        has live data about flights in the Santiago Airport, particularly the 
+        has live data about flights in the Santiago Airport. We are analyzing particularly the 
         <a href="https://www.santiago-airport.com/scl-departures" target="_blank"><span class="key"><strong style="color: blue;">departure</strong></span></a>
         and
         <a href="https://www.santiago-airport.com/scl-arrivals" target="_blank"><span class="key"><strong style="color: blue;">arrival</strong></span></a>
-        data such as Flight Status, Terminal Location, Departure/Arrival Time, Destination/Origen, and more.
+        data. It has information about the status of the flights, the terminal location, the departure/arrival time, the destination/origin, and more.
 </body>
 ''',unsafe_allow_html=True)
 
@@ -124,10 +124,30 @@ for day in filterDay:
 # # with st.expander("Python Data Extraction Code 🐍"):
 st.code(script_scrape,language="python")
 
+df_arrivals = pd.read_csv('arrivals.csv')
+df_departures = pd.read_csv('departures.csv')
+
 st.markdown('''
 <h2>Descriptive statistics</h2>
 <p>Calculate the mean, median, mode, variance, standard deviation, and other measures of central tendency and dispersion to gain insights into the distribution of different variables.</p>
 ''',unsafe_allow_html=True)
+
+col1, col2, col3 = st.beta_columns(3)
+
+n_airlines_yesterday = df_arrivals[df_arrivals.Reference_Day == 'yesterday'].Airline.nunique()
+n_airlines_today = df_arrivals[df_arrivals.Reference_Day == 'today'].Airline.nunique()
+n_airlines_tomorrow = df_arrivals[df_arrivals.Reference_Day == 'tomorrow'].Airline.nunique()
+
+date_yesterday = df_arrivals[df_arrivals.Reference_Day == 'yesterday'].Date.unique()[0]
+date_today = df_arrivals[df_arrivals.Reference_Day == 'today'].Date.unique()[0]
+date_tomorrow = df_arrivals[df_arrivals.Reference_Day == 'tomorrow'].Date.unique()[0]
+
+with col1:
+    st.metric(f"Airlines on {date_yesterday}",f"{n_airlines_today}")
+with col2:
+    st.metric(f"Airlines on {date_today}",f"{n_airlines_today}")
+with col3:
+    st.metric(f"Airlines on {date_tomorrow}",f"{n_airlines_today}")
 
 st.markdown('''
 <h2>Time Series Analysis</h2>
@@ -145,6 +165,8 @@ st.markdown('''
 ''',unsafe_allow_html=True)
 
 # # ---------------------------------------- KPI 1 ----------------------------------------
+
+
 
 # # Calculate the value counts of each party
 # party_counts = df['Party'].value_counts()
