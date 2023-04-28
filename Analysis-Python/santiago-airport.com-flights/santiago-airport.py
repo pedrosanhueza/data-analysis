@@ -124,7 +124,7 @@ for day in filterDay:
 # # with st.expander("Python Data Extraction Code 🐍"):
 st.code(script_scrape,language="python")
 
-df_arrivals = pd.read_csv('arrivals.csv')
+df_arrivals = pd.read_csv('Analysis-Python/santiago-airport.com-flights/arrivals.csv')
 df_departures = pd.read_csv('departures.csv')
 
 st.markdown('''
