@@ -2,7 +2,7 @@ import streamlit as st
 # import requests
 # from bs4 import BeautifulSoup
 import pandas as pd
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 # import altair as alt
 # import plotly.express as px
 
@@ -132,6 +132,15 @@ st.markdown('''
 <h2>Descriptive statistics</h2>
 <p>Calculate the mean, median, mode, variance, standard deviation, and other measures of central tendency and dispersion to gain insights into the distribution of different variables.</p>
 ''',unsafe_allow_html=True)
+
+fig, ax = plt.subplots()
+ax.bar(df_arrivals.Origin.value_counts().index, df_arrivals.Origin.value_counts())
+ax.set_xlabel('Fruit')
+ax.set_ylabel('Sales')
+ax.set_title('Sales by Fruit')
+
+# show the plot in Streamlit
+st.pyplot(fig)
 
 col1, col2, col3 = st.beta_columns(3)
 
