@@ -133,18 +133,18 @@ st.markdown('''
 <p>Calculate the mean, median, mode, variance, standard deviation, and other measures of central tendency and dispersion to gain insights into the distribution of different variables.</p>
 ''',unsafe_allow_html=True)
 
-df_grouped_arrivals = df_arrivals.groupby(['Origin', 'Airline']).size().reset_index(name='Count')
+df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
 
 # create the bar chart using Altair
 chart = alt.Chart(df_grouped_arrivals).mark_bar().encode(
     y=alt.Y('Origin:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
     x='Count:Q',                     # specify the x-axis as Count
-    color=alt.Color('Airline:N', scale=alt.Scale(scheme='dark2')),   # use different colors for each airline
-    tooltip=['Origin', 'Airline', 'Count']   # add a tooltip that shows the Origin, Airline, and Count
+    # color=alt.Color('Airline:N', scale=alt.Scale(scheme='dark2')),   # use different colors for each airline
+    tooltip=['Origin', 'Count']   # add a tooltip that shows the Origin, Airline, and Count
 ).properties(
     width=800,
     height=500,
-    title='Number of Flights by Origin and Airline'   # set the chart title
+    title='Number of Flights by Origin Frequency'   # set the chart title
 )
 
 # display the chart using Streamlit
