@@ -140,7 +140,7 @@ ax.set_ylabel('Sales')
 ax.set_title('Sales by Fruit')
 
 # show the plot in Streamlit
-st.pyplot(fig)
+st.pyplot(fig,  use_container_width=True)
 
 col1, col2, col3 = st.beta_columns(3)
 
