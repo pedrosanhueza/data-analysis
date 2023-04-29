@@ -33,6 +33,9 @@ st.markdown('''
 </body>
 ''',unsafe_allow_html=True)
 
+df_arrivals = pd.read_csv('Analysis-Python/santiago-airport.com-flights/arrivals.csv')
+df_departures = pd.read_csv('Analysis-Python/santiago-airport.com-flights/departures.csv')
+
 # # ---------------------------------------- Tabs ----------------------------------------
 
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
@@ -77,8 +80,8 @@ with tab1:
 				destination = flight.find('div', {'class', 'flight-col flight-col__dest-term'}).find('b').text
 				destination_code = flight.find('div', {'class', 'flight-col flight-col__dest-term'}).find('span').text
 				departure = flight.find('div', {'class', 'flight-col flight-col__hour'}).text.strip()
-				flight_number = flight.find('div', {'class', 'flight-col flight-col__flight'}).text.strip().split('\n')
-				airline = flight.find('div', {'class', 'flight-col flight-col__airline'}).text.strip().split('\n')
+				flight_number = flight.find('div',{'class','flight-col flight-col__flight'}).text.strip().split('\n')
+				airline = flight.find('div',{'class','flight-col flight-col__airline'}).text.strip().split('\n')
 				terminal = flight.find('div', {'class', 'flight-col flight-col__terminal'}).text.strip()
 				status = flight.find_all('a')[-1].text
 				for i in range(max(len(flight_number), len(airline))):
@@ -112,8 +115,8 @@ with tab1:
 				origin = flight.find('div', {'class', 'flight-col flight-col__dest-term'}).find('b').text
 				origin_code = flight.find('div', {'class', 'flight-col flight-col__dest-term'}).find('span').text
 				departure = flight.find('div', {'class', 'flight-col flight-col__hour'}).text.strip()
-				flight_number = flight.find('div', {'class', 'flight-col flight-col__flight'}).text.strip().split('\n')
-				airline = flight.find('div', {'class', 'flight-col flight-col__airline'}).text.strip().split('\n')
+				flight_number = flight.find('div',{'class','flight-col flight-col__flight'}).text.strip().split('\n')
+				airline = flight.find('div',{'class','flight-col flight-col__airline'}).text.strip().split('\n')
 				terminal = flight.find('div', {'class', 'flight-col flight-col__terminal'}).text.strip()
 				status = flight.find_all('a')[-1].text
 				for i in range(max(len(flight_number), len(airline))):
@@ -136,8 +139,11 @@ with tab1:
 	# # with st.expander("Python Data Extraction Code 🐍"):
 	st.code(script_scrape,language="python")
 
-df_arrivals = pd.read_csv('Analysis-Python/santiago-airport.com-flights/arrivals.csv')
-df_departures = pd.read_csv('Analysis-Python/santiago-airport.com-flights/departures.csv')
+	st.markdown('''<h2>Data Extraction Table</h2>''',unsafe_allow_html=True)
+        
+	st.dataframe(df_departures)
+    
+	st.dataframe(df_arrivals)
 
 # # ---------------------------------------- Descriptive statistics ----------------------------------------
 
