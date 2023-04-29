@@ -115,8 +115,8 @@ with tab1:
 				origin = flight.find('div', {'class', 'flight-col flight-col__dest-term'}).find('b').text
 				origin_code = flight.find('div', {'class', 'flight-col flight-col__dest-term'}).find('span').text
 				departure = flight.find('div', {'class', 'flight-col flight-col__hour'}).text.strip()
-				flight_number = flight.find('div',{'class','flight-col flight-col__flight'}).text.strip().split('\n')
-				airline = flight.find('div',{'class','flight-col flight-col__airline'}).text.strip().split('\n')
+				flight_number = flight.find('div',{'class','flight-col flight-col__flight'}).text.strip().split('\\n')
+				airline = flight.find('div',{'class','flight-col flight-col__airline'}).text.strip().split('\\n')
 				terminal = flight.find('div', {'class', 'flight-col flight-col__terminal'}).text.strip()
 				status = flight.find_all('a')[-1].text
 				for i in range(max(len(flight_number), len(airline))):
@@ -139,7 +139,7 @@ with tab1:
 	# # with st.expander("Python Data Extraction Code 🐍"):
 	st.code(script_scrape,language="python")
 
-	st.markdown('''<h2>Data Extraction Table</h2>''',unsafe_allow_html=True)
+	st.markdown('''<h2>Data Extraction Table Output</h2>''',unsafe_allow_html=True)
         
 	st.dataframe(df_departures)
     
