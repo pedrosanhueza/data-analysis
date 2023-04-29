@@ -140,9 +140,13 @@ with tab1:
 	st.code(script_scrape,language="python")
 
 	st.markdown('''<h2>Data Extraction Table Output</h2>''',unsafe_allow_html=True)
-        
+    
+	st.code("st.dataframe(df_departures)",language="python")
+    
 	st.dataframe(df_departures)
     
+	st.code("st.dataframe(df_arrivals)",language="python")
+
 	st.dataframe(df_arrivals)
 
 # # ---------------------------------------- Descriptive statistics ----------------------------------------
