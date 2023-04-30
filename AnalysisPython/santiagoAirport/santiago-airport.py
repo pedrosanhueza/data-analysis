@@ -36,12 +36,12 @@ st.markdown('''
 ''',unsafe_allow_html=True)
 
 
-def buttonActivate():
-	from slcAirportFlights import df_arrivals, df_departures
-	return df_arrivals, df_departures
+# def buttonActivate():
+# 	from slcAirportFlights import df_arrivals, df_departures
+# 	return df_arrivals, df_departures
 
 if st.button('Refresh Data'):
-    buttonActivate()
+    from slcAirportFlights import df_arrivals, df_departures
     
 else:
 	df_arrivals = pd.read_csv('AnalysisPython/santiagoAirport/arrivals.csv')
