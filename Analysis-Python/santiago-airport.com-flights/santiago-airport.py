@@ -35,7 +35,7 @@ st.markdown('''
 ''',unsafe_allow_html=True)
 
 import os
-print(os.getcwd())
+st.write(os.getcwd())
 
 if st.button('Refresh Data'):
     from Analysis_Python.santiago_airport_flights import df_departures, df_arrival
