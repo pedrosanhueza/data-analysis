@@ -2,6 +2,7 @@ import streamlit as st
 # import requests
 # from bs4 import BeautifulSoup
 import pandas as pd
+import time
 import matplotlib.pyplot as plt
 import altair as alt
 # import plotly.express as px
@@ -34,26 +35,15 @@ st.markdown('''
 <br><br>
 ''',unsafe_allow_html=True)
 
-
-
-import os
-import glob
-
-# Set the current directory
-directory = os.getcwd()
-
-# Find all Python files in the directory
-python_files = glob.glob(os.path.join(directory, '*.py'))
-
-# Print the file names
-for file in python_files:
-    st.write(os.path.basename(file))
-
-
-
-
 if st.button('Refresh Data'):
     from slcAirportFlights import df_arrivals, df_departures
+	progress_text = "Operation in progress. Please wait."
+	my_bar = st.progress(0, text=progress_text)
+
+	for percent_complete in range(100):
+    	time.sleep(0.1)
+    	my_bar.progress(percent_complete + 1, text=progress_text)    
+    
 else:
 	df_arrivals = pd.read_csv('AnalysisPython/santiagoAirport/arrivals.csv')
 	df_departures = pd.read_csv('AnalysisPython/santiagoAirport/departures.csv')
