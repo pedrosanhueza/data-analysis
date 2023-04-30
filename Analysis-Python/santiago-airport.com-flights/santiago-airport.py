@@ -34,8 +34,11 @@ st.markdown('''
 <br><br>
 ''',unsafe_allow_html=True)
 
-df_arrivals = pd.read_csv('Analysis-Python/santiago-airport.com-flights/arrivals.csv')
-df_departures = pd.read_csv('Analysis-Python/santiago-airport.com-flights/departures.csv')
+if st.button('Refresh Data'):
+    from Analysis_Python.santiago_airport_flights import df_departures, df_arrival
+else:
+	df_arrivals = pd.read_csv('Analysis-Python/santiago-airport.com-flights/arrivals.csv')
+	df_departures = pd.read_csv('Analysis-Python/santiago-airport.com-flights/departures.csv')
 
 # # ---------------------------------------- Tabs ----------------------------------------
 
