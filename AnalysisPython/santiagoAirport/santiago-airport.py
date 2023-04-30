@@ -44,6 +44,7 @@ st.markdown('''
 if st.button('Refresh Data'):
     st.info('Takes about 10 seconds to refresh', icon='⏰')
     from slcAirportFlights import df_arrivals, df_departures
+    st.success('Data refreshed', icon='✅')
 
 else:
 	df_arrivals = pd.read_csv('AnalysisPython/santiagoAirport/arrivals.csv')
