@@ -7,6 +7,12 @@ import matplotlib.pyplot as plt
 import altair as alt
 # import plotly.express as px
 
+st.set_page_config(
+	page_title='Santiago Airport',
+	page_icon=':airplane:',
+	layout='wide',
+)
+
 st.markdown('''
 <head>
 	<title>Santiago Airport</title>
