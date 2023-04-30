@@ -45,7 +45,7 @@ st.markdown('''
     <br><br>
 	The website 
     <a href="https://www.santiago-airport.com" target="_blank"><span class="key"><strong style="color: blue;">Santiago-Airport.com</strong></span></a>
-    provides real-time data on flight departures from Santiago International Airport.
+    provides real-time data on flight departures and arrivals from Santiago International Airport.
 	</center>
 </body>
 <br><br>

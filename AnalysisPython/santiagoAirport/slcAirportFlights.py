@@ -36,7 +36,7 @@ for day in filterDay:
                     'Status': status,
                     'Date': date,
                     'Reference Day': reference_day,
-                    'url': url
+                    # 'url': url
                 })
         df_departures = pd.concat([df_departures, pd.DataFrame(rows)], ignore_index=True)
 
@@ -71,6 +71,6 @@ for day in filterDay:
                     'Status': status,
                     'Date': date,
                     'Reference Day': reference_day,
-                    'url': url
+                    # 'url': urls
                 })
         df_arrivals = pd.concat([df_arrivals, pd.DataFrame(rows)], ignore_index=True)
