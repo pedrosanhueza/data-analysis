@@ -7,10 +7,18 @@ import matplotlib.pyplot as plt
 import altair as alt
 # import plotly.express as px
 
+import toml
+
+with open("my_custom_theme.toml", "r") as f:
+    theme_config = toml.load(f)
+
+
 st.set_page_config(
 	page_title='Santiago Airport',
 	page_icon=':airplane:',
 	layout='wide',
+	**theme_config
+
 )
 
 hide_st_style = """
