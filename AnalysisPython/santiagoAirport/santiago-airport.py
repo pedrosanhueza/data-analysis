@@ -175,14 +175,25 @@ with tab1_Extraction_Code:
         
 	st.markdown('''<br><br>''',unsafe_allow_html=True)
 
-# # ---------------------------------------- Descriptive statistics ----------------------------------------
+# # ---------------------------------------- Descriptive Statistics ----------------------------------------
+
+airlines_amount = df_departures.Airline.nunique()
+top_airlines_amount = 6
+top_airlines_percentage_from_total = round(top_airlines_amount / airlines_amount * 100)
+top_airlines_flights_amount = df_departures.Airline.value_counts().head(top_airlines_amount).sum()
+top_airlines_flights_percentage_from_total = round(top_airlines_flights_amount / df_departures.Airline.nunique() * 100)
+
 
 with tab2_Descriptive_Statistics:
-	st.markdown('''
+	st.markdown(f'''
 	<h2>Descriptive statistics</h2>
 	<p>Calculate the mean, median, mode, variance, standard deviation, and other measures of central tendency and dispersion to gain insights into the distribution of different variables.</p>
 	<o>
-		<li>
+		<li> Santiago airport is currently hosting {airlines_amount} airlines.
+
+		<li> The top {top_airlines_amount} Airlines ({top_airlines_percentage_from_total})% account for the {top_airlines_flights_percentage_from_total}% ({top_airlines_flights_amount}) of all flights in the airport.
+
+		
 
 	''',unsafe_allow_html=True)
 
