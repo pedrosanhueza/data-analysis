@@ -35,14 +35,18 @@ st.markdown('''
 <br><br>
 ''',unsafe_allow_html=True)
 
-if st.button('Refresh Data'):
-    from slcAirportFlights import df_arrivals, df_departures
-	progress_text = "Operation in progress. Please wait."
-	my_bar = st.progress(0, text=progress_text)
+progress_text = "Operation in progress. Please wait."
+my_bar = st.progress(0, text=progress_text)
 
+def buttonActivate():
+	# 	from slcAirportFlights import df_arrivals, df_departures
 	for percent_complete in range(100):
-    	time.sleep(0.1)
-    	my_bar.progress(percent_complete + 1, text=progress_text)    
+		time.sleep(0.1)
+		my_bar.progress(percent_complete + 1, t
+		     ext=progress_text)
+
+if st.button('Refresh Data'):
+    buttonActivate()
     
 else:
 	df_arrivals = pd.read_csv('AnalysisPython/santiagoAirport/arrivals.csv')
