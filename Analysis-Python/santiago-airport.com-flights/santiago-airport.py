@@ -34,9 +34,10 @@ st.markdown('''
 <br><br>
 ''',unsafe_allow_html=True)
 
+import os
+print(os.getcwd())
+
 if st.button('Refresh Data'):
-    import os
-    print(os.getcwd())
     from Analysis_Python.santiago_airport_flights import df_departures, df_arrival
 else:
 	df_arrivals = pd.read_csv('Analysis-Python/santiago-airport.com-flights/arrivals.csv')
