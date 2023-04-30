@@ -42,6 +42,7 @@ st.markdown('''
 ''',unsafe_allow_html=True)
 
 if st.button('Refresh Data'):
+    st.info('Takes about 10 seconds to refresh','Refreshing', icon='⏰')
     from slcAirportFlights import df_arrivals, df_departures
 
 else:
