@@ -38,10 +38,8 @@ st.markdown('''
 
 def buttonActivate():
 	from slcAirportFlights import df_arrivals, df_departures
-	df_arrivals = df_arrivals
-	df_departures = df_departures
-	st.info('Refreshing data...')
-	
+	return df_arrivals, df_departures
+
 if st.button('Refresh Data'):
     buttonActivate()
     
