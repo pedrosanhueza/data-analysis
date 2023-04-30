@@ -42,8 +42,7 @@ def buttonActivate():
 	# 	from slcAirportFlights import df_arrivals, df_departures
 	for percent_complete in range(100):
 		time.sleep(0.1)
-		my_bar.progress(percent_complete + 1, t
-		     ext=progress_text)
+		my_bar.progress(percent_complete + 1, text=progress_text)
 
 if st.button('Refresh Data'):
     buttonActivate()
