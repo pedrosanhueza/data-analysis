@@ -23,11 +23,15 @@ st.markdown('''
 			height: 5%;
 			object-fit: cover;
 		}
+		h1 {
+			font-size: 40px;
+		}
 	</style>
 </head>
 <body>
     <center>
 	<h1><strong>SANTIAGO AIRPORT</strong></h1>
+	<br>
 	<img src="https://www.swissasiatrading.com/wp-content/uploads/2018/04/72-min-1.jpg" alt="Arturo Merino Benítez International Airport (SCL) is the busiest airport in Chile.">
 	</center>
     <br><br>
