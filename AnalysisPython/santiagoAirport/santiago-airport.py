@@ -19,7 +19,7 @@ st.markdown('''
 	<link rel="stylesheet" type="text/css" href="style.css">
     <style>
 		img {
-			width: 100%;
+			width: 50%;
 			height: 5%;
 			object-fit: cover;
 		}
