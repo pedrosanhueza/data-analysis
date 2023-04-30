@@ -53,7 +53,7 @@ for file in python_files:
 
 
 if st.button('Refresh Data'):
-    from Analysis_Python.santiago_airport_flights import df_departures, df_arrival
+    from AnalysisPython.santiagoAirport.slcAirportFlights import df_arrivals, df_departures
 else:
 	df_arrivals = pd.read_csv('Analysis-Python/santiago-airport.com-flights/arrivals.csv')
 	df_departures = pd.read_csv('Analysis-Python/santiago-airport.com-flights/departures.csv')
