@@ -55,8 +55,8 @@ for file in python_files:
 if st.button('Refresh Data'):
     from AnalysisPython.santiagoAirport.slcAirportFlights import df_arrivals, df_departures
 else:
-	df_arrivals = pd.read_csv('Analysis-Python/santiago-airport.com-flights/arrivals.csv')
-	df_departures = pd.read_csv('Analysis-Python/santiago-airport.com-flights/departures.csv')
+	df_arrivals = pd.read_csv('AnalysisPython/santiagoaAirport/arrivals.csv')
+	df_departures = pd.read_csv('AnalysisPython/santiagoAirport/departures.csv')
 
 # # ---------------------------------------- Tabs ----------------------------------------
 
