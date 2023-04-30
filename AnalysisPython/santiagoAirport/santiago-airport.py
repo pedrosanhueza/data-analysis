@@ -9,7 +9,7 @@ import altair as alt
 
 import toml
 
-with open("my_custom_theme.toml", "r") as f:
+with open("AnalysisPython/santiagoAirport/my_custom_theme.toml", "r") as f:
     theme_config = toml.load(f)
 
 
