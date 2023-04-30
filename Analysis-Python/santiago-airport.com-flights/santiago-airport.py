@@ -205,19 +205,22 @@ with tab2_Descriptive_Statistics:
 	with col3:
 		st.metric(f"Airlines on {date_tomorrow}",f"{n_airlines_today}")
 
-st.markdown('''
-<h2>Time Series Analysis</h2>
-<p>Plot the number of flights over time and identify seasonal variations, trends, and anomalies.</p>
-''',unsafe_allow_html=True)
+with tab3_Time_Series_Analysis:
+	st.markdown('''
+	<h2>Time Series Analysis</h2>
+	<p>Plot the number of flights over time and identify seasonal variations, trends, and anomalies.</p>
+	''',unsafe_allow_html=True)
 
-st.markdown('''
-<h2>Hypothesis Testing</h2>
-<p>Test whether the average delay time of different airlines is statistically significant or not.</p>
-''',unsafe_allow_html=True)
+with tab4_Hypothesis_Testing:
+	st.markdown('''
+	<h2>Hypothesis Testing</h2>
+	<p>Test whether the average delay time of different airlines is statistically significant or not.</p>
+	''',unsafe_allow_html=True)
 
-st.markdown('''
-<h2>Regression analysis</h2>
-<p>Explore the relationship between the departure time and the delay time or the relationship between the airline and the status of the flight.</p>
-''',unsafe_allow_html=True)
+with tab5_Regression_Analysis:
+	st.markdown('''
+	<h2>Regression analysis</h2>
+	<p>Explore the relationship between the departure time and the delay time or the relationship between the airline and the status of the flight.</p>
+	''',unsafe_allow_html=True)
 
 # # ---------------------------------------- KPI 1 ----------------------------------------
