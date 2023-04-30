@@ -24,7 +24,7 @@ st.markdown('''
 			object-fit: cover;
 		}
 		h1 {
-			font-size: 40px;
+			font-size: 60px;
 		}
 	</style>
 </head>
