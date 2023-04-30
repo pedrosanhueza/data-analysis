@@ -140,7 +140,7 @@ with tab1_Extraction_Code:
 	# # with st.expander("Python Data Extraction Code 🐍"):
 	st.code(script_scrape,language="python")
 
-	st.markdown('''<h2>Data Extraction Table Output</h2>''',unsafe_allow_html=True)
+	st.markdown('''<h2>Code Output</h2>''',unsafe_allow_html=True)
     
 	st.code("st.dataframe(df_departures)",language="python")
     
@@ -158,6 +158,9 @@ with tab2_Descriptive_Statistics:
 	st.markdown('''
 	<h2>Descriptive statistics</h2>
 	<p>Calculate the mean, median, mode, variance, standard deviation, and other measures of central tendency and dispersion to gain insights into the distribution of different variables.</p>
+	<o>
+		<li>
+
 	''',unsafe_allow_html=True)
 
 
