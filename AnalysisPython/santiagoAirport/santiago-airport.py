@@ -42,14 +42,11 @@ st.markdown('''
 	<h1><strong>SANTIAGO AIRPORT</strong></h1>
 	<br>
 	<img src="https://www.swissasiatrading.com/wp-content/uploads/2018/04/72-min-1.jpg" alt="Arturo Merino Benítez International Airport (SCL) is the busiest airport in Chile.">
-	</center>
     <br><br>
-        <a href="https://www.santiago-airport.com" target="_blank"><span class="key"><strong style="color: blue;">Santiago-Airport.com</strong></span></a>
-        has live data about flights in the Santiago Airport. We are analyzing particularly the 
-        <a href="https://www.santiago-airport.com/scl-departures" target="_blank"><span class="key"><strong style="color: blue;">departure</strong></span></a>
-        and
-        <a href="https://www.santiago-airport.com/scl-arrivals" target="_blank"><span class="key"><strong style="color: blue;">arrival</strong></span></a>
-        data. It has information about the status of the flights, the terminal location, the departure/arrival time, the destination/origin, and more.
+	The website 
+    <a href="https://www.santiago-airport.com" target="_blank"><span class="key"><strong style="color: blue;">Santiago-Airport.com</strong></span></a>
+    provides real-time data on flight departures from Santiago International Airport.
+	</center>
 </body>
 <br><br>
 ''',unsafe_allow_html=True)
