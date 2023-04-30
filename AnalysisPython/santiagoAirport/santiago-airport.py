@@ -7,18 +7,19 @@ import matplotlib.pyplot as plt
 import altair as alt
 # import plotly.express as px
 
-import toml
-
-with open("AnalysisPython/santiagoAirport/my_custom_theme.toml", "r") as f:
-    theme_config = toml.load(f)
-
+my_custom_theme = {
+    'primaryColor': '#E694FF',
+    'backgroundColor': '#00172B',
+    'secondaryBackgroundColor': '#0083B8',
+    'textColor': '#FFF',
+    'font': 'sans serif'
+}
 
 st.set_page_config(
 	page_title='Santiago Airport',
 	page_icon=':airplane:',
 	layout='wide',
-	**theme_config
-
+	theme = my_custom_theme
 )
 
 hide_st_style = """
