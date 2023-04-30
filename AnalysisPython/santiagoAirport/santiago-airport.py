@@ -27,7 +27,7 @@ st.markdown('''
 </head>
 <body>
     <center>
-	<h1><strong>SANTIAGO DE CHILE AIRPORT (SCL)</strong></h1>
+	<h1><strong>SANTIAGO AIRPORT</strong></h1>
 	<img src="https://www.swissasiatrading.com/wp-content/uploads/2018/04/72-min-1.jpg" alt="Arturo Merino Benítez International Airport (SCL) is the busiest airport in Chile.">
 	</center>
     <br><br>
@@ -51,11 +51,11 @@ else:
 # # ---------------------------------------- Tabs ----------------------------------------
 
 tab1_Extraction_Code, tab2_Descriptive_Statistics, tab3_Time_Series_Analysis, tab4_Hypothesis_Testing, tab5_Regression_Analysis, tab6_Conclusion = st.tabs([
-    "Data Extraction Code", 
-    "Descriptive statistics",
+    "Data", 
+    "Descriptive KPI's",
     "Time Series Analysis",
     "Hypothesis Testing",
-    "Regression analysis",
+    "Regression Analysis",
     "Conclusion"])
 
 with tab1_Extraction_Code:
