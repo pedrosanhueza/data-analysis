@@ -34,8 +34,23 @@ st.markdown('''
 <br><br>
 ''',unsafe_allow_html=True)
 
+
+
 import os
-st.write(os.getcwd())
+import glob
+
+# Set the current directory
+directory = os.getcwd()
+
+# Find all Python files in the directory
+python_files = glob.glob(os.path.join(directory, '*.py'))
+
+# Print the file names
+for file in python_files:
+    st.write(os.path.basename(file))
+
+
+
 
 if st.button('Refresh Data'):
     from Analysis_Python.santiago_airport_flights import df_departures, df_arrival
