@@ -177,23 +177,26 @@ with tab1_Extraction_Code:
 
 # # ---------------------------------------- Descriptive Statistics ----------------------------------------
 
-airlines_amount = df_departures.Airline.nunique()
-top_airlines_amount = 6
-top_airlines_percentage_from_total = round(top_airlines_amount / airlines_amount * 100)
-airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().sum()
-top_airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().nlargest(2).sum()
-top_airlines_flights_percentage_from_total = round(top_airlines_flights_sum/airlines_flights_sum*100)
 
 with tab2_Descriptive_Statistics:
-	st.markdown(f'''
-	<h2>Descriptive statistics</h2>
-	<p>Calculate the mean, median, mode, variance, standard deviation, and other measures of central tendency and dispersion to gain insights into the distribution of different variables.</p>
-	<ul>
-		<li> Santiago airport is currently hosting <b> {airlines_amount} </b> wich manage <b>{airlines_flights_sum} </b> daily flights. </li>
-		<li> The top <b> {top_airlines_amount} </b> Airlines ({top_airlines_percentage_from_total}%) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
-		
-	</ul>
+	st.markdown(f'''<h2>Descriptive statistics</h2>''',unsafe_allow_html=True)
+
+	airlines_amount = df_departures.Airline.nunique()
 	
+	top_X = st.slider('Top X Flights', 0, airlines_amount,6)	
+
+	top_airlines_amount = top_X
+
+	top_airlines_percentage_from_total = round(top_airlines_amount / airlines_amount * 100)
+	airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().sum()
+	top_airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().nlargest(2).sum()
+	top_airlines_flights_percentage_from_total = round(top_airlines_flights_sum/airlines_flights_sum*100)
+
+	st.markdown(f'''
+		<ul>
+		<li> Santiago airport is currently hosting <b> {airlines_amount} </b> airlines managing <b>{airlines_flights_sum} </b> daily flights. </li>
+		<li> The top {top_airlines_amount} Airlines ({top_airlines_percentage_from_total}%) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
+		</ul>
 	''',unsafe_allow_html=True)
 
 	# Create a DataFrame with the counts of flights per airline
@@ -209,7 +212,7 @@ with tab2_Descriptive_Statistics:
 		y=alt.Y('Airline:N', sort='-x'),
 		x=alt.X('FlightCount:Q', title='Flight Count'),
 		color=alt.condition(
-			alt.datum.Rank <= 6,
+			alt.datum.Rank <= top_airlines_amount,
 			alt.value('orange'),
 			alt.value('gray')
 		)
