@@ -183,13 +183,13 @@ with tab2_Descriptive_Statistics:
 
 	airlines_amount = df_departures.Airline.nunique()
 	
-	top_X = st.slider('Top X Flights', 0, airlines_amount,6)	
+	top_X = st.slider('Top X Flights', 1, airlines_amount,6)	
 
 	top_airlines_amount = top_X
 
 	top_airlines_percentage_from_total = round(top_airlines_amount / airlines_amount * 100)
 	airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().sum()
-	top_airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().nlargest(2).sum()
+	top_airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().nlargest(top_X).sum()
 	top_airlines_flights_percentage_from_total = round(top_airlines_flights_sum/airlines_flights_sum*100)
 
 	st.markdown(f'''
