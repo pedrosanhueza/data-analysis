@@ -210,6 +210,23 @@ with tab2_Descriptive_Statistics:
 
 
 
+	chart = alt.Chart(df_departures).mark_bar().encode(
+		y=alt.Y('Airline:N', title='Airlines', sort=alt.EncodingSortField(field='Flight', op='count', order='descending')),
+		x=alt.X('count(Flight):Q', title='Flight Count'),
+		color=alt.condition(
+			alt.datum.Rank <= 2,
+			alt.value('orange'),
+			alt.value('gray')
+		)
+	).transform_window(
+		Rank='row_number()',
+		sort=[alt.SortField('count(Flight)', order='descending')]
+	)
+
+	st.altair_chart(chart, use_container_width=True)
+
+
+
 
 
 	df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
