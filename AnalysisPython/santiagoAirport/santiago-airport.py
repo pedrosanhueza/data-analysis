@@ -180,15 +180,20 @@ with tab1_Extraction_Code:
 airlines_amount = df_departures.Airline.nunique()
 top_airlines_amount = 6
 top_airlines_percentage_from_total = round(top_airlines_amount / airlines_amount * 100)
-top_airlines_flights_amount = df_departures.Airline.value_counts().head(top_airlines_amount).sum()
-top_airlines_flights_percentage_from_total = round(top_airlines_flights_amount / df_departures.Airline.nunique() * 100)
+
+airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count()
+top_airlines_flights_sum = airlines_flights_sum.nlargest(top_airlines_amount).sum()
+top_airlines_flights_percentage_from_total = top_airlines_flights_sum / airlines_flights_sum.sum() * 100
+
 
 st.markdown(f'''
-airlines_amount = {airlines_amount}
-top_airlines_amount = {top_airlines_amount}
-top_airlines_percentage_from_total = {top_airlines_percentage_from_total}
-top_airlines_flights_amount = {top_airlines_flights_amount}
-top_airlines_flights_percentage_from_total = {top_airlines_flights_percentage_from_total}
+airlines_amount = {airlines_amount} \n
+top_airlines_amount = {top_airlines_amount} \n
+top_airlines_percentage_from_total = {top_airlines_percentage_from_total} \n
+
+airlines_flights_sum = {airlines_flights_sum} \n
+top_airlines_flights_sum = {top_airlines_flights_sum} \n
+top_airlines_flights_percentage_from_total = {top_airlines_flights_percentage_from_total} \n
 ''',unsafe_allow_html=True)
 
 
