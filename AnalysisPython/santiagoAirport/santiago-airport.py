@@ -180,22 +180,9 @@ with tab1_Extraction_Code:
 airlines_amount = df_departures.Airline.nunique()
 top_airlines_amount = 6
 top_airlines_percentage_from_total = round(top_airlines_amount / airlines_amount * 100)
-
 airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().sum()
 top_airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().nlargest(2).sum()
 top_airlines_flights_percentage_from_total = round(top_airlines_flights_sum/airlines_flights_sum*100)
-
-
-st.markdown(f'''
-airlines_amount = {airlines_amount} \n
-top_airlines_amount = {top_airlines_amount} \n
-top_airlines_percentage_from_total = {top_airlines_percentage_from_total} \n
-
-airlines_flights_sum = {airlines_flights_sum} \n
-top_airlines_flights_sum = {top_airlines_flights_sum} \n
-top_airlines_flights_percentage_from_total = {top_airlines_flights_percentage_from_total} \n
-''',unsafe_allow_html=True)
-
 
 with tab2_Descriptive_Statistics:
 	st.markdown(f'''
@@ -209,7 +196,28 @@ with tab2_Descriptive_Statistics:
 	
 	''',unsafe_allow_html=True)
 
+	# create a horizontal bar chart in Streamlit where the airlines are listed in the y-axis and the flight amounts in the x-axis
 
+	# Get the top X most frequent airlines
+	top_airlines = df_arrivals['Airline'].value_counts().nlargest(top_airlines_amount).index.tolist()
+
+	# Filter the dataframe for only the top X airlines
+	df_top_airlines = df_arrivals[df_arrivals['Airline'].isin(top_airlines)]
+	
+	# Create a bar chart using Altair
+	chart = alt.Chart(df_top_airlines).mark_bar().encode(
+		y=alt.Y('Airline:N', sort='-x'),
+		x=alt.X('count(Flight):Q', title='Number of Flights')
+	)
+
+	# Set the chart options
+	chart = chart.properties(
+		width=700,
+		height=400
+	)
+
+	# Render the chart using Streamlit
+	st.altair_chart(chart, use_container_width=True)
 
 	df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
 
