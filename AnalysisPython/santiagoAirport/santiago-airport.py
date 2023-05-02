@@ -196,17 +196,19 @@ with tab2_Descriptive_Statistics:
 	
 	''',unsafe_allow_html=True)
 
-	# create a horizontal bar chart in Streamlit where the airlines are listed in the y-axis and the flight amounts in the x-axis
+
 
 	# Get the top X most frequent airlines
 	top_airlines = df_arrivals['Airline'].value_counts().nlargest(top_airlines_amount).index.tolist()
 
 	# Filter the dataframe for only the top X airlines
 	df_top_airlines = df_arrivals[df_arrivals['Airline'].isin(top_airlines)]
-	
+
 	# Create a bar chart using Altair
 	chart = alt.Chart(df_top_airlines).mark_bar().encode(
-		y=alt.Y('Airline:N', sort='-x'),
+		y=alt.Y('Airline:N', sort='-x', axis=alt.Axis(labelColor=alt.condition(
+			alt.datum.Airline <= top_airlines[5], alt.value('red'), alt.value('black')
+		))),
 		x=alt.X('count(Flight):Q', title='Number of Flights')
 	)
 
@@ -218,6 +220,12 @@ with tab2_Descriptive_Statistics:
 
 	# Render the chart using Streamlit
 	st.altair_chart(chart, use_container_width=True)
+
+
+
+
+
+
 
 	df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
 
