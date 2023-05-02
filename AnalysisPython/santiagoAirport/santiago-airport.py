@@ -192,12 +192,6 @@ with tab2_Descriptive_Statistics:
 	top_airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().nlargest(top_X).sum()
 	top_airlines_flights_percentage_from_total = round(top_airlines_flights_sum/airlines_flights_sum*100)
 
-	st.markdown(f'''
-		<ul>
-		<li> Santiago airport is currently hosting <b> {airlines_amount} </b> airlines managing <b>{airlines_flights_sum} </b> daily flights. </li>
-		<li> The top {top_airlines_amount} Airlines ({top_airlines_percentage_from_total}%) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
-		</ul>
-	''',unsafe_allow_html=True)
 
 	# Create a DataFrame with the counts of flights per airline
 	df_counts = df_departures.groupby('Airline').agg({'Flight': 'count'}).reset_index()
@@ -216,10 +210,19 @@ with tab2_Descriptive_Statistics:
 			alt.value('orange'),
 			alt.value('gray')
 		)
+	).properties(
+    title='Flight Count by Airline'
 	)
 
 	st.altair_chart(chart, use_container_width=True)
 
+	st.markdown(f'''
+		<p> The amount of flights per airline is highly skewed.
+		<ul>
+		<li> The top {top_airlines_amount} Airlines ({top_airlines_percentage_from_total}%) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
+		<li> Santiago airport is currently hosting <b> {airlines_amount} </b> airlines managing <b>{airlines_flights_sum} </b> daily flights. </li>
+		</ul>
+	''',unsafe_allow_html=True)
 
 
 
