@@ -202,8 +202,8 @@ with tab2_Descriptive_Statistics:
 	<h2>Descriptive statistics</h2>
 	<p>Calculate the mean, median, mode, variance, standard deviation, and other measures of central tendency and dispersion to gain insights into the distribution of different variables.</p>
 	<ul>
-		<li> Santiago airport is currently hosting <b> {airlines_amount} </b> airlines. </li>
-		<li> The top <b> {top_airlines_amount} </b> Airlines ({top_airlines_percentage_from_total}% of total airlines) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
+		<li> Santiago airport is currently hosting <b> {airlines_amount} </b> airlines wich account for <b>{airlines_flights_sum} </b> flights in total. </li>
+		<li> The top <b> {top_airlines_amount} </b> Airlines ({top_airlines_percentage_from_total}%) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
 		
 	</ul>
 	
