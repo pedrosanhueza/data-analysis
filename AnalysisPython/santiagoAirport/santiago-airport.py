@@ -198,11 +198,13 @@ with tab2_Descriptive_Statistics:
 
 
 
+
 	chart = alt.Chart(df_departures).mark_bar().encode(
-		y=alt.Y('Airline:N', title='Airlines'),
+		y=alt.Y('Airline:N', title='Airlines', sort=alt.EncodingSortField(field='Flight', op='count', order='descending')),
 		x=alt.X('count(Flight):Q', title='Flight Count')
 	)
 	st.altair_chart(chart, use_container_width=True)
+
 
 
 
