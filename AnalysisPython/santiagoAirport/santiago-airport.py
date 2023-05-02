@@ -202,7 +202,7 @@ with tab2_Descriptive_Statistics:
 		y=alt.Y('Airline:N', title='Airlines'),
 		x=alt.X('count(Flight):Q', title='Flight Count')
 	)
-	chart.show()
+	st.altair_chart(chart, use_container_width=True)
 
 
 
