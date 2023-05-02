@@ -189,7 +189,7 @@ with tab2_Descriptive_Statistics:
 	<h2>Descriptive statistics</h2>
 	<p>Calculate the mean, median, mode, variance, standard deviation, and other measures of central tendency and dispersion to gain insights into the distribution of different variables.</p>
 	<ul>
-		<li> Santiago airport is currently hosting <b> {airlines_amount} </b> airlines wich account for <b>{airlines_flights_sum} </b> flights in total. </li>
+		<li> Santiago airport is currently hosting <b> {airlines_amount} </b> wich manage <b>{airlines_flights_sum} </b> daily flights. </li>
 		<li> The top <b> {top_airlines_amount} </b> Airlines ({top_airlines_percentage_from_total}%) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
 		
 	</ul>
@@ -197,17 +197,13 @@ with tab2_Descriptive_Statistics:
 	''',unsafe_allow_html=True)
 
 
-
 	# Get the top X most frequent airlines
 	top_airlines = df_arrivals['Airline'].value_counts().nlargest(top_airlines_amount).index.tolist()
 
-	# Filter the dataframe for only the top X airlines
-	df_top_airlines = df_arrivals[df_arrivals['Airline'].isin(top_airlines)]
-
 	# Create a bar chart using Altair
-	chart = alt.Chart(df_top_airlines).mark_bar().encode(
+	chart = alt.Chart(df_arrivals).mark_bar().encode(
 		y=alt.Y('Airline:N', sort='-x', axis=alt.Axis(labelColor=alt.condition(
-			alt.datum.Airline <= top_airlines[5], alt.value('red'), alt.value('black')
+			alt.datum.Airline.isin(top_airlines), alt.value('red'), alt.value('black')
 		))),
 		x=alt.X('count(Flight):Q', title='Number of Flights')
 	)
