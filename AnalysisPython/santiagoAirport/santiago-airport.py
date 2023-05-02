@@ -209,18 +209,23 @@ with tab2_Descriptive_Statistics:
 
 
 
+	# Create a DataFrame with the counts of flights per airline
+	df_counts = df_departures.groupby('Airline').agg({'Flight': 'count'}).reset_index()
+	df_counts = df_counts.rename(columns={'Flight': 'FlightCount'})
 
-	chart = alt.Chart(df_departures).mark_bar().encode(
-		y=alt.Y('Airline:N', title='Airlines', sort=alt.EncodingSortField(field='Flight', op='count', order='descending')),
-		x=alt.X('count(Flight):Q', title='Flight Count'),
+	# Sort the DataFrame by flight count and add a rank column
+	df_counts = df_counts.sort_values('FlightCount', ascending=False)
+	df_counts['Rank'] = range(1, len(df_counts) + 1)
+
+	# Create a chart with conditional color formatting for the top 2 airlines
+	chart = alt.Chart(df_counts).mark_bar().encode(
+		y=alt.Y('Airline:N', sort='-x'),
+		x=alt.X('FlightCount:Q', title='Flight Count'),
 		color=alt.condition(
 			alt.datum.Rank <= 2,
 			alt.value('orange'),
 			alt.value('gray')
 		)
-	).transform_window(
-		Rank='row_number()',
-		sort=[alt.SortField('count(Flight)', order='descending')]
 	)
 
 	st.altair_chart(chart, use_container_width=True)
