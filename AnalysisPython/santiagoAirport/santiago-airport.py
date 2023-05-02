@@ -183,6 +183,14 @@ top_airlines_percentage_from_total = round(top_airlines_amount / airlines_amount
 top_airlines_flights_amount = df_departures.Airline.value_counts().head(top_airlines_amount).sum()
 top_airlines_flights_percentage_from_total = round(top_airlines_flights_amount / df_departures.Airline.nunique() * 100)
 
+st.markdown(f'''
+airlines_amount = {airlines_amount}
+top_airlines_amount = {top_airlines_amount}
+top_airlines_percentage_from_total = {top_airlines_percentage_from_total}
+top_airlines_flights_amount = {top_airlines_flights_amount}
+top_airlines_flights_percentage_from_total = {top_airlines_flights_percentage_from_total}
+''',unsafe_allow_html=True)
+
 
 with tab2_Descriptive_Statistics:
 	st.markdown(f'''
@@ -190,7 +198,7 @@ with tab2_Descriptive_Statistics:
 	<p>Calculate the mean, median, mode, variance, standard deviation, and other measures of central tendency and dispersion to gain insights into the distribution of different variables.</p>
 	<ul>
 		<li> Santiago airport is currently hosting <b> {airlines_amount} </b> airlines. </li>
-		<li> The top <b> {top_airlines_amount} </b> Airlines ({top_airlines_percentage_from_total})% account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_amount}) of all flights in the airport. </li>
+		<li> The top <b> {top_airlines_amount} </b> Airlines ({top_airlines_percentage_from_total}% of total airlines) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_amount}) of all flights in the airport. </li>
 		
 	</ul>
 	
