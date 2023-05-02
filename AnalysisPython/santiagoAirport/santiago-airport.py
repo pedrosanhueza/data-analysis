@@ -183,7 +183,7 @@ top_airlines_percentage_from_total = round(top_airlines_amount / airlines_amount
 
 airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().sum()
 top_airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().nlargest(2).sum()
-top_airlines_flights_percentage_from_total = round(airlines_flights_sum/top_airlines_flights_sum*100)
+top_airlines_flights_percentage_from_total = round(top_airlines_flights_sum/airlines_flights_sum*100)
 
 
 st.markdown(f'''
