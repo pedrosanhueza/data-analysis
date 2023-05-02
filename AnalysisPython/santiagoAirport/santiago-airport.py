@@ -196,20 +196,14 @@ with tab2_Descriptive_Statistics:
 	
 	''',unsafe_allow_html=True)
 
-	# Create a bar chart using Altair
-	chart = alt.Chart(df_arrivals).mark_bar().encode(
-		y=alt.Y('Airline:N', sort='-x',
-		x=alt.X('count(Flight):Q', title='Number of Flights'))
-	)
 
-	# Set the chart options
-	chart = chart.properties(
-		width=700,
-		height=400
-	)
 
-	# Render the chart using Streamlit
-	st.altair_chart(chart, use_container_width=True)
+	chart = alt.Chart(df).mark_bar().encode(
+		y=alt.Y('Airlines:N', title='Airlines'),
+		x=alt.X('count(Flights):Q', title='Flight Count')
+	)
+	chart.show()
+
 
 
 
