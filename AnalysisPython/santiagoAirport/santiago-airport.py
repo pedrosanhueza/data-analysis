@@ -199,8 +199,8 @@ with tab2_Descriptive_Statistics:
 
 
 	chart = alt.Chart(df).mark_bar().encode(
-		y=alt.Y('Airlines:N', title='Airlines'),
-		x=alt.X('count(Flights):Q', title='Flight Count')
+		y=alt.Y('Airline:N', title='Airlines'),
+		x=alt.X('count(Flight):Q', title='Flight Count')
 	)
 	chart.show()
 
