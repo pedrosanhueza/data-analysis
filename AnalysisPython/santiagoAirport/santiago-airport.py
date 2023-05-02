@@ -196,16 +196,10 @@ with tab2_Descriptive_Statistics:
 	
 	''',unsafe_allow_html=True)
 
-
-	# Get the top X most frequent airlines
-	top_airlines = df_arrivals['Airline'].value_counts().nlargest(top_airlines_amount).index.tolist()
-
 	# Create a bar chart using Altair
 	chart = alt.Chart(df_arrivals).mark_bar().encode(
-		y=alt.Y('Airline:N', sort='-x', axis=alt.Axis(labelColor=alt.condition(
-			alt.datum.Airline.isin(top_airlines), alt.value('red'), alt.value('black')
-		))),
-		x=alt.X('count(Flight):Q', title='Number of Flights')
+		y=alt.Y('Airline:N', sort='-x',
+		x=alt.X('count(Flight):Q', title='Number of Flights'))
 	)
 
 	# Set the chart options
