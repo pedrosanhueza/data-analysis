@@ -198,43 +198,11 @@ with tab2_Descriptive_Statistics:
 
 
 
-	# chart = alt.Chart(df_departures).mark_bar().encode(
-	# 	y=alt.Y('Airline:N', title='Airlines'),
-	# 	x=alt.X('count(Flight):Q', title='Flight Count')
-	# )
-	# st.altair_chart(chart, use_container_width=True)
-
-
-
-
-
-
-	# Calculate the maximum flight count for each airline
-	max_flights = df_departures.groupby('Airline')['Flight'].count().reset_index(name='MaxFlights')
-
-	# Create the Altair chart object
-	chart2 = alt.Chart(df_departures).mark_bar().encode(
-		y=alt.Y('Airline:N', title='Airline'),
-		x=alt.X('count(Flight):Q', title='Flight Count'),
-		color=alt.condition(
-			alt.datum.MaxFlights == alt.datum['count(Flight)'],
-			alt.value('red'),
-			alt.value('gray')
-		)
-	).transform_window(
-		MaxFlights='max(count(Flight))',
-		frame=[None, None]
-	).transform_filter(
-		alt.datum.MaxFlights > 0
+	chart = alt.Chart(df_departures).mark_bar().encode(
+		y=alt.Y('Airline:N', title='Airlines'),
+		x=alt.X('count(Flight):Q', title='Flight Count')
 	)
-
-	# Add the max flight counts to the chart object
-	chart2 = chart2.transform_lookup(
-		lookup='Airline',
-		from_=alt.LookupData(max_flights, 'Airline', ['MaxFlights'])
-	)
-
-	st.altair_chart(chart2, use_container_width=True)
+	st.altair_chart(chart, use_container_width=True)
 
 
 
