@@ -301,6 +301,36 @@ with tab2_Descriptive_Statistics:
 		fontSize=20,
 		fontWeight='bold'
 	)
+
+	st.altair_chart(chart, use_container_width=True)
+
+	# ---
+
+	# create a new column with the hour of the date/time
+	df_arrivals['Hour'] = df_arrivals['Date_Time'].dt.hour
+
+	# group by hour and count the number of flights
+	hourly_flights = df_arrivals.groupby('Hour').count()['Flight'].reset_index(name='Count')
+
+	# create the bar chart
+	chart = alt.Chart(hourly_flights).mark_bar().encode(
+		x=alt.X('Hour:N', title='Hour of the Day', axis=alt.Axis(labelAngle=0)),
+	    y=alt.Y('Count:Q', title='Flights'),
+	        color=alt.condition(
+        alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
+        alt.value('orange'),
+        alt.value('gray')
+    	)
+	).properties(
+		width=600,
+    	height=800,
+		title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='Number of flights per airline'),
+	).configure_axis(
+		grid=False
+	).configure_title(
+		fontSize=20,
+		fontWeight='bold'
+	)
 	
 	st.altair_chart(chart, use_container_width=True)
 
