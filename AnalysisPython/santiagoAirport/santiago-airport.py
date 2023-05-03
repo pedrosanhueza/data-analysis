@@ -60,6 +60,8 @@ if st.button('Refresh Data'):
 else:
 	df_arrivals = pd.read_csv('AnalysisPython/santiagoAirport/arrivals.csv')
 	df_departures = pd.read_csv('AnalysisPython/santiagoAirport/departures.csv')
+	df_departures['Date_Time'] = pd.to_datetime(df_departures.Date + "-" + df_departures.Departure, format='%Y-%m-%d-%H:%M')
+	df_arrivals['Date_Time'] = pd.to_datetime(df_arrivals.Date + "-" + df_arrivals.Arrival, format='%Y-%m-%d-%H:%M')
 
 # # ---------------------------------------- Tabs ----------------------------------------
 
