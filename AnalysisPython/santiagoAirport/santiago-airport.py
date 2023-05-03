@@ -286,7 +286,7 @@ with tab2_Descriptive_Statistics:
 			y=alt.Y('Count:Q', title='',axis=alt.Axis(labels=False),scale=alt.Scale(domain=[0, 100])),color=alt.condition(
 			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
 			alt.value('orange'),alt.value('gray'))
-		).properties(height=700,title=alt.TitleParams(text='Flights per Hour',align='left',subtitle='Departure Flights',subtitleColor='white'),
+		).properties(height=700,title=alt.TitleParams(text='Flights per Hour',align='left',subtitle='Departures',subtitleColor='white',orient='top'),
 		).configure_axis(grid=False
 		).configure_title(fontSize=20,fontWeight='bold')
 		st.altair_chart(chart, use_container_width=True)
@@ -302,7 +302,7 @@ with tab2_Descriptive_Statistics:
 			y=alt.Y('Count:Q', title='',axis=alt.Axis(labels=False),scale=alt.Scale(domain=[0, 100])),color=alt.condition(
 			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
 			alt.value('orange'),alt.value('gray'))
-		).properties(height=700,title=alt.TitleParams(text='Flights per Hour', align='left', subtitle='Arrival Flights',subtitleColor='white'),
+		).properties(height=700,title=alt.TitleParams(text='Flights per Hour', align='left', subtitle='Arrivals',subtitleColor='white'),
 		).configure_axis(grid=False
 		).configure_title(fontSize=20,fontWeight='bold')
 		st.altair_chart(chart, use_container_width=True)
