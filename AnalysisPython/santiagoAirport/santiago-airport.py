@@ -332,7 +332,7 @@ with tab2_Descriptive_Statistics:
 	with col_arrivals:
 		df_arrivals['Hour'] = df_arrivals['Date_Time'].dt.hour
 
-		skewness = round(df_departures['Hour'].skew(),2)
+		skewness = round(df_arrivals['Hour'].skew(),2)
 		skewness_kpi = (
 		"right-skewed" if skewness > 0.01 else
 		"left-skewed" if skewness < -0.01 else
