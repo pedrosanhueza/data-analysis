@@ -312,20 +312,32 @@ with tab3_Time_Series_Analysis:
 	with col2:
 		font_size = 24
 		st.markdown(f'''
-		<br>
 		<div style="text-align: center;">
 		<p style="font-family: Arial, sans-serif; font-size: 16px;">
-			Most departures occure
+			Most
 				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
-			   before noon
+				departures
 				</span>
-				while most arrivals occur
-				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
-				after noon.
+				occure
+				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+				before noon.
 				</span>
+				flights, from which the 
 		</p>
 		</div>
-	<br><br>
+		<div style="text-align: center;">
+			<p>
+			Most
+				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
+				Arrivals
+				</span>
+				occure
+				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+				after noon.
+				</span>
+			</p>
+		</div>
+		<br>
 		''',unsafe_allow_html=True)
 	with col3:
 		st.write("")
