@@ -391,15 +391,6 @@ with tab3_Time_Series_Analysis:
 		).configure_title(fontSize=20,fontWeight='bold')
 		st.altair_chart(chart, use_container_width=True)
 
-		st.markdown(f'''
-		<p>
-		The drop of flights from the hours: 1:00 am to 3:00am is
-		<span style="color: orange; font-weight: bold;"> not
-		</span>
-		statistically significant across the day based on the skewness and kurtosis of the distribution.
-		</p><br><br>
-		''',unsafe_allow_html=True)
-
 	with col_empty2:
 		st.write('')
 
@@ -449,13 +440,22 @@ with tab3_Time_Series_Analysis:
 		).configure_axis(grid=False
 		).configure_title(fontSize=20,fontWeight='bold')
 		st.altair_chart(chart, use_container_width=True)
+		
+	st.markdown(f'''
+	<p>
+	The drop of flights from the hours: 1:00 am to 3:00am for departures is
+	<span style="color: orange; font-weight: bold;"> not
+	</span>
+	statistically significant across the day based on the skewness and kurtosis of the distribution.
+	</p><br><br>
+	''',unsafe_allow_html=True)
 
-		st.markdown(f'''
-		<p>
-			The difference between departure and arrival flights are not statistically significant over time.
-		</p>
-		<br><br>
-		''',unsafe_allow_html=True)
+	st.markdown(f'''
+	<p>
+		The difference between departure and arrival flights are not statistically significant over time.
+	</p>
+	<br><br>
+	''',unsafe_allow_html=True)
 
 with tab4_Hypothesis_Testing:
 	st.markdown('''
