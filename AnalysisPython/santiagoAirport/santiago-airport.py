@@ -290,6 +290,8 @@ with tab2_Descriptive_Statistics:
 
 	# set the x-axis ticks to show only the hour
 	chart = chart.properties(
+		width=600,
+    	height=800,
 		title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='Number of flights per airline'),
 	).configure_axis(
     grid=False
