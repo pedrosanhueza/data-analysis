@@ -300,20 +300,19 @@ with tab2_Descriptive_Statistics:
 	st.altair_chart(chart, theme="streamlit", use_container_width=True)
 
 
+	# group by destination city and country and get the count
+	df_departures_grouped = df_departures.groupby(['Destination City', 'Country']).size().reset_index(name='Count')
 
-	# filter the DataFrame to only include rows where the Destination Country column equals Chile
-	df_chile_departures = df_departures[df_departures['Destination Country'] == 'Chile']
-
-	# group the filtered DataFrame by Destination City and count the number of departures
-	df_chile_departures_grouped = df_chile_departures.groupby(['Destination City']).size().reset_index(name='Count')
-
-	# create the bar chart using Altair and specify the color of the bars
-	chart = alt.Chart(df_chile_departures_grouped).mark_bar(color='orange').encode(
+	# create the bar chart using Altair
+	chart = alt.Chart(df_departures_grouped).mark_bar().encode(
 		y=alt.Y('Destination City:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
 		x='Count:Q',                     # specify the x-axis as Count
-		tooltip=['Destination City', 'Count'],   # add a tooltip that shows the Origin and Count
+		color=alt.Color('Country:N', scale=alt.Scale(domain=['Chile'], range=['#008000'])),  # color the bars that have 'Chile' in the country column
+		tooltip=['Destination City', 'Country', 'Count'],   # add a tooltip that shows the Origin, Country, and Count
 		text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
 	).properties(
+		# width=800,
+		# height=500,
 		title='Flights by Destination City'
 	)
 
@@ -325,6 +324,7 @@ with tab2_Descriptive_Statistics:
 
 	# display the chart using Streamlit
 	st.altair_chart(chart, theme="streamlit", use_container_width=True)
+
 
 
 
