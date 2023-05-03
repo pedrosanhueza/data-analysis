@@ -313,21 +313,20 @@ with tab3_Time_Series_Analysis:
 		font_size = 24
 		st.markdown(f'''
 		<div style="text-align: center;">
-		<p style="font-family: Arial, sans-serif; font-size: 16px;">
-			
+			<p>
 				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
 				Most departures
 				</span>
 				occure
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
-				before noon.
+				beforec noon.
 				</span>
 			</p>
 		</div>
 		<div style="text-align: center;">
 			<p>
 				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
-				Most Arrivals
+				Most arrivals
 				</span>
 				occure
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
