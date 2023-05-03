@@ -300,7 +300,7 @@ with tab2_Descriptive_Statistics:
 	).configure_title(
 		fontSize=20,
 		fontWeight='bold'
-	)
+	).BarConfig(width=12)
 
 	st.altair_chart(chart, use_container_width=True)
 
