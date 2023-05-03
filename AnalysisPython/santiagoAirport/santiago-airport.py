@@ -266,7 +266,7 @@ with tab2_Descriptive_Statistics:
 			alt.value('gray')
 		)
 	).properties(
-	title=alt.TitleParams(text='Flights by Airline', align='center', subtitle='Number of flights per airline'),
+	title=alt.TitleParams(text='Flights by Airline',align='center',subtitle='Number of flights per airline',subtitleColor='white'),
 	).configure_axis(
     grid=False
 	)
