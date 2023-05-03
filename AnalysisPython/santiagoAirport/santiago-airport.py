@@ -295,15 +295,34 @@ with tab2_Descriptive_Statistics:
 		st.write('')
 
 	with col_arrivals:
-		
 		df_arrivals['Hour'] = df_arrivals['Date_Time'].dt.hour
-		skew = round(df_departures['Hour'].skew(),2)
+
+		skewness = round(df_departures['Hour'].skew(),2)
+		if skewness < -1 or skewness > 1:
+			skewness_description = "highly skewed"
+		elif -1 <= skewness <= -0.5 or 0.5 <= skewness <= 1:
+			skewness_description = "moderately skewed"
+		else:
+			skewness_description = "approximately symmetric"
+		
 		kurtosis = round(df_departures['Hour'].kurtosis(),2)
+		if kurtosis < 3:
+			kurtosis_descriptive = "platykurtic"
+		elif kurtosis > 3:
+			kurtosis_descriptive = "leptokurtic"
+		else:
+			kurtosis_descriptive = "normal"
+
+		kpi1, kpi2 = st.columns(2)
+
+		kpi1.metric(label='Skewness', value=skewness, delta=skewness_description)
+		kpi2.metric(label='Kurtosis', value=kurtosis, delta=kurtosis_descriptive)
 
 		st.markdown(f'''
 		<h3>Departure Flights</h3>
 		<p>
 		Skewness: {skew}
+		<br>
 		Kurtosis: {kurtosis}
 		</p>
 		''',unsafe_allow_html=True)
