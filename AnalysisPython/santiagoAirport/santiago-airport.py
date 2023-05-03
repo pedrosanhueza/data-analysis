@@ -321,6 +321,7 @@ with tab3_Time_Series_Analysis:
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 				before noon.
 				<br>
+				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
 				Most arrivals
 				</span>
 				occure
@@ -437,12 +438,15 @@ with tab3_Time_Series_Analysis:
 		st.altair_chart(chart, use_container_width=True)
 		
 	st.markdown(f'''
-	<p>
-	The drop of flights from the hours: 1:00 am to 3:00am for departures is
-	<span style="color: orange; font-weight: bold;"> not
-	</span>
-	statistically significant across the day based on the skewness and kurtosis of the distribution.
-	</p><br><br>
+	<div style="text-align: center;">
+		<p>
+		The drop of flights from the hours: 1:00 am to 3:00am for departures is
+		<span style="color: orange; font-weight: bold;"> not
+		</span>
+		statistically significant across the day based on the skewness and kurtosis of the distribution.
+		</p>
+	</div>
+	<br><br>
 	''',unsafe_allow_html=True)
 
 	st.markdown(f'''
