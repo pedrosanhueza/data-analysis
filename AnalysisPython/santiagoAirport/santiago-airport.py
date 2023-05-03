@@ -302,29 +302,6 @@ with tab2_Descriptive_Statistics:
 		fontWeight='bold'
 	)
 
-	text = chart.mark_text(
-		align='center',
-		baseline='middle',
-		dy=-5  # adjust y position of the text
-	).encode(
-		text=alt.Text('Count:Q', format='.0f')
-	)
-
-	chart = chart + text
-
-	config = {
-    'axis': {
-        'labelFontSize': 14,
-        'titleFontSize': 16
-		}
-	}
-
-	# Set the configuration for the chart
-	chart.configure_axis(
-		labelFontSize=14,
-		titleFontSize=16
-	)
-
 	st.altair_chart(chart, use_container_width=True)
 
 	# df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
