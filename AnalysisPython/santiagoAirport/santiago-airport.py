@@ -296,7 +296,7 @@ with tab2_Descriptive_Statistics:
 		hourly_flights = df_arrivals.groupby('Hour').count()['Flight'].reset_index(name='Count')
 		chart = alt.Chart(hourly_flights).mark_bar().encode(
 			x=alt.X('Hour:N', title='Hour of the Day',axis=alt.Axis(labelAngle=0)),
-			y=alt.Y('Count:Q', title='',,axis=alt.Axis(ticks=False),scale=alt.Scale(domain=[0, 100])),color=alt.condition(
+			y=alt.Y('Count:Q', title='',axis=alt.Axis(ticks=False),scale=alt.Scale(domain=[0, 100])),color=alt.condition(
 			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
 			alt.value('orange'),alt.value('gray'))
 		).properties(height=700,title=alt.TitleParams(text='Flights per Hour', align='left', subtitle='Arrival Flights',subtitleColor='white'),
