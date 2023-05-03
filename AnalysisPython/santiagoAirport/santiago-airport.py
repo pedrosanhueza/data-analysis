@@ -323,18 +323,21 @@ with tab2_Descriptive_Statistics:
 		st.markdown(f'''
 		<p>
 			The distribution of flights over time is
-			<span style="color: orange; font-weight: bold;"> {skewness_description} 
+			<span style="color: orange; font-weight: bold; font-size: {font_size}px;"> {skewness_description} 
 			</span>
 			with statistically {kurtosis_descriptive}
 		<br>
 		''',unsafe_allow_html=True)
 
 		hourly_flights = df_arrivals.groupby('Hour').count()['Flight'].reset_index(name='Count')
+		bottom_3 = hourly_flights.nsmallest(3, 'Count')['Count'].max()
 		chart = alt.Chart(hourly_flights).mark_bar().encode(
 			x=alt.X('Hour:N', title='Hours of the Day',axis=alt.Axis(labelAngle=0)),
 			y=alt.Y('Count:Q', title='',axis=alt.Axis(labels=False),scale=alt.Scale(domain=[0, 100])),color=alt.condition(
-			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
-			alt.value('orange'),alt.value('gray'))
+			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),alt.value('orange'),alt.condition(
+            alt.datum.Count <= bottom_3,
+            alt.value('blue'),
+            alt.value('gray')))
 		).properties(height=700,title=alt.TitleParams(text='Flights per Hour', align='left', subtitle='Arrivals',subtitleColor='gray'),
 		).configure_axis(grid=False
 		).configure_title(fontSize=20,fontWeight='bold')
