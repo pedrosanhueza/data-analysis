@@ -279,7 +279,7 @@ with tab2_Descriptive_Statistics:
 	df_departures_grouped = df_departures.groupby(['Destination City','Destination Country']).size().reset_index(name='Count')
 
 	chart = alt.Chart(df_departures_grouped).mark_bar().encode(
-		y=alt.Y('Destination City:N', sort='-x'),
+		y=alt.Y('Destination City:N', sort='-x', title=''),
 		x='Count:Q',
 		tooltip=['Destination City', 'Count'],
 		text=alt.Text('Count:Q', format=',d'),
