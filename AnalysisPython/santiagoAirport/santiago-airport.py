@@ -61,6 +61,9 @@ else:
 	df_arrivals = pd.read_csv('AnalysisPython/santiagoAirport/arrivals.csv')
 	df_departures = pd.read_csv('AnalysisPython/santiagoAirport/departures.csv')
 
+	df_arrivals['Date_Time'] = pd.to_datetime(df_arrivals['Date_Time'])
+	df_departures['Date_Time'] = pd.to_datetime(df_departures['Date_Time'])
+
 # # ---------------------------------------- Tabs ----------------------------------------
 
 tab1_Extraction_Code, tab2_Descriptive_Statistics, tab3_Time_Series_Analysis, tab4_Hypothesis_Testing, tab5_Regression_Analysis, tab6_Conclusion = st.tabs([
