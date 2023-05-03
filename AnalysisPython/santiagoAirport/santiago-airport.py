@@ -277,12 +277,12 @@ with tab2_Descriptive_Statistics:
 	st.markdown(f'''
 		<div style="text-align: center;">
 			<p style="font-family: Arial, sans-serif; font-size: 16px;">
-				<span style="color: orange; font-weight: bold; font-size: 42px;">
-					{international_percentage:.1f}%
+				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+					International flights
 				</span>
-				<br>
-				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
-					of flights are international
+				account for the
+				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+					{international_percentage:.1f}%
 				</span>
 			</p>
 		</div>
