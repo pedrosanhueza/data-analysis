@@ -44,7 +44,9 @@ st.markdown('''
 	<img src="https://www.swissasiatrading.com/wp-content/uploads/2018/04/72-min-1.jpg" alt="Arturo Merino Benítez International Airport (SCL) is the busiest airport in Chile.">
     <br><br>
 	The website 
-    <a href="https://www.santiago-airport.com" target="_blank"><span class="key"><strong style="color: blue;">Santiago-Airport.com</strong></span></a>
+    <a href="https://www.santiago-airport.com" target="_blank"><span class="key">
+		sSantiago-Airport.com
+	</span></a>
     provides real-time data on flight departures and arrivals from Santiago International Airport.
 	</center>
 </body>
