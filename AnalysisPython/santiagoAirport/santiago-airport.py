@@ -280,9 +280,9 @@ with tab2_Descriptive_Statistics:
 
 	# create the bar chart using Altair
 	chart = alt.Chart(df_departures).mark_bar().encode(
-		y=alt.Y('Departure City:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
+		y=alt.Y('Destination City:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
 		x='Count:Q',                     # specify the x-axis as Count
-		tooltip=['Departure City', 'Count'],   # add a tooltip that shows the Origin and Count
+		tooltip=['Destination City', 'Count'],   # add a tooltip that shows the Origin and Count
 		text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
 	).properties(
 		# width=800,
