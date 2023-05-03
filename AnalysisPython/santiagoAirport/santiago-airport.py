@@ -440,19 +440,19 @@ with tab3_Time_Series_Analysis:
 	st.markdown(f'''
 	<div style="text-align: center;">
 		<p>
-		The drop of flights from the hours: 1:00 am to 3:00am for departures is
-		<span style="color: orange; font-weight: bold;"> not
+			The drop of flights from the hours: 1:00 am to 3:00am for departures is
+		<span style="color: orange; font-weight: bold;">
+			not
 		</span>
-		statistically significant across the day based on the skewness and kurtosis of the distribution.
+			statistically significant across the day based on the skewness and kurtosis of the distribution.
+		<br>
+			The difference between departure and arrival flights are
+		<span style="color: orange; font-weight: bold;">
+			not
+		</span>
+			statistically significant over time.
 		</p>
 	</div>
-	<br><br>
-	''',unsafe_allow_html=True)
-
-	st.markdown(f'''
-	<p>
-		The difference between departure and arrival flights are not statistically significant over time.
-	</p>
 	<br><br>
 	''',unsafe_allow_html=True)
 
