@@ -295,11 +295,11 @@ with tab2_Descriptive_Statistics:
 		if kurtosis < -0.3:
 			kurtosis_descriptive = "infrequent outliers"
 		elif kurtosis > 0.3:
-			kurtosis_descriptive = "well dispersed"
+			kurtosis_descriptive = "defined outliers"
 		else:
 			kurtosis_descriptive = "normal dispersation"
 
-		st.markdown(f'''<h3>Arrival Flights</h3>''',unsafe_allow_html=True)
+		st.markdown(f'''<h3>Departure Flights</h3>''',unsafe_allow_html=True)
 
 		kpi1, kpi2 = st.columns(2)
 
@@ -346,7 +346,7 @@ with tab2_Descriptive_Statistics:
 		if kurtosis < -0.3:
 			kurtosis_descriptive = "infrequent outliers"
 		elif kurtosis > 0.3:
-			kurtosis_descriptive = "well dispersed"
+			kurtosis_descriptive = "defined outliers"
 		else:
 			kurtosis_descriptive = "normal dispersation"
 
