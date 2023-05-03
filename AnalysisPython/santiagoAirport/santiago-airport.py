@@ -207,21 +207,8 @@ with tab2_Descriptive_Statistics:
 
 		st.markdown(f'''
 		<div style="text-align: center;">
-			<p>
-				The top
-				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
-					{top_airlines_amount} Airlines
-				</span>
-				({top_airlines_percentage_from_total}%) account for the
-				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
-					{top_airlines_flights_percentage_from_total}%
-				</span>
-				({top_airlines_flights_sum}) of all flights in the airport.
-			</p>
-		</div>
-		<div style="text-align: center;">
 		<p style="font-family: Arial, sans-serif; font-size: 16px;">
-			Santiago airport hosts
+			The Santiago Airport hosts
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 			   {airlines_amount}
 				</span>
@@ -231,6 +218,20 @@ with tab2_Descriptive_Statistics:
 				</span>
 				flights. 
 		</p>
+		</div>
+		<div style="text-align: center;">
+			<p>
+				From which \n
+				the top
+				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+					{top_airlines_amount} Airlines
+				</span>
+				({top_airlines_percentage_from_total}%) account for the
+				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+					{top_airlines_flights_percentage_from_total}%
+				</span>
+				({top_airlines_flights_sum}) of all flights in the airport.
+			</p>
 		</div>
 		''',unsafe_allow_html=True)
 
