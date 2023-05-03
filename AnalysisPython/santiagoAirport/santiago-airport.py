@@ -330,7 +330,7 @@ with tab2_Descriptive_Statistics:
 	with col_arrivals:
 		df_arrivals['Hour'] = df_arrivals['Date_Time'].dt.hour
 
-		skewness = round(df_departures['Hour'].skew(),2)
+		skewness = round(df_arrivals['Hour'].skew(),2)
 		if skewness < -1 or skewness > 1:
 			skewness_description = "highly skewed"
 		elif -1 <= skewness <= -0.5 or 0.5 <= skewness <= 1:
@@ -338,7 +338,7 @@ with tab2_Descriptive_Statistics:
 		else:
 			skewness_description = "approximately symmetric"
 		
-		kurtosis = round(df_departures['Hour'].kurtosis(),2)
+		kurtosis = round(df_arrivals['Hour'].kurtosis(),2)
 		if kurtosis < -0.3:
 			kurtosis_descriptive = "infrequent outliers"
 		elif kurtosis > 0.3:
