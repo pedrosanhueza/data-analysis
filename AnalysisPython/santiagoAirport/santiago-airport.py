@@ -276,10 +276,10 @@ with tab2_Descriptive_Statistics:
 
 	# ------- Destination Cities by Flights -------
 
-	df_departures = df_departures.groupby(['Origin City']).size().reset_index(name='Count')
+	df_departures_grouped = df_departures.groupby(['Destination City']).size().reset_index(name='Count')
 
 	# create the bar chart using Altair
-	chart = alt.Chart(df_departures).mark_bar().encode(
+	chart = alt.Chart(df_departures_grouped).mark_bar().encode(
 		y=alt.Y('Destination City:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
 		x='Count:Q',                     # specify the x-axis as Count
 		tooltip=['Destination City', 'Count'],   # add a tooltip that shows the Origin and Count
