@@ -279,13 +279,15 @@ with tab2_Descriptive_Statistics:
 	# create a new column with the hour of the date/time
 	df_departures['Hour'] = df_departures['Date_Time'].dt.hour
 
+	hours = [f"{hour % 12 or 12}:00 {'am' if hour < 12 else 'pm'}" for hour in range(24)]
+
 	# group by hour and count the number of flights
 	hourly_flights = df_departures.groupby('Hour').count()['Flight'].reset_index(name='Count')
 
 	# create the bar chart
 	chart = alt.Chart(hourly_flights).mark_bar().encode(
-		x=alt.X('Hour:O', title='Hour of the Day'),
-		y=alt.Y('Count:Q', title='Flights')
+		x=alt.X('Hour:O', title='Hour of the Day', axis=alt.Axis(values=hours)),
+	    y=alt.Y('Count:Q', title='Flights')
 	)
 
 	# set the x-axis ticks to show only the hour
