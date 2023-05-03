@@ -40,7 +40,7 @@ for day in filterDay:
                 })
         df_departures = pd.concat([df_departures, pd.DataFrame(rows)], ignore_index=True)
 
-df_arrivals = pd.DataFrame(columns=['Origin City', 'Origin Code', 'Departure', 'Flight', 'Airline', 'Terminal', 'Status', 'Date', 'Reference Day', 'url'])
+df_arrivals = pd.DataFrame(columns=['Origin City', 'Origin Code', 'Arrival', 'Flight', 'Airline', 'Terminal', 'Status', 'Date', 'Reference Day', 'url'])
 
 for day in filterDay:
     for hour in filterHour:
@@ -55,7 +55,7 @@ for day in filterDay:
                 continue
             origin = flight.find('div', {'class', 'flight-col flight-col__dest-term'}).find('b').text
             origin_code = flight.find('div', {'class', 'flight-col flight-col__dest-term'}).find('span').text
-            departure = flight.find('div', {'class', 'flight-col flight-col__hour'}).text.strip()
+            arrival = flight.find('div', {'class', 'flight-col flight-col__hour'}).text.strip()
             flight_number = flight.find('div', {'class', 'flight-col flight-col__flight'}).text.strip().split('\n')
             airline = flight.find('div', {'class', 'flight-col flight-col__airline'}).text.strip().split('\n')
             terminal = flight.find('div', {'class', 'flight-col flight-col__terminal'}).text.strip()
@@ -64,7 +64,7 @@ for day in filterDay:
                 rows.append({
                     'Origin City': origin,
                     'Origin Code': origin_code,
-                    'Departure': departure,
+                    'Arrival': arrival,
                     'Flight': flight_number[i] if i < len(flight_number) else '',
                     'Airline': airline[i] if i < len(airline) else '',
                     'Terminal': terminal,
