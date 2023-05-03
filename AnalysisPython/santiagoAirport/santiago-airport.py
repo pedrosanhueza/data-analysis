@@ -274,6 +274,20 @@ with tab2_Descriptive_Statistics:
 	df_international_flights = df_departures[df_departures['Destination Country'] != 'Chile']
 	international_percentage = len(df_international_flights) / len(df_departures) * 100
 
+	st.markdown(f'''
+		<div style="text-align: center;">
+			<p style="font-family: Arial, sans-serif; font-size: 16px;">
+				<span style="color: orange; font-weight: bold; font-size: 36px;">
+					{international_percentage:.2f}%
+				</span>
+				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
+					International Flights
+				</span>
+			</p>
+		</div>
+	''',unsafe_allow_html=True)
+
+
 
 	df_departures_grouped = df_departures.groupby(['Destination City','Destination Country']).size().reset_index(name='Count')
 	chart = alt.Chart(df_departures_grouped).mark_bar().encode(
