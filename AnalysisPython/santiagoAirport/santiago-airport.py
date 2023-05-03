@@ -297,15 +297,15 @@ with tab2_Descriptive_Statistics:
 	with col_arrivals:
 		
 		df_arrivals['Hour'] = df_arrivals['Date_Time'].dt.hour
-		skew = df_departures['Hour'].skew()
-		kurtosis = df_departures['Hour'].kurtosis()
+		skew = round(df_departures['Hour'].skew(),2)
+		kurtosis = round(df_departures['Hour'].kurtosis(),2)
 
 		st.markdown(f'''
-		<h1>Departure Flights</h1>
-		<h3>
+		<h3>Departure Flights</h3>
+		<p>
 		Skewness: {skew}
 		Kurtosis: {kurtosis}
-		</h3>
+		</p>
 		''',unsafe_allow_html=True)
 
 		hourly_flights = df_arrivals.groupby('Hour').count()['Flight'].reset_index(name='Count')
