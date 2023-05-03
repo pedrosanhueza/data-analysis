@@ -272,9 +272,9 @@ with tab2_Descriptive_Statistics:
 	st.markdown(f'''<br><br><br>''',unsafe_allow_html=True)
 
 	# ---------------------------------------- Hourly Flights ----------------------------------------
-	
+
 	# create a new column with the hour of the date/time
-	df_departures['Hour'] = df_departures['Date_Time'].dt.hour
+	df_departures['Hour'] = df_departures['Date_Time'].hour
 
 	# group by hour and count the number of flights
 	hourly_flights = df_departures.groupby('Hour').count()['Flight'].reset_index(name='Count')
