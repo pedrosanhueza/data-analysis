@@ -305,11 +305,7 @@ with tab2_Descriptive_Statistics:
 
 	# create the bar chart using Altair
 	chart = alt.Chart(df_departures_grouped).mark_bar(
-		color=alt.condition(
-        alt.datum['Destination Country'] == 'Chile',
-        alt.value('orange'),  # set color to orange for Chile
-        alt.value('gray')  # set color to gray for all other countries
-    	)
+
 	).encode(
 		y=alt.Y('Destination City:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
 		x='Count:Q',                     # specify the x-axis as Count
