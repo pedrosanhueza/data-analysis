@@ -167,7 +167,11 @@ with tab1_Extraction_Code:
 	# # with st.expander("Python Data Extraction Code 🐍"):
 	st.code(script_scrape,language="python")
 
-	st.markdown('''<h2>Code Output</h2>''',unsafe_allow_html=True)
+	st.markdown('''<h2>Code Output</h2>
+		<ul>
+			<li> Display output</li>
+		<ul>
+	''',unsafe_allow_html=True)
     
 	st.code("st.dataframe(df_departures)",language="python")
     
