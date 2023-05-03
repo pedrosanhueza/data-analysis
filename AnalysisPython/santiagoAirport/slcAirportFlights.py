@@ -77,4 +77,3 @@ for day in filterDay:
 
 df_departures['Date_Time'] = pd.to_datetime(df_departures.Date + "-" + df_departures.Departure, format='%Y-%m-%d-%H:%M')
 df_arrivals['Date_Time'] = pd.to_datetime(df_arrivals.Date + "-" + df_arrivals.Arrival, format='%Y-%m-%d-%H:%M')
-
