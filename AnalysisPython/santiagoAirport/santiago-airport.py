@@ -209,11 +209,11 @@ with tab2_Descriptive_Statistics:
 		<div style="text-align: center;">
 		<p style="font-family: Arial, sans-serif; font-size: 16px;">
 			The Santiago Airport hosts
-				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
 			   {airlines_amount}
 				</span>
-				airlines, and manages
-				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+				airlines, managing
+				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
 				{airlines_flights_sum}
 				</span>
 				flights, from which the 
