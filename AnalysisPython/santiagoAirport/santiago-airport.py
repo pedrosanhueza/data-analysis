@@ -274,37 +274,6 @@ with tab2_Descriptive_Statistics:
 
 	st.markdown(f'''<br><br><br>''',unsafe_allow_html=True)
 
-	# ------- Destination Cities by Flights -------
-
-	df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
-
-	# create the bar chart using Altair
-	chart = alt.Chart(df_grouped_arrivals).mark_bar().encode(
-		y=alt.Y('Origin:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
-		x='Count:Q',                     # specify the x-axis as Count
-		tooltip=['Origin', 'Count'],   # add a tooltip that shows the Origin and Count
-		text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
-	).properties(
-		width=800,
-		height=500,
-		title='Number of Flights by Origin Frequency'   # set the chart title
-	)
-
-	# remove the x-axis
-	chart.configure_axisX(
-		tickOpacity=0,
-		labelOpacity=0
-	)
-
-	# display the chart using Streamlit
-	st.altair_chart(chart, theme="streamlit", use_container_width=True)
-
-with tab3_Time_Series_Analysis:
-	st.markdown('''
-	<h2>Time Series Analysis</h2>
-	<p>Plot the number of flights over time and identify seasonal variations, trends, and anomalies.</p>
-	''',unsafe_allow_html=True)
-
 	# ---------------------------------------- Hourly Flights ----------------------------------------
 
 	col_departures, col_empty2, col_arrivals = st.columns([1,0.5,1]) 
@@ -415,6 +384,39 @@ with tab3_Time_Series_Analysis:
 		).configure_axis(grid=False
 		).configure_title(fontSize=20,fontWeight='bold')
 		st.altair_chart(chart, use_container_width=True)
+
+	# ------- Destination Cities by Flights -------
+
+	df_grouped_arrivals = df_arrivals.groupby(['Origin City']).size().reset_index(name='Count')
+
+	# create the bar chart using Altair
+	chart = alt.Chart(df_grouped_arrivals).mark_bar().encode(
+		y=alt.Y('Origin City:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
+		x='Count:Q',                     # specify the x-axis as Count
+		tooltip=['Origin City', 'Count'],   # add a tooltip that shows the Origin and Count
+		text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
+	).properties(
+		width=800,
+		height=500,
+		title='Number of Flights by Origin Frequency'   # set the chart title
+	)
+
+	# remove the x-axis
+	chart.configure_axisX(
+		tickOpacity=0,
+		labelOpacity=0
+	)
+
+	# display the chart using Streamlit
+	st.altair_chart(chart, theme="streamlit", use_container_width=True)
+
+
+
+with tab3_Time_Series_Analysis:
+	st.markdown('''
+	<h2>Time Series Analysis</h2>
+	<p>Plot the number of flights over time and identify seasonal variations, trends, and anomalies.</p>
+	''',unsafe_allow_html=True)
 
 with tab4_Hypothesis_Testing:
 	st.markdown('''
