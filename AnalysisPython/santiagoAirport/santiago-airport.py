@@ -285,8 +285,8 @@ with tab2_Descriptive_Statistics:
 		text=alt.Text('Count:Q', format=',d'),
 		color=alt.condition(
 			alt.datum['Destination Country'] == 'Chile',
-			alt.value('orange'),  # set color to orange if Destination Country is Chile
-			alt.value('gray')     # set color to gray otherwise
+			alt.value('gray'),  # set color to orange if Destination Country is Chile
+			alt.value('orange')     # set color to gray otherwise
 		)
 	).properties(
 		title='Flights by Destination City'
