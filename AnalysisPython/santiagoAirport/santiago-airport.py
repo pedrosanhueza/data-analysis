@@ -224,25 +224,33 @@ with tab2_Descriptive_Statistics:
 		st.altair_chart(chart, use_container_width=True)
 
 	with col2:
+		
+		font_size = 24
 
 		st.markdown(f'''
 
 		<p style="font-family: Arial, sans-serif; font-size: 16px;">
 			The top
-				<span style="color: orange; font-weight: bold;">
-					6 Airlines
+				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+					{top_airlines_amount} Airlines
 				</span>
-				(17%) account for the
-				<span style="color: orange; font-weight: bold;">
-					83%
+				({top_airlines_percentage_from_total}%) account for the
+				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+					{top_airlines_flights_percentage_from_total}%
 				</span>
-				(653) of all flights in the airport.
-
+				({top_airlines_flights_sum}) of all flights in the airport.
 		</p>
-			<ul>
-			<li> The top {top_airlines_amount} Airlines ({top_airlines_percentage_from_total}%) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
-			<li> Santiago airport is currently hosting <b> {airlines_amount} </b> airlines managing <b>{airlines_flights_sum} </b> daily flights. </li>
-			</ul>
+		<p style="font-family: Arial, sans-serif; font-size: 16px;">
+			Santiago airport hosts
+				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+			   {airlines_amount}
+				</span>
+				airlines, and manages
+				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
+				{airlines_flights_sum}
+				</span>
+				flights. 
+		</p>
 		''',unsafe_allow_html=True)
 
 
