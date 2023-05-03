@@ -276,35 +276,8 @@ with tab2_Descriptive_Statistics:
 
 	# ------- Destination Cities by Flights -------
 
-	df_departures_grouped = df_departures.groupby(['Destination City']).size().reset_index(name='Count')
-
-	# create the bar chart using Altair
-	chart = alt.Chart(df_departures_grouped).mark_bar().encode(
-		y=alt.Y('Destination City:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
-		x='Count:Q',                     # specify the x-axis as Count
-		tooltip=['Destination City', 'Count'],   # add a tooltip that shows the Origin and Count
-		text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
-	).properties(
-		# width=800,
-		# height=500,
-		title='Flights by Destination City'
-	)
-
-	# remove the x-axis
-	chart.configure_axisX(
-		tickOpacity=0,
-		labelOpacity=0
-	)
-
-	# display the chart using Streamlit
-	st.altair_chart(chart, theme="streamlit", use_container_width=True)
-
-
-
-
 	df_departures_grouped = df_departures.groupby(['Destination City','Destination Country']).size().reset_index(name='Count')
 
-	# create the bar chart using Altair
 	chart = alt.Chart(df_departures_grouped).mark_bar().encode(
 		y=alt.Y('Destination City:N', sort='-x'),
 		x='Count:Q',
@@ -317,15 +290,10 @@ with tab2_Descriptive_Statistics:
 		)
 	).properties(
 		title='Flights by Destination City'
+	).configure_axis(
+    grid=False
 	)
 
-	# remove the x-axis
-	chart.configure_axisX(
-		tickOpacity=0,
-		labelOpacity=0
-	)
-
-	# display the chart using Streamlit
 	st.altair_chart(chart, theme="streamlit", use_container_width=True)
 
 
