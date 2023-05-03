@@ -296,8 +296,6 @@ with tab2_Descriptive_Statistics:
 	).configure_title(
 		fontSize=20,
 		fontWeight='bold'
-	).transform_calculate(
-    hour_label='format(datum.Hour, "%H:00")'
 	)
 
 	# show the plot
