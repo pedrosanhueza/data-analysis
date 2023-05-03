@@ -312,6 +312,19 @@ with tab2_Descriptive_Statistics:
 
 	chart = chart + text
 
+	config = {
+    'axis': {
+        'labelFontSize': 14,
+        'titleFontSize': 16
+		}
+	}
+
+	# Set the configuration for the chart
+	chart.configure_axis(
+		labelFontSize=14,
+		titleFontSize=16
+	)
+
 	st.altair_chart(chart, use_container_width=True)
 
 	# df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
