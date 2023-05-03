@@ -221,7 +221,8 @@ with tab2_Descriptive_Statistics:
 		</div>
 		<div style="text-align: center;">
 			<p>
-				From which \n
+				From which
+				<br>
 				the top
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 					{top_airlines_amount} Airlines
