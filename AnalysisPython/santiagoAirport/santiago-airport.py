@@ -54,7 +54,8 @@ st.markdown('''
 if st.button('Refresh Data'):
     st.info('Takes about 10 seconds to refresh', icon='⏰')
     from slcAirportFlights import df_arrivals, df_departures
-    st.success(f'Data refreshed ({df_arrivals.Date.value_counts().index[1]})', icon='✅')
+    today_date = df_arrivals[df_arrivals['Reference Day'] == 'today'].Date.iloc[0]
+    st.success(f'Data refreshed ({today_date})', icon='✅')
 
 else:
 	df_arrivals = pd.read_csv('AnalysisPython/santiagoAirport/arrivals.csv')
