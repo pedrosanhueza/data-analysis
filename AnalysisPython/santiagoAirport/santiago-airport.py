@@ -181,6 +181,14 @@ with tab1_Extraction_Code:
 with tab2_Descriptive_Statistics:
 	st.markdown(f'''<h2>Descriptive statistics</h2>''',unsafe_allow_html=True)
 
+	st.markdown(f'''
+		<ul>
+			<li> Flights by Airline </li>
+			<li> Flights by Destination </li>
+			<li> Flights by Hour </li>
+		</ul>
+	''',unsafe_allow_html=True)
+
 	airlines_amount = df_departures.Airline.nunique()
 	top_airlines_amount = 6
 	top_airlines_percentage_from_total = round(top_airlines_amount / airlines_amount * 100)
@@ -218,7 +226,14 @@ with tab2_Descriptive_Statistics:
 	with col2:
 
 		st.markdown(f'''
-			<p> The amount of flights per airline is highly skewed.
+
+		<p style="font-family: Arial, sans-serif; font-weight: bold; font-size: 16px;">
+			The <span style="color: orange;">top 6 Airlines</span>
+		</p>
+		<p style="font-family: Arial, sans-serif; font-size: 16px;">
+			(17%) account for the 83% (653) of all flights in the airport.
+		</p>
+		
 			<ul>
 			<li> The top {top_airlines_amount} Airlines ({top_airlines_percentage_from_total}%) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
 			<li> Santiago airport is currently hosting <b> {airlines_amount} </b> airlines managing <b>{airlines_flights_sum} </b> daily flights. </li>
