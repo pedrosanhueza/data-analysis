@@ -313,11 +313,10 @@ with tab2_Descriptive_Statistics:
         'Destination Country:O',
         condition=alt.condition(
             alt.datum['Destination Country'] == 'Chile',
-            alt.value("#E48A3F"),
-            alt.value("#BFBEBF")
-        )),
-		tooltip=['Destination City', 'Destination Country', 'Count'],   # add a tooltip that shows the Origin, Country, and Count
-		text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
+            alt.value("orange"),
+            alt.value("gray")
+        	)
+		)
 	)
 
 	# display the chart using Streamlit
