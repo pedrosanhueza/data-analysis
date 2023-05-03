@@ -284,7 +284,7 @@ with tab2_Descriptive_Statistics:
 
 	# create the bar chart
 	chart = alt.Chart(hourly_flights).mark_bar().encode(
-		x=alt.X('Hour:O', title='Hour of the Day'),
+		x=alt.X('Hour:O', title='Hour of the Day').axis(format=':00'),
 		y=alt.Y('Count:Q', title='Flights')
 	)
 
