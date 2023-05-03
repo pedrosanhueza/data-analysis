@@ -280,10 +280,11 @@ with tab2_Descriptive_Statistics:
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 					International
 				</span>
-				flights account for the
+				destinations account for the
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 					{international_percentage:.1f}%
 				</span>
+				of all flights.
 			</p>
 		</div>
 	''',unsafe_allow_html=True)
