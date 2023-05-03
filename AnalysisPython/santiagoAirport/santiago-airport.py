@@ -278,9 +278,9 @@ with tab2_Descriptive_Statistics:
 		<div style="text-align: center;">
 			<p style="font-family: Arial, sans-serif; font-size: 16px;">
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
-					International flights
+					International
 				</span>
-				account for the
+				flights account for the
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 					{international_percentage:.1f}%
 				</span>
