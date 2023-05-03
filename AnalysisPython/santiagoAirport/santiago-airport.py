@@ -249,8 +249,8 @@ with tab2_Descriptive_Statistics:
 
 	# Create a chart with conditional color formatting for the top 2 airlines
 	chart = alt.Chart(df_counts).mark_bar().encode(
-		y=alt.Y('Airline:N', sort='-x'),
-		x=alt.X('FlightCount:Q', title='Flight Count'),
+		y=alt.Y('Airline:N', sort='-x', title='Airline Name'),
+		x=alt.X('FlightCount:Q', title='Flights Amount'),
 		color=alt.condition(
 			alt.datum.Rank <= top_airlines_amount,
 			alt.value('orange'),
