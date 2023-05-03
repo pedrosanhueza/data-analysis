@@ -299,6 +299,37 @@ with tab2_Descriptive_Statistics:
 	# display the chart using Streamlit
 	st.altair_chart(chart, theme="streamlit", use_container_width=True)
 
+
+
+	# filter the DataFrame to only include rows where the Destination Country column equals Chile
+	df_chile_departures = df_departures[df_departures['Destination Country'] == 'Chile']
+
+	# group the filtered DataFrame by Destination City and count the number of departures
+	df_chile_departures_grouped = df_chile_departures.groupby(['Destination City']).size().reset_index(name='Count')
+
+	# create the bar chart using Altair and specify the color of the bars
+	chart = alt.Chart(df_chile_departures_grouped).mark_bar(color='orange').encode(
+		y=alt.Y('Destination City:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
+		x='Count:Q',                     # specify the x-axis as Count
+		tooltip=['Destination City', 'Count'],   # add a tooltip that shows the Origin and Count
+		text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
+	).properties(
+		title='Flights by Destination City'
+	)
+
+	# remove the x-axis
+	chart.configure_axisX(
+		tickOpacity=0,
+		labelOpacity=0
+	)
+
+	# display the chart using Streamlit
+	st.altair_chart(chart, theme="streamlit", use_container_width=True)
+
+
+
+
+
 with tab3_Time_Series_Analysis:
 	st.markdown('''
 	<h2>Time Series Analysis</h2>
