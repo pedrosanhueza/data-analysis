@@ -308,7 +308,7 @@ with tab2_Descriptive_Statistics:
 		y=alt.Y('Destination City:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
 		x='Count:Q',                     # specify the x-axis as Count
 		color=alt.Color('Destination Country:N', scale=alt.Scale(domain=['Chile'], range=['#008000'])),  # color the bars that have 'Chile' in the country column
-		tooltip=['Destination City', 'Country', 'Count'],   # add a tooltip that shows the Origin, Country, and Count
+		tooltip=['Destination City', 'Destination Country', 'Count'],   # add a tooltip that shows the Origin, Country, and Count
 		text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
 	).properties(
 		# width=800,
