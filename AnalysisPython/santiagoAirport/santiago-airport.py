@@ -182,47 +182,48 @@ with tab2_Descriptive_Statistics:
 	st.markdown(f'''<h2>Descriptive statistics</h2>''',unsafe_allow_html=True)
 
 	airlines_amount = df_departures.Airline.nunique()
-	
-	top_X = st.slider('Top X Flights', 1, airlines_amount,6)	
-
-	top_airlines_amount = top_X
-
+	top_airlines_amount = 6
 	top_airlines_percentage_from_total = round(top_airlines_amount / airlines_amount * 100)
 	airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().sum()
 	top_airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().nlargest(top_X).sum()
 	top_airlines_flights_percentage_from_total = round(top_airlines_flights_sum/airlines_flights_sum*100)
 
+	col1, col2 = st.columns(2)
 
-	# Create a DataFrame with the counts of flights per airline
-	df_counts = df_departures.groupby('Airline').agg({'Flight': 'count'}).reset_index()
-	df_counts = df_counts.rename(columns={'Flight': 'FlightCount'})
+	with col1:
 
-	# Sort the DataFrame by flight count and add a rank column
-	df_counts = df_counts.sort_values('FlightCount', ascending=False)
-	df_counts['Rank'] = range(1, len(df_counts) + 1)
+		# Create a DataFrame with the counts of flights per airline
+		df_counts = df_departures.groupby('Airline').agg({'Flight': 'count'}).reset_index()
+		df_counts = df_counts.rename(columns={'Flight': 'FlightCount'})
 
-	# Create a chart with conditional color formatting for the top 2 airlines
-	chart = alt.Chart(df_counts).mark_bar().encode(
-		y=alt.Y('Airline:N', sort='-x'),
-		x=alt.X('FlightCount:Q', title='Flight Count'),
-		color=alt.condition(
-			alt.datum.Rank <= top_airlines_amount,
-			alt.value('orange'),
-			alt.value('gray')
+		# Sort the DataFrame by flight count and add a rank column
+		df_counts = df_counts.sort_values('FlightCount', ascending=False)
+		df_counts['Rank'] = range(1, len(df_counts) + 1)
+
+		# Create a chart with conditional color formatting for the top 2 airlines
+		chart = alt.Chart(df_counts).mark_bar().encode(
+			y=alt.Y('Airline:N', sort='-x'),
+			x=alt.X('FlightCount:Q', title='Flight Count'),
+			color=alt.condition(
+				alt.datum.Rank <= top_airlines_amount,
+				alt.value('orange'),
+				alt.value('gray')
+			)
+		).properties(
+		title='Flight Count by Airline'
 		)
-	).properties(
-    title='Flight Count by Airline'
-	)
 
-	st.altair_chart(chart, use_container_width=True)
+		st.altair_chart(chart, use_container_width=True)
 
-	st.markdown(f'''
-		<p> The amount of flights per airline is highly skewed.
-		<ul>
-		<li> The top {top_airlines_amount} Airlines ({top_airlines_percentage_from_total}%) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
-		<li> Santiago airport is currently hosting <b> {airlines_amount} </b> airlines managing <b>{airlines_flights_sum} </b> daily flights. </li>
-		</ul>
-	''',unsafe_allow_html=True)
+	with col2:
+
+		st.markdown(f'''
+			<p> The amount of flights per airline is highly skewed.
+			<ul>
+			<li> The top {top_airlines_amount} Airlines ({top_airlines_percentage_from_total}%) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
+			<li> Santiago airport is currently hosting <b> {airlines_amount} </b> airlines managing <b>{airlines_flights_sum} </b> daily flights. </li>
+			</ul>
+		''',unsafe_allow_html=True)
 
 
 
