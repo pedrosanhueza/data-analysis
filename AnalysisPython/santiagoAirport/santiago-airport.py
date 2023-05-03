@@ -216,7 +216,7 @@ with tab2_Descriptive_Statistics:
 		st.markdown(f'''
 		<div style="text-align: center;">
 		<p style="font-family: Arial, sans-serif; font-size: 16px;">
-			The Santiago Airport hosts
+			Santiago Airport hosts
 				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
 			   {airlines_amount}
 				</span>
@@ -287,6 +287,7 @@ with tab2_Descriptive_Statistics:
 				of all flights.
 			</p>
 		</div>
+		<br>
 	''',unsafe_allow_html=True)
 
 
@@ -309,12 +310,6 @@ with tab2_Descriptive_Statistics:
 	)
 
 	st.altair_chart(chart, theme="streamlit", use_container_width=True)
-
-
-
-
-
-
 
 with tab3_Time_Series_Analysis:
 	st.markdown('''
