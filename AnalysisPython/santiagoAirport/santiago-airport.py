@@ -469,15 +469,6 @@ with tab3_Time_Series_Analysis:
 	<br><br>
 	''',unsafe_allow_html=True)
 
-	chart = alt.Chart(hourly_flights).transform_calculate(
-		HourLabel="datum.Hour + ':00'"
-	).mark_bar().encode(
-		x=alt.X('HourLabel:N', sort=alt.SortField('Hour'), axis=alt.Axis(labelAngle=0)),
-		y=alt.Y('Count:Q')
-	)
-	st.altair_chart(chart, use_container_width=True)
-
-
 with tab4_Hypothesis_Testing:
 	st.markdown('''
 	<h2>Hypothesis Testing</h2>
