@@ -457,7 +457,7 @@ with tab3_Time_Series_Analysis:
 		</span>
 			statistically significant across the day based on the skewness and kurtosis of the distribution.
 		<br>
-			The difference between departure and arrival flights over time are
+			Although there is a difference between departure and arrival flights over time, it is
 		<span style="color: orange; font-weight: bold;">
 			not
 		</span>
