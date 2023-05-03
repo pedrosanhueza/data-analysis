@@ -291,21 +291,52 @@ with tab2_Descriptive_Statistics:
         alt.value('orange'),
         alt.value('gray')
     	)
-	)
-
-	# set the x-axis ticks to show only the hour
-	chart = chart.properties(
+	).properties(
 		width=600,
     	height=800,
 		title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='Number of flights per airline'),
 	).configure_axis(
-    grid=False
+		grid=False
+	).configure_title(
+		fontSize=20,
+		fontWeight='bold'
+	).encode(
+    text=alt.Text('Count:Q', format='.0f')
+	)
+
+	# show the plot
+	st.altair_chart(chart, use_container_width=True)
+
+	chart = alt.Chart(hourly_flights).mark_bar().encode(
+		x=alt.X('Hour:N', title='Hour of the Day', axis=alt.Axis(labelAngle=0)),
+		y=alt.Y('Count:Q', title='Flights'),
+		color=alt.condition(
+			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
+			alt.value('orange'),
+			alt.value('gray')
+		),
+		tooltip=[alt.Tooltip('Count:Q', title='Flights')]
+	).properties(
+		width=600,
+		height=800,
+		title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='Number of flights per airline'),
+	).configure_axis(
+		grid=False
 	).configure_title(
 		fontSize=20,
 		fontWeight='bold'
 	)
 
-	# show the plot
+	text = chart.mark_text(
+		align='center',
+		baseline='middle',
+		dy=-5  # adjust y position of the text
+	).encode(
+		text=alt.Text('Count:Q', format='.0f')
+	)
+
+	chart = chart + text
+
 	st.altair_chart(chart, use_container_width=True)
 
 
