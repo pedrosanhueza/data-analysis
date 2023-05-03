@@ -441,8 +441,8 @@ with tab3_Time_Series_Analysis:
 		''',unsafe_allow_html=True)
 
 		hourly_flights = df_arrivals.groupby('Hour').count()['Flight'].reset_index(name='Count')
-		chart = alt.Chart(hourly_flights).mark_bar().encode(
-			x=alt.X('Hour:N', title='Hours of the Day',axis=alt.Axis(labelAngle=0)),
+		chart = alt.Chart(hourly_flights).transform_calculate(HourLabel="datum.Hour + ':00'").mark_bar().encode(
+			x=alt.X('HourLabel:N', title='Hours of the Day',axis=alt.Axis(labelAngle=0)),
 			y=alt.Y('Count:Q', title='',axis=alt.Axis(labels=False),scale=alt.Scale(domain=[0, 100])),color=alt.condition(
 			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),alt.value('orange'),alt.value('gray'))
 		).properties(height=700,title=alt.TitleParams(text='Flights per Hour', align='left', subtitle='Arrivals',subtitleColor='gray'),
