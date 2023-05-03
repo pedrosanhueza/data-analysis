@@ -276,33 +276,33 @@ with tab2_Descriptive_Statistics:
 
 	# ---------------------------------------- Hourly Flights ----------------------------------------
 
-	col_departures, col_empty, col_arrivals = st.columns([1,0.5,1]) 
+	col_departures, col_empty2, col_arrivals = st.columns([1,0.5,1]) 
 
 	with col_departures:
 		df_departures['Hour'] = df_departures['Date_Time'].dt.hour
 		hourly_flights = df_departures.groupby('Hour').count()['Flight'].reset_index(name='Count')
 		chart = alt.Chart(hourly_flights).mark_bar().encode(
-			x=alt.X('Hour:N', title='Hour of the Day',axis=alt.Axis(labelAngle=0)),
+			x=alt.X('Hour:N', title='Hours of the Day',axis=alt.Axis(labelAngle=0)),
 			y=alt.Y('Count:Q', title='',axis=alt.Axis(labels=False),scale=alt.Scale(domain=[0, 100])),color=alt.condition(
 			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
 			alt.value('orange'),alt.value('gray'))
-		).properties(height=700,title=alt.TitleParams(text='Flights per Hour',align='left',subtitle='Departures',subtitleColor='white',orient='top'),
+		).properties(height=700,title=alt.TitleParams(text='Flights per Hour',align='left',subtitle='Departures',subtitleColor='gray'),
 		).configure_axis(grid=False
 		).configure_title(fontSize=20,fontWeight='bold')
 		st.altair_chart(chart, use_container_width=True)
 
-	with col_empty:
+	with col_empty2:
 		st.write('')
 
 	with col_arrivals:
 		df_arrivals['Hour'] = df_arrivals['Date_Time'].dt.hour
 		hourly_flights = df_arrivals.groupby('Hour').count()['Flight'].reset_index(name='Count')
 		chart = alt.Chart(hourly_flights).mark_bar().encode(
-			x=alt.X('Hour:N', title='Hour of the Day',axis=alt.Axis(labelAngle=0)),
+			x=alt.X('Hour:N', title='Hours of the Day',axis=alt.Axis(labelAngle=0)),
 			y=alt.Y('Count:Q', title='',axis=alt.Axis(labels=False),scale=alt.Scale(domain=[0, 100])),color=alt.condition(
 			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
 			alt.value('orange'),alt.value('gray'))
-		).properties(height=700,title=alt.TitleParams(text='Flights per Hour', align='left', subtitle='Arrivals',subtitleColor='white'),
+		).properties(height=700,title=alt.TitleParams(text='Flights per Hour', align='left', subtitle='Arrivals',subtitleColor='gray'),
 		).configure_axis(grid=False
 		).configure_title(fontSize=20,fontWeight='bold')
 		st.altair_chart(chart, use_container_width=True)
