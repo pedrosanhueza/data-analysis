@@ -280,6 +280,39 @@ with tab2_Descriptive_Statistics:
 
 	with col_departures:
 		df_departures['Hour'] = df_departures['Date_Time'].dt.hour
+
+		skewness = round(df_departures['Hour'].skew(),2)
+		if skewness < -1 or skewness > 1:
+			skewness_description = "highly skewed"
+		elif -1 <= skewness <= -0.5 or 0.5 <= skewness <= 1:
+			skewness_description = "moderately skewed"
+		else:
+			skewness_description = "approximately symmetric"
+		
+		kurtosis = round(df_departures['Hour'].kurtosis(),2)
+		if kurtosis < -0.3:
+			kurtosis_descriptive = "infrequent outliers"
+		elif kurtosis > 0.3:
+			kurtosis_descriptive = "leptokurtic"
+		else:
+			kurtosis_descriptive = "normal"
+
+		st.markdown(f'''<h3>Arrival Flights</h3>''',unsafe_allow_html=True)
+
+		kpi1, kpi2 = st.columns(2)
+
+		kpi1.metric(label='Skewness', value=skewness, delta=skewness_description)
+		kpi2.metric(label='Kurtosis', value=kurtosis, delta=kurtosis_descriptive)
+
+		st.markdown(f'''
+		<p>
+			The distribution of flights over time is
+			<span style="color: orange; font-weight: bold; font-size: {font_size}px;"> {skewness_description} 
+			</span>
+			with statistically {kurtosis_descriptive}
+		<br>
+		''',unsafe_allow_html=True)
+
 		hourly_flights = df_departures.groupby('Hour').count()['Flight'].reset_index(name='Count')
 		chart = alt.Chart(hourly_flights).mark_bar().encode(
 			x=alt.X('Hour:N', title='Hours of the Day',axis=alt.Axis(labelAngle=0)),
