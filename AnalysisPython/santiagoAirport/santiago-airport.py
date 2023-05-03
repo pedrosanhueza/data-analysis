@@ -350,7 +350,7 @@ with tab3_Time_Series_Analysis:
 
 	# ---------------------------------------- Hourly Flights ----------------------------------------
 
-	col_departures, col_empty2, col_arrivals = st.columns([1,0.2,1]) 
+	col_departures, col_empty2, col_arrivals = st.columns([1,0.1,1]) 
 
 	with col_departures:
 		df_departures['Hour'] = df_departures['Date_Time'].dt.hour
