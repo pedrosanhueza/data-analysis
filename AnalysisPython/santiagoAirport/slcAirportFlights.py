@@ -6,7 +6,7 @@ filterDay = ['yesterday', 'today', 'tomorrow']
 
 filterHour = [str(i) for i in range(0, 24, 6)]
 
-df_departures = pd.DataFrame(columns=['Destination', 'Destination Code', 'Departure', 'Flight', 'Airline', 'Terminal', 'Status', 'Date', 'Reference Day', 'url'])
+df_departures = pd.DataFrame(columns=['Destination City', 'Destination Code', 'Departure', 'Flight', 'Airline', 'Terminal', 'Status', 'Date', 'Reference Day', 'url'])
 for day in filterDay:
     for hour in filterHour:
         url = f'https://www.santiago-airport.com/scl-departures?day={day}&tp={hour}'
@@ -27,7 +27,7 @@ for day in filterDay:
             status = flight.find_all('a')[-1].text
             for i in range(max(len(flight_number), len(airline))):
                 rows.append({
-                    'Destination': destination,
+                    'Destination City': destination,
                     'Destination Code': destination_code,
                     'Departure': departure,
                     'Flight': flight_number[i] if i < len(flight_number) else '',
@@ -40,7 +40,7 @@ for day in filterDay:
                 })
         df_departures = pd.concat([df_departures, pd.DataFrame(rows)], ignore_index=True)
 
-df_arrivals = pd.DataFrame(columns=['Origin', 'Origin Code', 'Departure', 'Flight', 'Airline', 'Terminal', 'Status', 'Date', 'Reference Day', 'url'])
+df_arrivals = pd.DataFrame(columns=['Origin City', 'Origin Code', 'Departure', 'Flight', 'Airline', 'Terminal', 'Status', 'Date', 'Reference Day', 'url'])
 
 for day in filterDay:
     for hour in filterHour:
@@ -62,7 +62,7 @@ for day in filterDay:
             status = flight.find_all('a')[-1].text
             for i in range(max(len(flight_number), len(airline))):
                 rows.append({
-                    'Origin': origin,
+                    'Origin City': origin,
                     'Origin Code': origin_code,
                     'Departure': departure,
                     'Flight': flight_number[i] if i < len(flight_number) else '',
@@ -74,3 +74,7 @@ for day in filterDay:
                     'url': url
                 })
         df_arrivals = pd.concat([df_arrivals, pd.DataFrame(rows)], ignore_index=True)
+
+df_departures['Date_Time'] = pd.to_datetime(df_departures.Date + "-" + df_departures.Departure, format='%Y-%m-%d-%H:%M')
+df_arrivals['Date_Time'] = pd.to_datetime(df_arrivals.Date + "-" + df_arrivals.Arrival, format='%Y-%m-%d-%H:%M')
+

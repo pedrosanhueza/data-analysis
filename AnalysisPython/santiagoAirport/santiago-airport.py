@@ -170,7 +170,7 @@ with tab1_Extraction_Code:
 	st.markdown('''
 	<h2>Code Output</h2>
 	<p>
-	Display output
+	Display output table
 	</p>
 	<br>
 	''',unsafe_allow_html=True)
@@ -269,45 +269,47 @@ with tab2_Descriptive_Statistics:
 
 	st.markdown(f'''<br><br><br>''',unsafe_allow_html=True)
 
-	df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
 
-	# create the bar chart using Altair
-	chart = alt.Chart(df_grouped_arrivals).mark_bar().encode(
-		y=alt.Y('Origin:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
-		x='Count:Q',                     # specify the x-axis as Count
-		tooltip=['Origin', 'Count'],   # add a tooltip that shows the Origin and Count
-		text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
-	).properties(
-		width=800,
-		height=500,
-		title='Number of Flights by Origin Frequency'   # set the chart title
-	)
 
-	# remove the x-axis
-	chart.configure_axisX(
-		tickOpacity=0,
-		labelOpacity=0
-	)
+	# df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
 
-	# display the chart using Streamlit
-	st.altair_chart(chart, theme="streamlit", use_container_width=True)
+	# # create the bar chart using Altair
+	# chart = alt.Chart(df_grouped_arrivals).mark_bar().encode(
+	# 	y=alt.Y('Origin:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
+	# 	x='Count:Q',                     # specify the x-axis as Count
+	# 	tooltip=['Origin', 'Count'],   # add a tooltip that shows the Origin and Count
+	# 	text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
+	# ).properties(
+	# 	width=800,
+	# 	height=500,
+	# 	title='Number of Flights by Origin Frequency'   # set the chart title
+	# )
 
-	col1, col2, col3 = st.beta_columns(3)
+	# # remove the x-axis
+	# chart.configure_axisX(
+	# 	tickOpacity=0,
+	# 	labelOpacity=0
+	# )
 
-	n_airlines_yesterday = df_arrivals[df_arrivals['Reference Day'] == 'yesterday'].Airline.nunique()
-	n_airlines_today = df_arrivals[df_arrivals['Reference Day'] == 'today'].Airline.nunique()
-	n_airlines_tomorrow = df_arrivals[df_arrivals['Reference Day'] == 'tomorrow'].Airline.nunique()
+	# # display the chart using Streamlit
+	# st.altair_chart(chart, theme="streamlit", use_container_width=True)
 
-	date_yesterday = df_arrivals[df_arrivals['Reference Day'] == 'yesterday'].Date.unique()[0]
-	date_today = df_arrivals[df_arrivals['Reference Day'] == 'today'].Date.unique()[0]
-	date_tomorrow = df_arrivals[df_arrivals['Reference Day'] == 'tomorrow'].Date.unique()[0]
+	# col1, col2, col3 = st.beta_columns(3)
 
-	with col1:
-		st.metric(f"Airlines on {date_yesterday}",f"{n_airlines_today}")
-	with col2:
-		st.metric(f"Airlines on {date_today}",f"{n_airlines_today}")
-	with col3:
-		st.metric(f"Airlines on {date_tomorrow}",f"{n_airlines_today}")
+	# n_airlines_yesterday = df_arrivals[df_arrivals['Reference Day'] == 'yesterday'].Airline.nunique()
+	# n_airlines_today = df_arrivals[df_arrivals['Reference Day'] == 'today'].Airline.nunique()
+	# n_airlines_tomorrow = df_arrivals[df_arrivals['Reference Day'] == 'tomorrow'].Airline.nunique()
+
+	# date_yesterday = df_arrivals[df_arrivals['Reference Day'] == 'yesterday'].Date.unique()[0]
+	# date_today = df_arrivals[df_arrivals['Reference Day'] == 'today'].Date.unique()[0]
+	# date_tomorrow = df_arrivals[df_arrivals['Reference Day'] == 'tomorrow'].Date.unique()[0]
+
+	# with col1:
+	# 	st.metric(f"Airlines on {date_yesterday}",f"{n_airlines_today}")
+	# with col2:
+	# 	st.metric(f"Airlines on {date_today}",f"{n_airlines_today}")
+	# with col3:
+	# 	st.metric(f"Airlines on {date_tomorrow}",f"{n_airlines_today}")
 
 with tab3_Time_Series_Analysis:
 	st.markdown('''
