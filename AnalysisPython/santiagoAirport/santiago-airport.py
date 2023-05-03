@@ -336,8 +336,8 @@ with tab2_Descriptive_Statistics:
 
 		skewness = round(df_departures['Hour'].skew(),2)
 		skewness_kpi = (
-		"right skewed" if skewness < -1 or skewness > 1 else
-		"left skewed" if -1 <= skewness <= -0.5 or 0.5 <= skewness <= 1 else
+		"right skewed" if skewness > 0.1 else
+		"left skewed" if skewness < 0.1 else
 		"zero skewed")
 		skewness_description= (
 		"highly skewed" if skewness < -1 or skewness > 1 else
