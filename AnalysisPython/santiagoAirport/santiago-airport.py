@@ -282,15 +282,13 @@ with tab2_Descriptive_Statistics:
 		df_departures['Hour'] = df_departures['Date_Time'].dt.hour
 
 		skewness = round(df_departures['Hour'].skew(),2)
-		
 		skewness_kpi = (
-		"right skewed" if skewness < -1 or skewness > 1 else
-		"left skewed" if -1 <= skewness <= -0.5 or 0.5 <= skewness <= 1 else
-		"zero skewed")
-		
+		"right-skewed" if skewness > 0.1 else
+		"left-skewed" if skewness < -0.1 else
+		"zero-skewed")
 		skewness_description= (
-		"highly skewed" if skewness < -1 or skewness > 1 else
-		"moderately skewed" if -1 <= skewness <= -0.5 or 0.5 <= skewness <= 1 else
+		"highly skewed" if skewness > 0.1 else
+		"moderately skewed" if skewness < -0.1 else
 		"approximately symmetric")
 		
 		kurtosis = round(df_departures['Hour'].kurtosis(),2)
@@ -336,12 +334,12 @@ with tab2_Descriptive_Statistics:
 
 		skewness = round(df_departures['Hour'].skew(),2)
 		skewness_kpi = (
-		"right skewed" if skewness > 0.1 else
-		"left skewed" if skewness < 0.1 else
-		"zero skewed")
+		"right-skewed" if skewness > 0.1 else
+		"left-skewed" if skewness < -0.1 else
+		"zero-skewed")
 		skewness_description= (
-		"highly skewed" if skewness < -1 or skewness > 1 else
-		"moderately skewed" if -1 <= skewness <= -0.5 or 0.5 <= skewness <= 1 else
+		"highly skewed" if skewness > 0.1 else
+		"moderately skewed" if skewness < -0.1 else
 		"approximately symmetric")
 		
 		kurtosis = round(df_arrivals['Hour'].kurtosis(),2)
