@@ -216,13 +216,12 @@ with tab2_Descriptive_Statistics:
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 				{airlines_flights_sum}
 				</span>
-				flights,
+				flights, from which the 
 		</p>
 		</div>
 		<div style="text-align: center;">
 			<p>
-				from which the top
-				<br>
+				top
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 					{top_airlines_amount} Airlines
 				</span>
