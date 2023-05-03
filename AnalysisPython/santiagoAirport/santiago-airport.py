@@ -216,11 +216,7 @@ with tab2_Descriptive_Statistics:
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 					{top_airlines_flights_percentage_from_total}%
 				</span>
-				({top_airlines_flights_sum}) of all flights in the airport.
-			</p>
-		</div>
-
-		<p style="font-family: Arial, sans-serif; font-size: 16px;">
+				({top_airlines_flights_sum}) of all flights in the airport. \n
 			Santiago airport hosts
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 			   {airlines_amount}
@@ -231,6 +227,7 @@ with tab2_Descriptive_Statistics:
 				</span>
 				flights. 
 		</p>
+		</div>
 		''',unsafe_allow_html=True)
 
 	with col3:
