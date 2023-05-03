@@ -300,8 +300,8 @@ with tab2_Descriptive_Statistics:
 	).configure_title(
 		fontSize=20,
 		fontWeight='bold'
-	).BarConfig(width=12)
-
+	)
+	
 	st.altair_chart(chart, use_container_width=True)
 
 	# df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
