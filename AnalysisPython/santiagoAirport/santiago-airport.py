@@ -300,27 +300,34 @@ with tab2_Descriptive_Statistics:
 	st.altair_chart(chart, theme="streamlit", use_container_width=True)
 
 
-	# group by destination city and country and get the count
-	df_departures_grouped = df_departures.groupby(['Destination City', 'Destination Country']).size().reset_index(name='Count')
+
+
+	df_departures_grouped = df_departures.groupby(['Destination City']).size().reset_index(name='Count')
 
 	# create the bar chart using Altair
-	chart = alt.Chart(df_departures_grouped).mark_bar(
-
-	).encode(
-		y=alt.Y('Destination City:N', sort='-x'),   # specify the y-axis as Origin, and sort the values in descending order
-		x='Count:Q',  
-	    color=alt.Color(
-        'Destination Country:O',
-        condition=alt.condition(
-            alt.datum['Destination Country'] == 'Chile',
-            alt.value("orange"),
-            alt.value("gray")
-        	)
+	chart = alt.Chart(df_departures_grouped).mark_bar().encode(
+		y=alt.Y('Destination City:N', sort='-x'),
+		x='Count:Q',
+		tooltip=['Destination City', 'Count'],
+		text=alt.Text('Count:Q', format=',d'),
+		color=alt.condition(
+			alt.datum['Destination Country'] == 'Chile',
+			alt.value('orange'),  # set color to orange if Destination Country is Chile
+			alt.value('gray')     # set color to gray otherwise
 		)
+	).properties(
+		title='Flights by Destination City'
+	)
+
+	# remove the x-axis
+	chart.configure_axisX(
+		tickOpacity=0,
+		labelOpacity=0
 	)
 
 	# display the chart using Streamlit
 	st.altair_chart(chart, theme="streamlit", use_container_width=True)
+
 
 
 
