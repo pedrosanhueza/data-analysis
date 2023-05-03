@@ -75,7 +75,11 @@ with tab1_Extraction_Code:
 	st.markdown('''
 	<h2>Data Extraction Code</h2>
 		<ol>
-		<li> Loops over all pages from santiago-airport extracting its data. </li>
+		<li> Loops over all pages from
+		    <a href="https://www.santiago-airport.com" target="_blank"><strong style="color: blue;">
+			santiago-airport
+			</strong></span></a>
+			extracting its data.</li>
 		<li> Structures the data into a dataframe. </li>
 		</ol>
 	''',unsafe_allow_html=True)
@@ -181,13 +185,7 @@ with tab1_Extraction_Code:
 with tab2_Descriptive_Statistics:
 	st.markdown(f'''<h2>Descriptive Analysis</h2>''',unsafe_allow_html=True)
 
-	st.markdown(f'''
-		<ul>
-			<li> Flights by Airline </li>
-			<li> Flights by Destination </li>
-			<li> Flights by Hour </li>
-		</ul>
-	''',unsafe_allow_html=True)
+	st.markdown(f'''<br><br><br>''',unsafe_allow_html=True)
 
 	airlines_amount = df_departures.Airline.nunique()
 	top_airlines_amount = 6
@@ -263,7 +261,7 @@ with tab2_Descriptive_Statistics:
 	)
 	st.altair_chart(chart, use_container_width=True)
 
-
+	st.markdown(f'''<br><br><br>''',unsafe_allow_html=True)
 
 	df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
 
