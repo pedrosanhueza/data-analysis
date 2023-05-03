@@ -319,7 +319,7 @@ with tab3_Time_Series_Analysis:
 				</span>
 				occure
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
-				beforec noon.
+				before noon.
 				</span>
 			</p>
 		</div>
@@ -450,6 +450,12 @@ with tab3_Time_Series_Analysis:
 		).configure_title(fontSize=20,fontWeight='bold')
 		st.altair_chart(chart, use_container_width=True)
 
+		st.markdown(f'''
+		<p>
+			The difference between departure and arrival flights are not statistically significant over time.
+		</p>
+		<br><br>
+		''',unsafe_allow_html=True)
 
 with tab4_Hypothesis_Testing:
 	st.markdown('''
