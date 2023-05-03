@@ -295,7 +295,19 @@ with tab2_Descriptive_Statistics:
 		st.write('')
 
 	with col_arrivals:
+		
 		df_arrivals['Hour'] = df_arrivals['Date_Time'].dt.hour
+		skew = df_departures['Hour'].skew()
+		kurtosis = df_departures['Hour'].kurtosis()
+
+		st.markdown(f'''
+		<h1>Departure Flights</h1>
+		<h3>
+		Skewness: {skew}
+		Kurtosis: {kurtosis}
+		</h3>
+		''',unsafe_allow_html=True)
+
 		hourly_flights = df_arrivals.groupby('Hour').count()['Flight'].reset_index(name='Count')
 		chart = alt.Chart(hourly_flights).mark_bar().encode(
 			x=alt.X('Hour:N', title='Hours of the Day',axis=alt.Axis(labelAngle=0)),
