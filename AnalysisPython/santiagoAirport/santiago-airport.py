@@ -294,7 +294,7 @@ with tab2_Descriptive_Statistics:
 	).properties(
 		width=600,
     	height=800,
-		title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='Number of flights per airline'),
+		title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='(Departures) Number of flights per airline'),
 	).configure_axis(
 		grid=False
 	).configure_title(
@@ -324,7 +324,7 @@ with tab2_Descriptive_Statistics:
 	).properties(
 		width=600,
     	height=800,
-		title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='Number of flights per airline'),
+		title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='(Arrivals) Number of flights per airline'),
 	).configure_axis(
 		grid=False
 	).configure_title(
