@@ -60,8 +60,6 @@ if st.button('Refresh Data'):
 else:
 	df_arrivals = pd.read_csv('AnalysisPython/santiagoAirport/arrivals.csv')
 	df_departures = pd.read_csv('AnalysisPython/santiagoAirport/departures.csv')
-	df_departures['Date_Time'] = pd.to_datetime(df_departures.Date + "-" + df_departures.Departure, format='%Y-%m-%d-%H:%M')
-	df_arrivals['Date_Time'] = pd.to_datetime(df_arrivals.Date + "-" + df_arrivals.Arrival, format='%Y-%m-%d-%H:%M')
 
 # # ---------------------------------------- Tabs ----------------------------------------
 
@@ -276,7 +274,7 @@ with tab2_Descriptive_Statistics:
 	# ---------------------------------------- Hourly Flights ----------------------------------------
 
 	# create a new column with the hour of the date/time
-	df_departures['Hour'] = df_departures['Date_Time'].hour
+	df_departures['Hour'] = df_departures['Date_Time'].dt.hour
 
 	# group by hour and count the number of flights
 	hourly_flights = df_departures.groupby('Hour').count()['Flight'].reset_index(name='Count')
