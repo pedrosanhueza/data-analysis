@@ -276,32 +276,33 @@ with tab2_Descriptive_Statistics:
 
 	# ---------------------------------------- Hourly Flights ----------------------------------------
 
-	df_departures['Hour'] = df_departures['Date_Time'].dt.hour
-	hourly_flights = df_departures.groupby('Hour').count()['Flight'].reset_index(name='Count')
-	chart = alt.Chart(hourly_flights).mark_bar().encode(
-		x=alt.X('Hour:N', title='Hour of the Day', axis=alt.Axis(labelAngle=0)),
-	    y=alt.Y('Count:Q', title='Flights'),color=alt.condition(
-        alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
-        alt.value('orange'),alt.value('gray'))
-	).properties(width=600,height=800,title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='Number of flights per airline'),
-	).configure_axis(grid=False
-	).configure_title(fontSize=20,fontWeight='bold')
-	st.altair_chart(chart, use_container_width=True)
+	col_departures, col_arrivals = st.columns([1,1]) 
 
+	with col_departures:
+		df_departures['Hour'] = df_departures['Date_Time'].dt.hour
+		hourly_flights = df_departures.groupby('Hour').count()['Flight'].reset_index(name='Count')
+		chart = alt.Chart(hourly_flights).mark_bar().encode(
+			x=alt.X('Hour:N', title='Hour of the Day', axis=alt.Axis(labelAngle=0)),
+			y=alt.Y('Count:Q', title='Flights'),color=alt.condition(
+			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
+			alt.value('orange'),alt.value('gray'))
+		).properties(width=600,height=800,title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='Number of flights per airline'),
+		).configure_axis(grid=False
+		).configure_title(fontSize=20,fontWeight='bold')
+		st.altair_chart(chart, use_container_width=True)
 
-	# ---
-
-	df_arrivals['Hour'] = df_arrivals['Date_Time'].dt.hour
-	hourly_flights = df_arrivals.groupby('Hour').count()['Flight'].reset_index(name='Count')
-	chart = alt.Chart(hourly_flights).mark_bar().encode(
-		x=alt.X('Hour:N', title='Hour of the Day', axis=alt.Axis(labelAngle=0)),
-	    y=alt.Y('Count:Q', title='Flights'),color=alt.condition(
-        alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
-        alt.value('orange'),alt.value('gray'))
-	).properties(width=600,height=800,title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='Number of flights per airline'),
-	).configure_axis(grid=False
-	).configure_title(fontSize=20,fontWeight='bold')
-	st.altair_chart(chart, use_container_width=True)
+	with col_arrivals:
+		df_arrivals['Hour'] = df_arrivals['Date_Time'].dt.hour
+		hourly_flights = df_arrivals.groupby('Hour').count()['Flight'].reset_index(name='Count')
+		chart = alt.Chart(hourly_flights).mark_bar().encode(
+			x=alt.X('Hour:N', title='Hour of the Day', axis=alt.Axis(labelAngle=0)),
+			y=alt.Y('Count:Q', title='Flights'),color=alt.condition(
+			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
+			alt.value('orange'),alt.value('gray'))
+		).properties(width=600,height=800,title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='Number of flights per airline'),
+		).configure_axis(grid=False
+		).configure_title(fontSize=20,fontWeight='bold')
+		st.altair_chart(chart, use_container_width=True)
 
 	# df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
 
