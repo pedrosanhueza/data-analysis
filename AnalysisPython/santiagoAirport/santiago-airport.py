@@ -326,6 +326,15 @@ with tab2_Descriptive_Statistics:
 		).configure_title(fontSize=20,fontWeight='bold')
 		st.altair_chart(chart, use_container_width=True)
 
+		st.markdown(f'''
+		<p>
+		The drop of flights from the hours: 1:00 am to 3:00am is
+		<span style="color: orange; font-weight: bold; font-size: {font_size}px;"> not
+		</span>
+		statistically significant based on the skewness and kurtosis of the distribution.
+		</p><br><br>
+		''',unsafe_allow_html=True)
+
 	with col_empty2:
 		st.write('')
 
