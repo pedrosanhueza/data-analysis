@@ -333,11 +333,16 @@ with tab2_Descriptive_Statistics:
 		bottom_3 = hourly_flights.nsmallest(3, 'Count')['Count'].max()
 		chart = alt.Chart(hourly_flights).mark_bar().encode(
 			x=alt.X('Hour:N', title='Hours of the Day',axis=alt.Axis(labelAngle=0)),
-			y=alt.Y('Count:Q', title='',axis=alt.Axis(labels=False),scale=alt.Scale(domain=[0, 100])),color=alt.condition(
-			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),alt.value('orange'),alt.condition(
+			y=alt.Y('Count:Q', title='',axis=alt.Axis(labels=False),scale=alt.Scale(domain=[0, 100])),
+			color=alt.condition(
+        alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
+        alt.value('orange'),
+        alt.condition(
             alt.datum.Count <= bottom_3,
             alt.value('blue'),
-            alt.value('gray')))
+            alt.value('gray')
+        )
+    	)
 		).properties(height=700,title=alt.TitleParams(text='Flights per Hour', align='left', subtitle='Arrivals',subtitleColor='gray'),
 		).configure_axis(grid=False
 		).configure_title(fontSize=20,fontWeight='bold')
