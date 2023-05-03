@@ -307,7 +307,7 @@ with tab2_Descriptive_Statistics:
 		
 		kurtosis = round(df_departures['Hour'].kurtosis(),2)
 		if kurtosis < -0.3:
-			kurtosis_descriptive = "platykurtic"
+			kurtosis_descriptive = "infrequent outliers"
 		elif kurtosis > 0.3:
 			kurtosis_descriptive = "leptokurtic"
 		else:
@@ -320,7 +320,14 @@ with tab2_Descriptive_Statistics:
 		kpi1.metric(label='Skewness', value=skewness, delta=skewness_description)
 		kpi2.metric(label='Kurtosis', value=kurtosis, delta=kurtosis_descriptive)
 
-		st.markdown(f'''<br>''',unsafe_allow_html=True)
+		st.markdown(f'''
+		<p>
+			The distribution of flights over time is
+			<span style="color: orange; font-weight: bold;"> {skewness_description} 
+			</span>
+			with statistically {kurtosis_descriptive}
+		<br>
+		''',unsafe_allow_html=True)
 
 		hourly_flights = df_arrivals.groupby('Hour').count()['Flight'].reset_index(name='Count')
 		chart = alt.Chart(hourly_flights).mark_bar().encode(
