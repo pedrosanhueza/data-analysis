@@ -318,15 +318,6 @@ with tab2_Descriptive_Statistics:
 		kpi1.metric(label='Skewness', value=skewness, delta=skewness_description)
 		kpi2.metric(label='Kurtosis', value=kurtosis, delta=kurtosis_descriptive)
 
-		st.markdown(f'''
-		<h3>Departure Flights</h3>
-		<p>
-		Skewness: {skew}
-		<br>
-		Kurtosis: {kurtosis}
-		</p>
-		''',unsafe_allow_html=True)
-
 		hourly_flights = df_arrivals.groupby('Hour').count()['Flight'].reset_index(name='Count')
 		chart = alt.Chart(hourly_flights).mark_bar().encode(
 			x=alt.X('Hour:N', title='Hours of the Day',axis=alt.Axis(labelAngle=0)),
