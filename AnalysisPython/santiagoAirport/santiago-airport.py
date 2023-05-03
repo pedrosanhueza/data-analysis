@@ -318,10 +318,6 @@ with tab2_Descriptive_Statistics:
         )),
 		tooltip=['Destination City', 'Destination Country', 'Count'],   # add a tooltip that shows the Origin, Country, and Count
 		text=alt.Text('Count:Q', format=',d')  # add text to each bar to display the Count with comma separators
-	).properties(
-		# width=800,
-		# height=500,
-		title='Flights by Destination City'
 	)
 
 	# display the chart using Streamlit
