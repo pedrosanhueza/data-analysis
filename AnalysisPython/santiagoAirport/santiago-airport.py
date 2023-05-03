@@ -313,6 +313,8 @@ with tab2_Descriptive_Statistics:
 		else:
 			kurtosis_descriptive = "normal"
 
+		st.markdown(f'''<h3>Arrival Flights</h3>''',unsafe_allow_html=True)
+
 		kpi1, kpi2 = st.columns(2)
 
 		kpi1.metric(label='Skewness', value=skewness, delta=skewness_description)
