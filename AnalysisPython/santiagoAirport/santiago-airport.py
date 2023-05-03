@@ -239,6 +239,7 @@ with tab2_Descriptive_Statistics:
 				 of all flights.
 			</p>
 		</div>
+		<br>
 		''',unsafe_allow_html=True)
 
 	with col3:
@@ -270,6 +271,35 @@ with tab2_Descriptive_Statistics:
 
 	st.markdown(f'''<br><br><br>''',unsafe_allow_html=True)
 
+	# ---------------------------------------- Hourly Flights ----------------------------------------
+	
+	# create a new column with the hour of the date/time
+	df_departures['Hour'] = df_departures['Date_Time'].dt.hour
+
+	# group by hour and count the number of flights
+	hourly_flights = df_departures.groupby('Hour').count()['Flight'].reset_index(name='Count')
+
+	# create the bar chart
+	chart = alt.Chart(hourly_flights).mark_bar().encode(
+		x=alt.X('Hour:O', title='Hour of the Day'),
+		y=alt.Y('Count:Q', title='Number of flights')
+	)
+
+	# set the x-axis ticks to show only the hour
+	chart = chart.properties(
+		width=600,
+		height=400,
+		title='Number of flights per hour'
+	).configure_axis(
+		labelFontSize=14,
+		titleFontSize=16
+	).configure_title(
+		fontSize=20,
+		fontWeight='bold'
+	)
+
+	# show the plot
+	st.altair_chart(chart, use_container_width=True)
 
 
 	# df_grouped_arrivals = df_arrivals.groupby(['Origin']).size().reset_index(name='Count')
