@@ -320,12 +320,7 @@ with tab3_Time_Series_Analysis:
 				occure
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 				before noon.
-				</span>
-			</p>
-		</div>
-		<div style="text-align: center;">
-			<p>
-				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
+				<br>
 				Most arrivals
 				</span>
 				occure
