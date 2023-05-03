@@ -64,7 +64,7 @@ else:
 
 tab1_Extraction_Code, tab2_Descriptive_Statistics, tab3_Time_Series_Analysis, tab4_Hypothesis_Testing, tab5_Regression_Analysis, tab6_Conclusion = st.tabs([
     "Data", 
-    "Descriptive KPI's",
+    "Descriptive",
     "Time Series Analysis",
     "Hypothesis Testing",
     "Regression Analysis",
@@ -179,7 +179,7 @@ with tab1_Extraction_Code:
 
 
 with tab2_Descriptive_Statistics:
-	st.markdown(f'''<h2>Descriptive statistics</h2>''',unsafe_allow_html=True)
+	st.markdown(f'''<h2>Descriptive Analysis</h2>''',unsafe_allow_html=True)
 
 	st.markdown(f'''
 		<ul>
@@ -196,32 +196,10 @@ with tab2_Descriptive_Statistics:
 	top_airlines_flights_sum = df_departures.groupby('Airline')['Flight'].count().nlargest(top_airlines_amount).sum()
 	top_airlines_flights_percentage_from_total = round(top_airlines_flights_sum/airlines_flights_sum*100)
 
-	col1, col2 = st.columns(2)
+	col1, col2, col3 = st.columns([1,2,1])
 
 	with col1:
-
-		# Create a DataFrame with the counts of flights per airline
-		df_counts = df_departures.groupby('Airline').agg({'Flight': 'count'}).reset_index()
-		df_counts = df_counts.rename(columns={'Flight': 'FlightCount'})
-
-		# Sort the DataFrame by flight count and add a rank column
-		df_counts = df_counts.sort_values('FlightCount', ascending=False)
-		df_counts['Rank'] = range(1, len(df_counts) + 1)
-
-		# Create a chart with conditional color formatting for the top 2 airlines
-		chart = alt.Chart(df_counts).mark_bar().encode(
-			y=alt.Y('Airline:N', sort='-x'),
-			x=alt.X('FlightCount:Q', title='Flight Count'),
-			color=alt.condition(
-				alt.datum.Rank <= top_airlines_amount,
-				alt.value('orange'),
-				alt.value('gray')
-			)
-		).properties(
-	    title=alt.TitleParams(text='Flights by Airline', align='center', subtitle='Number of flights per airline'),
-		)
-
-		st.altair_chart(chart, use_container_width=True)
+		st.write("")
 
 	with col2:
 		
@@ -253,6 +231,31 @@ with tab2_Descriptive_Statistics:
 		</p>
 		''',unsafe_allow_html=True)
 
+	with col3:
+		st.write("")
+
+	# Create a DataFrame with the counts of flights per airline
+	df_counts = df_departures.groupby('Airline').agg({'Flight': 'count'}).reset_index()
+	df_counts = df_counts.rename(columns={'Flight': 'FlightCount'})
+
+	# Sort the DataFrame by flight count and add a rank column
+	df_counts = df_counts.sort_values('FlightCount', ascending=False)
+	df_counts['Rank'] = range(1, len(df_counts) + 1)
+
+	# Create a chart with conditional color formatting for the top 2 airlines
+	chart = alt.Chart(df_counts).mark_bar().encode(
+		y=alt.Y('Airline:N', sort='-x'),
+		x=alt.X('FlightCount:Q', title='Flight Count'),
+		color=alt.condition(
+			alt.datum.Rank <= top_airlines_amount,
+			alt.value('orange'),
+			alt.value('gray')
+		)
+	).properties(
+	title=alt.TitleParams(text='Flights by Airline', align='center', subtitle='Number of flights per airline'),
+	)
+
+	st.altair_chart(chart, use_container_width=True)
 
 
 
