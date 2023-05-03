@@ -280,24 +280,29 @@ with tab2_Descriptive_Statistics:
 	df_departures['Hour'] = df_departures['Date_Time'].dt.hour
 
 	# group by hour and count the number of flights
-	hourly_flights = df_departures.groupby('Hour').count()['Flight'].reset_index(name='Count')
+	hourly_flights = df_departures.groupby('Hour').count()['Flight'].reset_index(name='count')
 
-	# create the bar chart
+	# create the bar chart using Altair
 	chart = alt.Chart(hourly_flights).mark_bar().encode(
-		x=alt.X('Hour:O', title='Hour of the Day'),
-		y=alt.Y('Count:Q', title='Flights')
+		x=alt.X('Hour:O', axis=alt.Axis(title='Hour of the Day', labelAngle=0, labelAlign='left', labelPadding=8),
+				scale=alt.Scale(paddingInner=0)),
+		y=alt.Y('count:Q', axis=alt.Axis(title='Number of flights')),
+		tooltip=['Hour:O', 'count:Q']
+	).properties(
+		title='Number of flights by hour of the day'
 	)
 
-	# set the x-axis ticks to show only the hour
-	chart = chart.properties(
-		title=alt.TitleParams(text='Flights per Hour', align='center', subtitle='Number of flights per airline'),
+	# customize the x-axis labels
+	chart = chart.transform_calculate(
+		hour_label='format(datum.Hour, "%H:00")'
+	).properties(
+		width=600,
+		height=400
 	).configure_axis(
-    grid=False
-	).configure_title(
-		fontSize=20,
-		fontWeight='bold'
+		grid=False
+	).configure_view(
+		strokeWidth=0
 	)
-
 	# show the plot
 	st.altair_chart(chart, use_container_width=True)
 
