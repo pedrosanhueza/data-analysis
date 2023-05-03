@@ -226,11 +226,13 @@ with tab2_Descriptive_Statistics:
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 					{top_airlines_amount} Airlines
 				</span>
-				({top_airlines_percentage_from_total}%) account for the
+				<!-- ({top_airlines_percentage_from_total}%) -->
+				account for the
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 					{top_airlines_flights_percentage_from_total}%
 				</span>
-				({top_airlines_flights_sum}) of all flights.
+				<!-- ({top_airlines_flights_sum}) -->
+				 of all flights.
 			</p>
 		</div>
 		''',unsafe_allow_html=True)
