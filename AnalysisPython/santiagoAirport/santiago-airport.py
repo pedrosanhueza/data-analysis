@@ -285,7 +285,12 @@ with tab2_Descriptive_Statistics:
 	# create the bar chart
 	chart = alt.Chart(hourly_flights).mark_bar().encode(
 		x=alt.X('Hour:N', title='Hour of the Day', axis=alt.Axis(labelAngle=0)),
-	    y=alt.Y('Count:Q', title='Flights')
+	    y=alt.Y('Count:Q', title='Flights'),
+	        color=alt.condition(
+        alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
+        alt.value('orange'),
+        alt.value('gray')
+    	)
 	)
 
 	# set the x-axis ticks to show only the hour
