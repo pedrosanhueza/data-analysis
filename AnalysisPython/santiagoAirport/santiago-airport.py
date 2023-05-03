@@ -472,7 +472,7 @@ with tab3_Time_Series_Analysis:
 	chart = alt.Chart(hourly_flights).transform_calculate(
 		HourLabel="datum.Hour + ':00'"
 	).mark_bar().encode(
-		x=alt.X('HourLabel:N', axis=alt.Axis(labelAngle=0)),
+		x=alt.X('HourLabel:N', sort=alt.SortField('Hour'), axis=alt.Axis(labelAngle=0)),
 		y=alt.Y('Count:Q')
 	)
 	st.altair_chart(chart, use_container_width=True)
