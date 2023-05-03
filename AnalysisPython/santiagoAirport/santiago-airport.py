@@ -330,13 +330,18 @@ with tab2_Descriptive_Statistics:
 	with col_arrivals:
 		df_arrivals['Hour'] = df_arrivals['Date_Time'].dt.hour
 
+		skewness_kpi = (
+		"highly skewed" if skewness < -1 or skewness > 1 else
+		"moderately skewed" if -1 <= skewness <= -0.5 or 0.5 <= skewness <= 1 else
+		"approximately symmetric")
+
 		skewness = round(df_arrivals['Hour'].skew(),2)
 		if skewness < -1 or skewness > 1:
-			skewness_description = "highly skewed"
+			skewness_description = "right skewed"
 		elif -1 <= skewness <= -0.5 or 0.5 <= skewness <= 1:
-			skewness_description = "moderately skewed"
+			skewness_description = "left skewed"
 		else:
-			skewness_description = "approximately symmetric"
+			skewness_description = "zero skewed"
 		
 		kurtosis = round(df_arrivals['Hour'].kurtosis(),2)
 		if kurtosis < -0.3:
@@ -350,7 +355,7 @@ with tab2_Descriptive_Statistics:
 
 		kpi1, kpi2 = st.columns(2)
 
-		kpi1.metric(label='Skewness', value=skewness, delta=skewness_description)
+		kpi1.metric(label='Skewness', value=skewness, delta=skewness_kpi)
 		kpi2.metric(label='Kurtosis', value=kurtosis, delta=kurtosis_descriptive)
 
 		st.markdown(f'''
