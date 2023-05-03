@@ -169,7 +169,10 @@ with tab1_Extraction_Code:
 
 	st.markdown('''
 	<h2>Code Output</h2>
+	<p>
 	Display output
+	</p>
+	<br>
 	''',unsafe_allow_html=True)
     
 	st.code("st.dataframe(df_departures)",language="python")
