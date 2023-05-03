@@ -302,7 +302,7 @@ with tab2_Descriptive_Statistics:
 
 
 
-	df_departures_grouped = df_departures.groupby(['Destination City']).size().reset_index(name='Count')
+	df_departures_grouped = df_departures.groupby(['Destination City','Destination Country']).size().reset_index(name='Count')
 
 	# create the bar chart using Altair
 	chart = alt.Chart(df_departures_grouped).mark_bar().encode(
