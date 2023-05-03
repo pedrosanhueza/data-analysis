@@ -248,15 +248,10 @@ with tab2_Descriptive_Statistics:
 	with col3:
 		st.write("")
 
-	# Create a DataFrame with the counts of flights per airline
 	df_counts = df_departures.groupby('Airline').agg({'Flight': 'count'}).reset_index()
 	df_counts = df_counts.rename(columns={'Flight': 'FlightCount'})
-
-	# Sort the DataFrame by flight count and add a rank column
 	df_counts = df_counts.sort_values('FlightCount', ascending=False)
 	df_counts['Rank'] = range(1, len(df_counts) + 1)
-
-	# Create a chart with conditional color formatting for the top 2 airlines
 	chart = alt.Chart(df_counts).mark_bar().encode(
 		y=alt.Y('Airline:N', sort='-x', title=''),
 		x=alt.X('FlightCount:Q', title='Flights Amount'),
@@ -266,7 +261,7 @@ with tab2_Descriptive_Statistics:
 			alt.value('gray')
 		)
 	).properties(
-	title=alt.TitleParams(text='Flights by Airline',align='center',subtitle='Number of flights per airline',subtitleColor='white'),
+	title=alt.TitleParams(text='Flights by Airline',align='center',subtitle='Number of flights per airline',subtitleColor='gray'),
 	).configure_axis(
     grid=False
 	)
@@ -276,8 +271,11 @@ with tab2_Descriptive_Statistics:
 
 	# ------- Destination Cities by Flights -------
 
-	df_departures_grouped = df_departures.groupby(['Destination City','Destination Country']).size().reset_index(name='Count')
+	df_international_flights = df_departures[df_departures['Destination Country'] != 'Chile']
+	international_percentage = len(df_international_flights) / len(df_departures) * 100
 
+
+	df_departures_grouped = df_departures.groupby(['Destination City','Destination Country']).size().reset_index(name='Count')
 	chart = alt.Chart(df_departures_grouped).mark_bar().encode(
 		y=alt.Y('Destination City:N', sort='-x', title=''),
 		x='Count:Q',
@@ -289,7 +287,7 @@ with tab2_Descriptive_Statistics:
 			alt.value('orange')     # set color to gray otherwise
 		)
 	).properties(
-		title='Flights by Destination City'
+	title=alt.TitleParams(text='Flights by Destination',align='center',subtitle='Number of flights per destination city',subtitleColor='gray'),
 	).configure_axis(
     grid=False
 	)
