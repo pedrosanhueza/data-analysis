@@ -228,8 +228,16 @@ with tab2_Descriptive_Statistics:
 		st.markdown(f'''
 
 		<p style="font-family: Arial, sans-serif; font-size: 16px;">
-			The <span style="color: yellow; font-weight: bold;">top 6 Airlines</span>
-			(17%) account for the 83% (653) of all flights in the airport.
+			The top
+				<span style="color: orange; font-weight: bold;">
+					6 Airlines
+				</span>
+				(17%) account for the
+				<span style="color: orange; font-weight: bold;">
+					83%
+				</span>
+				(653) of all flights in the airport.
+
 		</p>
 			<ul>
 			<li> The top {top_airlines_amount} Airlines ({top_airlines_percentage_from_total}%) account for the <b>{top_airlines_flights_percentage_from_total}% </b> ({top_airlines_flights_sum}) of all flights in the airport. </li>
