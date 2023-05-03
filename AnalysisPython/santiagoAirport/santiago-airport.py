@@ -206,9 +206,9 @@ with tab2_Descriptive_Statistics:
 		font_size = 24
 
 		st.markdown(f'''
-
-		<p style="font-family: Arial, sans-serif; font-size: 16px; align="center">
-			The top
+		<div style="text-align: center;">
+			<p>
+				The top
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 					{top_airlines_amount} Airlines
 				</span>
@@ -217,8 +217,10 @@ with tab2_Descriptive_Statistics:
 					{top_airlines_flights_percentage_from_total}%
 				</span>
 				({top_airlines_flights_sum}) of all flights in the airport.
-		</p>
-		<p style="font-family: Arial, sans-serif; font-size: 16px; align="center"">
+			</p>
+		</div>
+
+		<p style="font-family: Arial, sans-serif; font-size: 16px;">
 			Santiago airport hosts
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
 			   {airlines_amount}
