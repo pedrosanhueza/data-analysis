@@ -45,7 +45,7 @@ st.markdown('''
     <br><br>
 	The website 
     <a href="https://www.santiago-airport.com" target="_blank"><span class="key">
-		sSantiago-Airport.com
+		Santiago-Airport.com
 	</span></a>
     provides real-time data on flight departures and arrivals from Santiago International Airport.
 	</center>
@@ -468,6 +468,11 @@ with tab3_Time_Series_Analysis:
 	</div>
 	<br><br>
 	''',unsafe_allow_html=True)
+
+	chart = alt.Chart(hourly_flights).mark_bar().encode(
+		x=alt.X('Hour:N'),
+		y=alt.Y('Count:Q'))
+	st.altair_chart(chart, use_container_width=True)
 
 with tab4_Hypothesis_Testing:
 	st.markdown('''
