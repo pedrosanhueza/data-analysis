@@ -210,7 +210,7 @@ with tab2_Descriptive_Statistics:
 				alt.value('gray')
 			)
 		).properties(
-		title='Flight Count by Airline'
+	    title=alt.TitleParams(text='Flights by Airline', align='center', subtitle='Number of flights per airline'),
 		)
 
 		st.altair_chart(chart, use_container_width=True)
