@@ -315,18 +315,20 @@ with tab3_Time_Series_Analysis:
 		<div style="text-align: center;">
 			<p>
 				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
-				Most departures
+					Most departures
 				</span>
-				occure
+					occure
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
-				before noon.
+					before noon.
+				
 				<br>
+				
 				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
-				Most arrivals
+					Most arrivals
 				</span>
-				occure
+					occure
 				<span style="color: orange; font-weight: bold; font-size: {font_size}px;">
-				after noon.
+					after noon.
 				</span>
 			</p>
 		</div>
