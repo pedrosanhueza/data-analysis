@@ -76,9 +76,9 @@ with tab1_Extraction_Code:
 	<h2>Data Extraction Code</h2>
 		<ol>
 		<li> Loops over all pages from
-		    <a href="https://www.santiago-airport.com" target="_blank"><strong style="color: blue;">
+		    <a href="https://www.santiago-airport.com" target="_blank">
 			santiago-airport
-			</strong></span></a>
+			</a>
 			extracting its data.</li>
 		<li> Structures the data into a dataframe. </li>
 		</ol>
