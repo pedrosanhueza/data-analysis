@@ -324,6 +324,7 @@ with tab3_Time_Series_Analysis:
 	with col2:
 		font_size = 24
 		st.markdown(f'''
+		<br><br>
 		<div style="text-align: center;">
 			<p>
 				<span style="color: gray; font-weight: bold; font-size: {font_size}px;">
@@ -343,7 +344,7 @@ with tab3_Time_Series_Analysis:
 				</span>
 			</p>
 		</div>
-		<br>
+		<br><br><br>
 		''',unsafe_allow_html=True)
 	with col3:
 		st.write("")
