@@ -513,8 +513,7 @@ with tab4_Hypothesis_Testing:
 	
 	chart = alt.Chart(df_arrivals).mark_bar().encode(
     x=alt.X('Terminal:O', title='Terminal'),
-    y=alt.Y('count()', title='Frequency'),
-    color=alt.Color('Terminal:O', title='Terminal')
+    y=alt.Y('count()', title='Frequency')
 	)
 
 	text = chart.mark_text(
@@ -522,7 +521,7 @@ with tab4_Hypothesis_Testing:
 		baseline='bottom',
 		dy=-5  # Adjust this value to change the distance between the text and the bars
 	).encode(
-		text=alt.Text('count():Q', format='.1%')  # Display the percentage with one decimal place
+		text=alt.Text('count():Q')  # Display the percentage with one decimal place
 	)
 
 	chart_with_text = (chart + text).properties(width=400, height=300)
