@@ -374,7 +374,7 @@ with tab3_Time_Series_Analysis:
 		else:
 			kurtosis_descriptive = "normal dispersation"
 
-		st.markdown(f'''<h3>Departure Flights</h3>''',unsafe_allow_html=True)
+		st.markdown(f'''<h3>Flights per Hour</h3><h6>Departure Flights<\h6>''',unsafe_allow_html=True)
 
 		kpi1, kpi2 = st.columns(2)
 
@@ -396,7 +396,7 @@ with tab3_Time_Series_Analysis:
 			y=alt.Y('Count:Q', title='',axis=alt.Axis(labels=False),scale=alt.Scale(domain=[0, 100])),color=alt.condition(
 			alt.datum.Count >= hourly_flights.nlargest(2, 'Count')['Count'].min(),
 			alt.value('orange'),alt.value('gray'))
-		).properties(height=700,title=alt.TitleParams(text='Flights per Hour',align='left',subtitle='Departures',subtitleColor='gray'),
+		).properties(height=700,title=alt.TitleParams(text='',align='left',subtitle='',subtitleColor='gray'),
 		).configure_axis(grid=False
 		).configure_title(fontSize=20,fontWeight='bold')
 		st.altair_chart(chart, use_container_width=True)
