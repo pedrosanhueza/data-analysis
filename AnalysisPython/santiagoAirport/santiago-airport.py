@@ -565,16 +565,9 @@ with tab4_Hypothesis_Testing:
 	col1,col2 = st.columns([1,1])
 
 	with col1:
-		country_option_1 = st.selectbox(
-			"Country",
-			country_list
-		)
-
+		country_option_1 = st.selectbox("Country A",country_list)
 	with col2:
-		country_option_2 = st.selectbox(
-			"Country",
-			("Email", "Home phone", "Mobile phone")
-		)		
+		country_option_2 = st.selectbox("Country B",country_list)
 
 	chart = alt.Chart(df_arrivals_terminal).transform_calculate(Terminal="'Terminal '+datum.Terminal"
 	).mark_bar(
