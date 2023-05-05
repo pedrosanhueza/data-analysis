@@ -497,16 +497,6 @@ with tab4_Hypothesis_Testing:
 	<h3>
 		Chi-Square Test of Independence
 	</h3>
-	<p>
-		The Airport has two possible terminals (Terminal 1 and Terminal 2). <br>
-		With the "Terminal" and "Flight Code" columns, I am going to perform a chi-square test of independence to <br>
-		test whether there is a significant difference between the <b> number of flights arriving at each terminal. </b>
-	</p>
-	<br><br>
-	<p>
-		First, visulize the frequency distribution of the Terminal number with a histogram:
-	</p>
-	</div>
 	<br><br>
 	''',unsafe_allow_html=True)
 	
@@ -531,18 +521,8 @@ with tab4_Hypothesis_Testing:
 	with  col3:
 		st.write('')
 
-	st.markdown(f'''
-	<div style="text-align: center;">
-	<br><br>
-	<p>
-		Secondly, examine the relationship between the Terminal and Flight with a contingency table:
-		<br>
-		This is used to calculate the chi-square test of independence.
-	</p>
-	</div>
-	<br><br>
-	''',unsafe_allow_html=True)
-
+	st.latex(r'''\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}''')
+	
 	contingency_table = pd.crosstab(df_arrivals_terminal['Terminal'], df_arrivals_terminal['Flight'])
 	st.table(contingency_table)
 
@@ -558,9 +538,6 @@ with tab4_Hypothesis_Testing:
 	<br><br>
 	''',unsafe_allow_html=True)
 
-	st.latex(r'''
-	\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}
-	''')
 
 	stat, p, dof, expected = chi2_contingency(contingency_table)
 	
