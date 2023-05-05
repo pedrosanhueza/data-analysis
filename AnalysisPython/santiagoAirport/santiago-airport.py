@@ -501,7 +501,7 @@ with tab4_Hypothesis_Testing:
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
-	chart = alt.Chart(df_arrivals_terminal.transform_calculate(TerminalLabel=" 'Terminal' + datum.Terminal")).mark_bar().encode(
+	chart = alt.Chart(df_arrivals_terminal).transform_calculate(TerminalLabel=" 'Terminal' + datum.Terminal").mark_bar().encode(
     	x=alt.X('TerminalLabel:O', title='Terminal', axis=alt.Axis(labelAngle=0)),
 		y=alt.Y('count()', title=''),
 		text=alt.Text('count()', format=',d')
