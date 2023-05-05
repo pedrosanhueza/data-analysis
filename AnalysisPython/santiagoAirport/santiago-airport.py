@@ -504,13 +504,19 @@ with tab4_Hypothesis_Testing:
 	total = df_arrivals_terminal['Terminal'].sum()
 	df_arrivals_terminal['percentage'] = (df_arrivals_terminal['Terminal'] / total) * 100
 
-	chart = alt.Chart(df_arrivals_terminal
-		).transform_calculate(Terminal_Label="'Terminal '+datum.Terminal").mark_bar(
-		).encode(
-			x=alt.X('Terminal_Label:O', title='',axis=alt.Axis(labelAngle=0)),
-			y=alt.Y('count()', title='',scale=alt.Scale(domain=[0, 500]))
-		).configure_axis(grid=False)
+	# chart = alt.Chart(df_arrivals_terminal
+	# 	).transform_calculate(Terminal_Label="'Terminal '+datum.Terminal").mark_bar(
+	# 	).encode(
+	# 		x=alt.X('Terminal_Label:O', title='',axis=alt.Axis(labelAngle=0)),
+	# 		y=alt.Y('count()', title='',scale=alt.Scale(domain=[0, 500]))
+	# 	).configure_axis(grid=False)
 	
+	chart = alt.Chart(df_arrivals).mark_bar().encode(
+    x=alt.X('Terminal:O', title='Terminal'),
+    y=alt.Y('count()', title='Frequency'),
+    color=alt.Color('Terminal:O', title='Terminal')
+	)
+
 	text = chart.mark_text(
 		align='center',
 		baseline='bottom',
