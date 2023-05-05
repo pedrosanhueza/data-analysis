@@ -500,17 +500,12 @@ with tab4_Hypothesis_Testing:
 	
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
 
-	df_arrivals_terminal['Terminal'] = df_arrivals_terminal['Terminal'].astype('int')
+	chart = alt.Chart(df_arrivals).mark_bar().encode(
+		x=alt.X('Terminal:O', title='Terminal'),
+		y=alt.Y('count()', title='Frequency')
+	)
 
-	counts = df_arrivals_terminal.groupby('Terminal')['Flight'].count()
-
-	fig, ax = plt.subplots()
-	counts.plot(kind='bar', ax=ax)
-	ax.set_xlabel('Terminal')
-	ax.set_ylabel('Frequency')
-	ax.set_title('Arrivals by Terminal')
-
-	st.pyplot(fig)
+	st.altair_chart(chart, use_container_width=True)
 
 with tab5_Regression_Analysis:
 	st.markdown('''
