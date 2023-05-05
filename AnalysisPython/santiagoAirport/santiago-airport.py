@@ -274,7 +274,9 @@ with tab2_Descriptive_Statistics:
 	# ------- Destination Cities by Flights -------
 
 	st.markdown(f'''
-	<img src="AnalysisPython/santiagoAirport/airport-world-map.jpeg" alt="chilean-airport-world-map">
+	<center>
+		<img src="https://images.cdn.centreforaviation.com/stories/ctc/2018/07/SCL001.png" style="width: 50%; height: 5%; object-fit: cover;">
+	<\center>
 	''',unsafe_allow_html=True)
 
 	df_international_flights = df_departures[df_departures['Destination Country'] != 'Chile']
