@@ -501,8 +501,8 @@ with tab4_Hypothesis_Testing:
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
-	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
-    	x=alt.X('Terminal:O', title='Terminal', axis=alt.Axis(labelAngle=0)),
+	chart = alt.Chart(df_arrivals_terminal.transform_calculate(TerminalLabel=" 'Terminal' + datum.Terminal")).mark_bar().encode(
+    	x=alt.X('TerminalLabel:O', title='Terminal', axis=alt.Axis(labelAngle=0)),
 		y=alt.Y('count()', title=''),
 		text=alt.Text('count()', format=',d')
 	).properties(height=700,width=200,title=alt.TitleParams(text='Flights by Terminal',align='center',subtitle='Number of flights per terminal',subtitleColor='gray'),
