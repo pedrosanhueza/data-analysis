@@ -514,19 +514,10 @@ with tab4_Hypothesis_Testing:
 	chart = alt.Chart(df_arrivals_terminal
 	).transform_calculate(Terminal_Label="'Terminal '+datum.Terminal").mark_bar(
     x=alt.X('Terminal:O', title='Terminal'),
-    y=alt.Y('count()', title='Frequency'),
-    color=alt.Color('Terminal:O', title='Terminal')
-	)
+    y=alt.Y('count()', title='Frequency')
+	).properties(width=400, height=300)
 
-	text = chart.mark_text(
-		align='center',
-		baseline='bottom',
-		dy=-5  # Adjust this value to change the distance between the text and the bars
-	).encode(
-		text=alt.Text('count():Q', format=',')
-	)
-
-	chart_with_text = (chart + text).properties(width=400, height=300)
+	chart_with_text = (chart)
 
 	st.altair_chart(chart_with_text, use_container_width=True)
 
