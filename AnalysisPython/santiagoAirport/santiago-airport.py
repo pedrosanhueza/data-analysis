@@ -486,22 +486,34 @@ with tab4_Hypothesis_Testing:
 		Chi-Square Test of Independence
 	</h3>
 	<p>
-		The Airport has two possible terminals (Terminal 1 and Terminal 2). With the "Terminal" and "Flight Code" columns, I am going to perform a chi-square test of independence to 
-		test whether there is a significant difference between the <b> number of flights arriving at each terminal </b>.
+		The Airport has two possible terminals (Terminal 1 and Terminal 2). <br>
+		With the "Terminal" and "Flight Code" columns, I am going to perform a chi-square test of independence to <br>
+		test whether there is a significant difference between the <b> number of flights arriving at each terminal. </b>
 	</p>
+	<br><br>
 	<p>
 		First, visulize the frequency distribution of the Terminal number with a histogram:
 	</p>
 	</div>
+	<br><br>
 	''',unsafe_allow_html=True)
 	
-	df_arrivals_terminal = df_arrivals[df_arrivals['Terminal'] != "C"]
+	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
 
 	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
     	x=alt.X('Terminal:O', title='Terminal'),
 		y=alt.Y('count()', title='Frequency'))
 	st.altair_chart(chart, use_container_width=True)
 
+	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
+    	x=alt.X('Terminal:O', title='Terminal'),
+		y=alt.Y('count()', title=''),
+		text=alt.Text('count()', format=',d')
+	).properties(
+	title=alt.TitleParams(text='Flights by Terminal',align='center',subtitle='Number of flights per terminal',subtitleColor='gray'),
+	).configure_axis(
+    grid=False
+	)
 
 with tab5_Regression_Analysis:
 	st.markdown('''
