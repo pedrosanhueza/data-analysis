@@ -545,8 +545,14 @@ with tab4_Hypothesis_Testing:
 	<br><br>
 	''',unsafe_allow_html=True)
 
-	st.markdown(f'''
-	$\pi \approx 3.14159$
+	st.markdown('''
+	$$
+	\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}
+	$$
+
+	$$
+	\pi \approx 3.14159
+	$$
 	''')
 
 with tab5_Regression_Analysis:
