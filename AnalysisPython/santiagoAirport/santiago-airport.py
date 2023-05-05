@@ -560,7 +560,25 @@ with tab4_Hypothesis_Testing:
 	st.latex(r'''H_0: \text{There is no significant difference between the arriving time and country of origin}''')
 	st.latex(r'''H_a: \text{There is a significant difference between the arriving time and country of origin}''')	
 	
+	country_list = tuple(df_arrivals[~df_arrivals['Origin Country'].isna()]['Origin Country'].unique())
 	
+	col1,col2 = st.columns([1,1])
+
+	with col1:
+		country_option_1 = st.selectbox(
+			"Country",
+			country_list,
+			label_visibility=st.session_state.visibility,
+			disabled=st.session_state.disabled,
+		)
+
+	with col2:
+		country_option_2 = st.selectbox(
+			"Country",
+			("Email", "Home phone", "Mobile phone"),
+			label_visibility=st.session_state.visibility,
+			disabled=st.session_state.disabled,
+		)		
 
 	chart = alt.Chart(df_arrivals_terminal).transform_calculate(Terminal="'Terminal '+datum.Terminal"
 	).mark_bar(
