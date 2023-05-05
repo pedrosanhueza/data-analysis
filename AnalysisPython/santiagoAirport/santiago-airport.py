@@ -568,7 +568,6 @@ with tab4_Hypothesis_Testing:
 		country_option_1 = st.selectbox(
 			"Country",
 			country_list,
-			label_visibility=st.session_state.visibility,
 			disabled=st.session_state.disabled,
 		)
 
@@ -576,7 +575,6 @@ with tab4_Hypothesis_Testing:
 		country_option_2 = st.selectbox(
 			"Country",
 			("Email", "Home phone", "Mobile phone"),
-			label_visibility=st.session_state.visibility,
 			disabled=st.session_state.disabled,
 		)		
 
