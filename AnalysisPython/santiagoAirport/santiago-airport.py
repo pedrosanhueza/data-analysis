@@ -501,26 +501,24 @@ with tab4_Hypothesis_Testing:
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
-	# calculate percentage values
 	total = df_arrivals_terminal['Terminal'].sum()
 	df_arrivals_terminal['percentage'] = (df_arrivals_terminal['Terminal'] / total) * 100
 
-	chart = alt.Chart(df_arrivals_terminal).transform_calculate(TerminalLabel=" 'Terminal ' + datum.Terminal").mark_bar().encode(
-    	x=alt.X('TerminalLabel:O', title='Terminal', axis=alt.Axis(labelAngle=0)),
-		y=alt.Y('count()', title=''),
-		text=alt.Text('count()', format=',d')
-	).properties(height=700,width=200,title=alt.TitleParams(text='Flights by Terminal',align='center',subtitle='Number of flights per terminal',subtitleColor='gray'),
-	).configure_axis(
-    grid=False
+	chart = alt.Chart(df_arrivals).mark_bar().encode(
+		x=alt.X('Terminal:O', title='Terminal'),
+		y=alt.Y('count()', title='Frequency'),
+		color=alt.Color('Terminal:O', title='Terminal')
 	)
 
 	text = chart.mark_text(
 		align='center',
 		baseline='bottom',
-		dy=-5
-	).encode(text=alt.Text('percentage:Q', format='.1f'))
+		dy=-5  # Adjust this value to change the distance between the text and the bars
+	).encode(
+		text=alt.Text('count():Q', format='.1%')
+	)
 
-	chart_with_text = (chart + text)
+	chart_with_text = (chart + text).properties(width=400, height=300)
 
 	st.altair_chart(chart_with_text, use_container_width=True)
 
