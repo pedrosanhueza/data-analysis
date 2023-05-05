@@ -502,7 +502,7 @@ with tab4_Hypothesis_Testing:
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
 	total = df_arrivals_terminal['Terminal'].sum()
-	df_arrivals_terminal['percentage'] = (df_arrivals_terminal['Terminal'] / total)
+	df_arrivals_terminal['percentage'] = (df_arrivals_terminal['Terminal'] / total / 100)
 
 	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
 		x=alt.X('Terminal:O', title='Terminal'),
