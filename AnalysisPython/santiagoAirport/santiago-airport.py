@@ -503,41 +503,17 @@ with tab4_Hypothesis_Testing:
 	# df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
-	total = df_arrivals_terminal['Terminal'].sum()
-	df_arrivals_terminal['percentage'] = (df_arrivals_terminal['Terminal'] / total) * 100
+	# Group the data by terminal and count the number of flights in each terminal
+	counts = df_arrivals_terminal.groupby('Terminal')['Flight'].count()
 
-	# chart = alt.Chart(df_arrivals_terminal
-	# 	).transform_calculate(Terminal_Label="'Terminal '+datum.Terminal").mark_bar(
-	# 	).encode(
-	# 		x=alt.X('Terminal_Label:O', title='',axis=alt.Axis(labelAngle=0)),
-	# 		y=alt.Y('count()', title='',scale=alt.Scale(domain=[0, 500]))
-	# 	).configure_axis(grid=False)
-	
-	# chart = alt.Chart(df_arrivals_terminal
-	# ).transform_calculate(Terminal_Label="'Terminal '+datum.Terminal").mark_bar(
-    # x=alt.X('Terminal:N', title='Terminal'),
-    # y=alt.Y('count()', title='Frequency')
-	# ).properties(width=400, height=300)
+	# Create a bar plot
+	fig, ax = plt.subplots()
+	counts.plot(kind='bar', ax=ax)
+	ax.set_xlabel('Terminal')
+	ax.set_ylabel('Frequency')
+	ax.set_title('Arrivals by Terminal')
 
-	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
-    x=alt.X('Terminal:O', title='Terminal'),
-    y=alt.Y('count()', title='Frequency'),
-    color=alt.Color('Terminal:O', title='Terminal')
-)
-
-	# Add text labels for the bar values
-	text = chart.mark_text(
-		align='center',
-		baseline='bottom',
-		dy=-5  # Adjust this value to change the distance between the text and the bars
-	).encode(
-		text=alt.Text('count():Q', format='.1%')  # Display the percentage with one decimal place
-	)
-
-	# Combine the chart and text layers
-	chart_with_text = (chart + text).properties(width=400, height=300)
-
-	st.altair_chart(chart, use_container_width=True)
+	st.pyplot(fig)
 
 with tab5_Regression_Analysis:
 	st.markdown('''
