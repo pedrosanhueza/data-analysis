@@ -511,10 +511,12 @@ with tab4_Hypothesis_Testing:
 	# 		y=alt.Y('count()', title='',scale=alt.Scale(domain=[0, 500]))
 	# 	).configure_axis(grid=False)
 	
-	chart = alt.Chart(df_arrivals).mark_bar().encode(
-    x=alt.X('Terminal:O', title='Terminal'),
-    y=alt.Y('count()', title='Frequency')
-	)
+	chart = alt.Chart(df_arrivals_terminal
+	).transform_calculate(Terminal_Label="'Terminal '+datum.Terminal").mark_bar(
+	).encode(
+		x=alt.X('Terminal:O', title='Terminal'),
+		y=alt.Y('count()', title='Frequency')
+	).configure_axis(grid=False)
 
 	text = chart.mark_text(
 		align='center',
