@@ -511,7 +511,13 @@ with tab4_Hypothesis_Testing:
 	).configure_axis(grid=False
 	)
 
-	st.altair_chart(chart, use_container_width=True)
+	col1, col2, col3 = st.columns([1,1,1])
+	with col1:
+		st.write('')
+	with col2:
+		st.altair_chart(chart, use_container_width=True)
+	with  col3:
+		st.write('')
 
 with tab5_Regression_Analysis:
 	st.markdown('''
