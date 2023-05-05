@@ -514,7 +514,7 @@ with tab4_Hypothesis_Testing:
 	
 	chart = alt.Chart(df_arrivals_terminal
 	).transform_calculate(Terminal_Label="'Terminal '+datum.Terminal").mark_bar(
-    x=alt.X('Terminal:O', title='Terminal'),
+    x=alt.X('Terminal:N', title='Terminal'),
     y=alt.Y('count()', title='Frequency')
 	).properties(width=400, height=300)
 
