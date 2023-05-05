@@ -500,8 +500,8 @@ with tab4_Hypothesis_Testing:
 	<br><br>
 	''',unsafe_allow_html=True)
 	
-	# df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
-	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
+	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
+	# df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
 	# Group the data by terminal and count the number of flights in each terminal
 	counts = df_arrivals_terminal.groupby('Terminal')['Flight'].count()
