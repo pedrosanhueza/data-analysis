@@ -524,6 +524,8 @@ with tab4_Hypothesis_Testing:
 	<br><br>
 	<p>
 		Secondly, examine the relationship between the Terminal and Flight with a contingency table:
+		<br>
+		This is used to calculate the chi-square test of independence.
 	</p>
 	</div>
 	<br><br>
@@ -532,9 +534,21 @@ with tab4_Hypothesis_Testing:
 	contingency_table = pd.crosstab(df_arrivals_terminal['Terminal'], df_arrivals_terminal['Flight'])
 	st.table(contingency_table)
 
+	st.markdown(f'''
+	<div style="text-align: center;">
+	<br><br>
+	<p>
+		Finally, 
+		<br>
+		This is used to calculate the chi-square test of independence.
+	</p>
+	</div>
+	<br><br>
+	''',unsafe_allow_html=True)
 
-
-
+	st.latex(r'''
+	\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}
+	''')
 
 
 
