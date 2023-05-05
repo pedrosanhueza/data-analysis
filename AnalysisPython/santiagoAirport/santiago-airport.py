@@ -504,7 +504,7 @@ with tab4_Hypothesis_Testing:
 	chart = alt.Chart(df_arrivals_terminal).transform_calculate(Terminal="'Terminal '+datum.Terminal").mark_bar().encode(
 		x=alt.X('Terminal:O', title='', axis=alt.Axis(labelAngle=0)),
 		y=alt.Y('count()', title='')
-	).properties(height=700,width=400
+	).properties(height=500,width=100
 	).configure_axis(grid=False
 	)
 
