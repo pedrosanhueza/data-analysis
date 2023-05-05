@@ -531,29 +531,12 @@ with tab4_Hypothesis_Testing:
 	contingency_table = pd.crosstab(df_arrivals_terminal['Terminal'], df_arrivals_terminal['Flight'])
 	stat, p, dof, expected = chi2_contingency(contingency_table)
 	
-	st.markdown(f'''
-	<div style="text-align: center;">
-	<br><br>
-	<p>
-		The chi-square test of independence is performed with a p-value of {p}.
-		<br>
-		The chi-square test of independence is performed with a p-value of {p}.
-		<br>.
-		<br>
-	</p>
-	</div>
-	<br><br>
-	''',unsafe_allow_html=True)
-
-	st.markdown('''
-	$$
-	\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}
-	$$
-
-	$$
-	\pi \approx 3.14159
-	$$
-	''')
+	st.latex(r'''
+	\begin{center}
+		\vspace{20pt}
+		\text{The chi-square test of independence is performed with a p-value of } %s.
+	\end{center}
+	''' % p)
 
 with tab5_Regression_Analysis:
 	st.markdown('''
