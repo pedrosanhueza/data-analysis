@@ -6,6 +6,8 @@ import time
 import matplotlib.pyplot as plt
 import altair as alt
 # import plotly.express as px
+from scipy.stats import chi2_contingency
+
 
 st.set_page_config(
 	page_title='Santiago Airport',
@@ -550,6 +552,24 @@ with tab4_Hypothesis_Testing:
 	\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}
 	''')
 
+	stat, p, dof, expected = chi2_contingency(contingency_table)
+	
+	st.markdown(f'''
+	<div style="text-align: center;">
+	<br><br>
+	<p>
+		The chi-square test of independence is performed with a p-value of {p}.
+		<br>
+		{stat}
+		<br>
+		{dof}
+		<br>
+		{expected}
+		<br>
+	</p>
+	</div>
+	<br><br>
+	''',unsafe_allow_html=True)
 
 
 with tab5_Regression_Analysis:
