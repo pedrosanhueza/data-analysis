@@ -501,18 +501,11 @@ with tab4_Hypothesis_Testing:
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
-
 	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
-    	x=alt.X('Terminal:O', title='Terminal'),
-		y=alt.Y('count()', title='Frequency'))
-	st.altair_chart(chart, use_container_width=True)
-
-	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
-    	x=alt.X('Terminal:O', title='Terminal'),
+    	x=alt.X('Terminal:O', title='Terminal', axis=alt.Axis(labelAngle=0)),
 		y=alt.Y('count()', title=''),
 		text=alt.Text('count()', format=',d')
-	).properties(
-	title=alt.TitleParams(text='Flights by Terminal',align='center',subtitle='Number of flights per terminal',subtitleColor='gray'),
+	).properties(title=alt.TitleParams(text='Flights by Terminal',align='center',subtitle='Number of flights per terminal',subtitleColor='gray',height=700,width=200),
 	).configure_axis(
     grid=False
 	)
