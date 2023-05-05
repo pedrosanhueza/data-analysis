@@ -515,8 +515,7 @@ with tab4_Hypothesis_Testing:
 		baseline='middle',
 		dx=3
 	).encode(
-		text='percentage:Q'
-	
+		text='count:Q'
 	)
 
 	chart_with_text = (chart + text).properties(width=400, height=300)
