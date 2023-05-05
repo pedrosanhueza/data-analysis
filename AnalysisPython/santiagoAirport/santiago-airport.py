@@ -505,15 +505,15 @@ with tab4_Hypothesis_Testing:
 		y=alt.Y('count()', title='Frequency'))
 	st.altair_chart(chart, use_container_width=True)
 
-	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
-    	x=alt.X('Terminal:O', title='Terminal'),
-		y=alt.Y('count()', title=''),
-		text=alt.Text('count()', format=',d')
-	).properties(
-	title=alt.TitleParams(text='Flights by Terminal',align='center',subtitle='Number of flights per terminal',subtitleColor='gray'),
-	).configure_axis(
-    grid=False
-	)
+	# chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
+    # 	x=alt.X('Terminal:O', title='Terminal'),
+	# 	y=alt.Y('count()', title=''),
+	# 	text=alt.Text('count()', format=',d')
+	# ).properties(
+	# title=alt.TitleParams(text='Flights by Terminal',align='center',subtitle='Number of flights per terminal',subtitleColor='gray'),
+	# ).configure_axis(
+    # grid=False
+	# )
 
 with tab5_Regression_Analysis:
 	st.markdown('''
