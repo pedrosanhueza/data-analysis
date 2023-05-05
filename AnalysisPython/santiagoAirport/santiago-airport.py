@@ -311,11 +311,11 @@ with tab2_Descriptive_Statistics:
 
 	st.altair_chart(chart, theme="streamlit", use_container_width=True)
 
-	st.markdown(f'''
-	<center>
-		<img src="https://images.cdn.centreforaviation.com/stories/ctc/2018/07/SCL001.png" style="width: 30%; height: 5%; object-fit: cover;">
-	</center><br><br>
-	''',unsafe_allow_html=True)
+	# st.markdown(f'''
+	# <center>
+	# 	<img src="https://images.cdn.centreforaviation.com/stories/ctc/2018/07/SCL001.png" style="width: 30%; height: 5%; object-fit: cover;">
+	# </center><br><br>
+	# ''',unsafe_allow_html=True)
 
 with tab3_Time_Series_Analysis:
 	st.markdown('''
