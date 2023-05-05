@@ -513,13 +513,19 @@ with tab4_Hypothesis_Testing:
 	with  col3:
 		st.write('')
 
-	st.write('Chi-Square Test of Independence',unsafe_allow_html=True)
+	st.markdown(f'''
+	<div style="text-align: center;">
+	<h6>
+		Chi-Square Test of Independence
+	</h6>
+	''',unsafe_allow_html=True)
 
 	st.latex(r'''\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}''')
 	
 	st.code('''
 	contingency_table = pd.crosstab(df_arrivals_terminal['Terminal'], df_arrivals_terminal['Flight'])
 	stat, p, dof, expected = chi2_contingency(contingency_table)
+	print(f'The chi-square test of independence is performed with a p-value of {p}')
 	''',language='python')
 
 	contingency_table = pd.crosstab(df_arrivals_terminal['Terminal'], df_arrivals_terminal['Flight'])
