@@ -553,31 +553,21 @@ with tab4_Hypothesis_Testing:
 	<br><br>
 	<div style="text-align: center;">
 	<h3>
-		Relationship Between the Arrival Time and Country of Origin
+		Relationship Between the Arrival Time and City of Origin
 	</h3>
 	''',unsafe_allow_html=True)
 
-	st.latex(r'''H_0: \text{There is no significant difference between the arriving time and country of origin}''')
-	st.latex(r'''H_a: \text{There is a significant difference between the arriving time and country of origin}''')	
+	st.latex(r'''H_0: \text{There is no significant difference between the arriving time and city of origin}''')
+	st.latex(r'''H_a: \text{There is a significant difference between the arriving time and city of origin}''')	
 	
-	country_list = tuple(df_arrivals[~df_arrivals['Origin Country'].isna()]['Origin Country'].unique())
+	city_list = tuple(df_arrivals['Origin City'].unique())
 	
 	col1,col2 = st.columns([1,1])
 
 	with col1:
-		country_option_1 = st.selectbox("Country A",country_list)
+		country_option_1 = st.selectbox("City A",city_list)
 	with col2:
-		country_option_2 = st.selectbox("Country B",country_list)
-
-	chart = alt.Chart(df_arrivals_terminal).transform_calculate(Terminal="'Terminal '+datum.Terminal"
-	).mark_bar(
-		size=120
-	).encode(
-		x=alt.X('Terminal:O', title='', axis=alt.Axis(labelAngle=0)),
-		y=alt.Y('count()', title='')
-	).properties(height=500,width=100
-	).configure_axis(grid=False
-	)
+		country_option_2 = st.selectbox("City B",city_list)
 
 	col1, col2, col3 = st.columns([1,1,1])
 	with col1:
