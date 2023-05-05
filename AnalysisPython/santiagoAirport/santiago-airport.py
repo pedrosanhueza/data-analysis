@@ -482,6 +482,10 @@ with tab4_Hypothesis_Testing:
 	<p>Test whether the average delay time of different airlines is statistically significant or not.</p>
 	''',unsafe_allow_html=True)
 
+	st.latex(r'''H_0: \text{There is no significant difference between the number of flights arriving at each terminal}''')
+
+	st.latex(r'''H_a: \text{There is a significant difference between the number of flights arriving at each terminal}''')
+
 	st.markdown(f'''
 	<div style="text-align: center;">
 	<h3>
