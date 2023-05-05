@@ -66,7 +66,7 @@ else:
 	df_arrivals['Date_Time'] = pd.to_datetime(df_arrivals['Date_Time'])
 	df_departures['Date_Time'] = pd.to_datetime(df_departures['Date_Time'])
 
-	df_arrivals['Terminal'] = df_arrivals['Terminal'].astype('str')
+	df_arrivals['Terminal'] = df_arrivals['Terminal'].astype('int')
 
 # # ---------------------------------------- Tabs ----------------------------------------
 
@@ -500,7 +500,8 @@ with tab4_Hypothesis_Testing:
 	<br><br>
 	''',unsafe_allow_html=True)
 	
-	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
+	# df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
+	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
 	total = df_arrivals_terminal['Terminal'].sum()
 	df_arrivals_terminal['percentage'] = (df_arrivals_terminal['Terminal'] / total) * 100
