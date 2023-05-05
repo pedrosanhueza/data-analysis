@@ -519,7 +519,9 @@ with tab4_Hypothesis_Testing:
 	
 	)
 
-	st.altair_chart(chart + text, use_container_width=True)
+	chart_with_text = (chart + text).properties(width=400, height=300)
+
+	st.altair_chart(chart_with_text, use_container_width=True)
 
 with tab5_Regression_Analysis:
 	st.markdown('''
