@@ -531,12 +531,7 @@ with tab4_Hypothesis_Testing:
 	contingency_table = pd.crosstab(df_arrivals_terminal['Terminal'], df_arrivals_terminal['Flight'])
 	stat, p, dof, expected = chi2_contingency(contingency_table)
 	
-	st.latex(r'''
-	\begin{center}
-		\vspace{20pt}
-		\text{The chi-square test of independence is performed with a p-value of } %s.
-	\end{center}
-	''' % p)
+	st.latex(r'''\text{The chi-square test of independence is performed with a p-value of } %s.''' % p)
 
 with tab5_Regression_Analysis:
 	st.markdown('''
