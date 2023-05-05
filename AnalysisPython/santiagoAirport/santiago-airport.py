@@ -531,7 +531,16 @@ with tab4_Hypothesis_Testing:
 	contingency_table = pd.crosstab(df_arrivals_terminal['Terminal'], df_arrivals_terminal['Flight'])
 	stat, p, dof, expected = chi2_contingency(contingency_table)
 	
-	st.latex(r'''\text{The chi-square test of independence is performed with a p-value of } %s \approx 0''' %p)
+	st.latex(r'''\text{The chi-square test of independence is performed with a p-value of } %s \approx 0.00''' %p)
+
+	st.markdown(f'''
+	<div style="text-align: center;">
+	<h6>
+	The p-value extremely close to zero indicates that the probability of frequencies of flights arriving at each terminal under the assumption of independence between the Terminal and Flight variables is extremely low.
+	<br>
+	In other words, <br> there is a statistically significant association between the Terminal and Flight variables <br>.
+	</h6>
+	''',unsafe_allow_html=True)
 
 with tab5_Regression_Analysis:
 	st.markdown('''
