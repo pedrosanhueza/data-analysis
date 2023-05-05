@@ -489,6 +489,9 @@ with tab4_Hypothesis_Testing:
 		The Airport has two possible terminals (Terminal 1 and Terminal 2). With the "Terminal" and "Flight Code" columns, I am going to perform a chi-square test of independence to 
 		test whether there is a significant difference between the <b> number of flights arriving at each terminal </b>.
 	</p>
+	<p>
+		First, visulize the frequency distribution of the Terminal number with a histogram:
+	</p>
 	</div>
 	''',unsafe_allow_html=True)
 	
