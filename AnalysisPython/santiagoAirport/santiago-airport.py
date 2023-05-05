@@ -505,7 +505,7 @@ with tab4_Hypothesis_Testing:
     	x=alt.X('Terminal:O', title='Terminal', axis=alt.Axis(labelAngle=0)),
 		y=alt.Y('count()', title=''),
 		text=alt.Text('count()', format=',d')
-	).properties(title=alt.TitleParams(text='Flights by Terminal',align='center',subtitle='Number of flights per terminal',subtitleColor='gray',height=700,width=200),
+	).properties(height=700,width=200,title=alt.TitleParams(text='Flights by Terminal',align='center',subtitle='Number of flights per terminal',subtitleColor='gray'),
 	).configure_axis(
     grid=False
 	)
