@@ -480,6 +480,26 @@ with tab4_Hypothesis_Testing:
 	<p>Test whether the average delay time of different airlines is statistically significant or not.</p>
 	''',unsafe_allow_html=True)
 
+	st.markdown(f'''
+	<div style="text-align: center;">
+	<h3>
+		Chi-Square Test of Independence
+	</h3>
+	<p>
+		The Airport has two possible terminals (Terminal 1 and Terminal 2). With the "Terminal" and "Flight Code" columns, I am going to perform a chi-square test of independence to 
+		test whether there is a significant difference between the <b> number of flights arriving at each terminal </b>.
+	</p>
+	</div>
+	''',unsafe_allow_html=True)
+	
+	df_arrivals_terminal = df_arrivals[df_arrivals['Terminal'] != "C"]
+
+	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
+    	x=alt.X('Terminal:O', title='Terminal'),
+		y=alt.Y('count()', title='Frequency'))
+	st.altair_chart(chart, use_container_width=True)
+
+
 with tab5_Regression_Analysis:
 	st.markdown('''
 	<h2>Regression analysis</h2>
