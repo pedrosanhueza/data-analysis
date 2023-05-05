@@ -502,8 +502,10 @@ with tab4_Hypothesis_Testing:
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
 	chart = alt.Chart(df_arrivals_terminal).transform_calculate(Terminal="'Terminal '+datum.Terminal").mark_bar().encode(
-		x=alt.X('Terminal:O', title='Terminal', axis=alt.Axis(labelAngle=0)),
-		y=alt.Y('count()', title='Frequency')
+		x=alt.X('Terminal:O', title='', axis=alt.Axis(labelAngle=0)),
+		y=alt.Y('count()', title='')
+	).properties(height=700,width=400
+	).configure_axis(grid=False
 	)
 
 	st.altair_chart(chart, use_container_width=True)
