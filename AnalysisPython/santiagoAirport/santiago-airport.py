@@ -519,7 +519,7 @@ with tab4_Hypothesis_Testing:
     # y=alt.Y('count()', title='Frequency')
 	# ).properties(width=400, height=300)
 
-	chart = alt.Chart(df_arrivals).mark_bar().encode(
+	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
     x=alt.X('Terminal:O', title='Terminal'),
     y=alt.Y('count()', title='Frequency'),
     color=alt.Color('Terminal:O', title='Terminal')
