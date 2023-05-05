@@ -511,15 +511,6 @@ with tab4_Hypothesis_Testing:
 	).configure_axis(grid=False
 	)
 
-	labels = chart.mark_text(
-    align='center',
-    baseline='bottom',
-    dy=-5, # adjust the vertical position of the labels
-    fontSize=10
-	).encode(
-		text=alt.Text('count()', format='.0f')
-	)
-	chart = chart + labels
 	st.altair_chart(chart, use_container_width=True)
 
 with tab5_Regression_Analysis:
