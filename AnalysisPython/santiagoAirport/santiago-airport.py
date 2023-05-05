@@ -505,7 +505,7 @@ with tab4_Hypothesis_Testing:
 	df_arrivals_terminal['percentage'] = (df_arrivals_terminal['Terminal'] / total / 100)
 
 	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
-		x=alt.X('Terminal:O', title='Terminal'),
+		x=alt.X('Terminal:O', title='Terminal',axis=alt.Axis(labelAngle=0)),
 		y=alt.Y('count()', title='Frequency')
 	)
 
