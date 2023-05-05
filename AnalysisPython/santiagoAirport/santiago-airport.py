@@ -511,7 +511,8 @@ with tab4_Hypothesis_Testing:
 	# 		y=alt.Y('count()', title='',scale=alt.Scale(domain=[0, 500]))
 	# 	).configure_axis(grid=False)
 	
-	chart = alt.Chart(df_arrivals).mark_bar().encode(
+	chart = alt.Chart(df_arrivals_terminal
+	).transform_calculate(Terminal_Label="'Terminal '+datum.Terminal").mark_bar(
     x=alt.X('Terminal:O', title='Terminal'),
     y=alt.Y('count()', title='Frequency'),
     color=alt.Color('Terminal:O', title='Terminal')
