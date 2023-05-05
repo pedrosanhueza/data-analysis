@@ -66,8 +66,6 @@ else:
 	df_arrivals['Date_Time'] = pd.to_datetime(df_arrivals['Date_Time'])
 	df_departures['Date_Time'] = pd.to_datetime(df_departures['Date_Time'])
 
-	df_arrivals['Terminal'] = df_arrivals['Terminal'].astype('int')
-
 # # ---------------------------------------- Tabs ----------------------------------------
 
 tab1_Extraction_Code, tab2_Descriptive_Statistics, tab3_Time_Series_Analysis, tab4_Hypothesis_Testing, tab5_Regression_Analysis, tab6_Conclusion = st.tabs([
@@ -501,7 +499,6 @@ with tab4_Hypothesis_Testing:
 	''',unsafe_allow_html=True)
 	
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
-	# df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
 	counts = df_arrivals_terminal.groupby('Terminal')['Flight'].count()
 
