@@ -519,7 +519,7 @@ with tab4_Hypothesis_Testing:
 	
 	)
 
-	st.altair_chart(chart, use_container_width=True)
+	st.altair_chart(chart + text, use_container_width=True)
 
 with tab5_Regression_Analysis:
 	st.markdown('''
