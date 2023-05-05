@@ -533,15 +533,21 @@ with tab4_Hypothesis_Testing:
 	
 	st.latex(r'''\text{The chi-square test of independence is performed with a p-value of } %s \approx 0.00''' %p)
 
-	st.markdown(f'''
-	<div style="text-align: center;">
-	<h6>
-	The p-value extremely close to zero indicates that the probability of frequencies of flights arriving at each terminal under the assumption of independence between the Terminal and Flight variables is extremely low.
-	<br>
-	In other words, <br> there is a statistically significant association between the Terminal and Flight variables <br>.
-	</h6>
-	</div>
-	''',unsafe_allow_html=True)
+	col1,col2,col3 = st.columns([1,1,1])
+	with col1:
+		st.write('')
+	with col2:
+		st.markdown(f'''
+		<div style="text-align: center;">
+		<p>
+		The p-value extremely close to zero indicates that the probability of frequencies of flights arriving at each terminal under the assumption of independence between the Terminal and Flight variables is extremely low.
+		<br>
+		In other words, <br> there is a statistically significant association between the Terminal and Flight variables <br>.
+		</p>
+		</div>
+		''',unsafe_allow_html=True)
+	with col3:
+		st.write('')
 
 with tab5_Regression_Analysis:
 	st.markdown('''
