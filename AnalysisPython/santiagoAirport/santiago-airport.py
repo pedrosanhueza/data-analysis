@@ -512,11 +512,29 @@ with tab4_Hypothesis_Testing:
 	# 		y=alt.Y('count()', title='',scale=alt.Scale(domain=[0, 500]))
 	# 	).configure_axis(grid=False)
 	
-	chart = alt.Chart(df_arrivals_terminal
-	).transform_calculate(Terminal_Label="'Terminal '+datum.Terminal").mark_bar(
-    x=alt.X('Terminal:N', title='Terminal'),
-    y=alt.Y('count()', title='Frequency')
-	).properties(width=400, height=300)
+	# chart = alt.Chart(df_arrivals_terminal
+	# ).transform_calculate(Terminal_Label="'Terminal '+datum.Terminal").mark_bar(
+    # x=alt.X('Terminal:N', title='Terminal'),
+    # y=alt.Y('count()', title='Frequency')
+	# ).properties(width=400, height=300)
+
+	chart = alt.Chart(df_arrivals).mark_bar().encode(
+    x=alt.X('Terminal:O', title='Terminal'),
+    y=alt.Y('count()', title='Frequency'),
+    color=alt.Color('Terminal:O', title='Terminal')
+)
+
+	# Add text labels for the bar values
+	text = chart.mark_text(
+		align='center',
+		baseline='bottom',
+		dy=-5  # Adjust this value to change the distance between the text and the bars
+	).encode(
+		text=alt.Text('count():Q', format='.1%')  # Display the percentage with one decimal place
+	)
+
+	# Combine the chart and text layers
+	chart_with_text = (chart + text).properties(width=400, height=300)
 
 	st.altair_chart(chart, use_container_width=True)
 
