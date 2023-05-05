@@ -502,7 +502,7 @@ with tab4_Hypothesis_Testing:
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
 	total = df_arrivals_terminal['Terminal'].sum()
-	df_arrivals_terminal['percentage'] = (df_arrivals_terminal['Terminal'] / total / 100)
+	df_arrivals_terminal['percentage'] = (df_arrivals_terminal['Terminal'] / total) * 100
 
 	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
 		x=alt.X('Terminal:O', title='Terminal',axis=alt.Axis(labelAngle=0)),
@@ -514,7 +514,7 @@ with tab4_Hypothesis_Testing:
 		baseline='bottom',
 		dy=-5  # Adjust this value to change the distance between the text and the bars
 	).encode(
-		text=alt.Text('count():Q', format='.1%')
+		text=alt.Text('percentage:Q', format='.1%')
 	)
 
 	chart_with_text = (chart + text).properties(width=400, height=300)
