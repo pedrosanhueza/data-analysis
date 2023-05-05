@@ -542,7 +542,7 @@ with tab4_Hypothesis_Testing:
 		<p>
 		The p-value extremely close to zero indicates that the probability of frequencies of flights arriving at each terminal under the assumption of independence between the Terminal and Flight variables is extremely low.
 		<br><br>
-		In other words, <br> there is a statistically significant association between the Terminal and Flight variables <br>.
+		In other words, <b> there is a statistically significant association between the Terminal and Flight variables <b>.
 		</p>
 		</div>
 		''',unsafe_allow_html=True)
