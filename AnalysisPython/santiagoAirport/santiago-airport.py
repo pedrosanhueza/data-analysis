@@ -273,6 +273,10 @@ with tab2_Descriptive_Statistics:
 
 	# ------- Destination Cities by Flights -------
 
+	st.markdown(f'''
+	<img src="AnalysisPython/santiagoAirport/airport-world-map.webp" alt="chilean-airport-world-map">
+	''',unsafe_allow_html=True)
+
 	df_international_flights = df_departures[df_departures['Destination Country'] != 'Chile']
 	international_percentage = len(df_international_flights) / len(df_departures) * 100
 
