@@ -545,6 +545,9 @@ with tab4_Hypothesis_Testing:
 	<br><br>
 	''',unsafe_allow_html=True)
 
+	st.markdown(f'''
+	$\pi \approx 3.14159$
+	''')
 
 with tab5_Regression_Analysis:
 	st.markdown('''
