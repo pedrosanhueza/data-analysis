@@ -490,15 +490,7 @@ with tab4_Hypothesis_Testing:
 	''',unsafe_allow_html=True)
 
 	st.latex(r'''H_0: \text{There is no significant difference between the number of flights arriving at each terminal}''')
-	st.latex(r'''H_a: \text{There is a significant difference between the number of flights arriving at each terminal}''')
-	
-	st.markdown(f'''
-	<div style="text-align: center;">
-	<h3>
-		Chi-Square Test of Independence
-	</h3>
-	<br><br>
-	''',unsafe_allow_html=True)
+	st.latex(r'''H_a: \text{There is a significant difference between the number of flights arriving at each terminal}''')	
 	
 	df_arrivals.Terminal = df_arrivals.Terminal.astype('float')
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
@@ -520,6 +512,8 @@ with tab4_Hypothesis_Testing:
 		st.altair_chart(chart, use_container_width=True)
 	with  col3:
 		st.write('')
+
+	st.markdown(f'''<div style="text-align: center;"><h3>Chi-Square Test of Independence</h3><br><br></div>''',unsafe_allow_html=True)
 
 	st.latex(r'''\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}''')
 	
