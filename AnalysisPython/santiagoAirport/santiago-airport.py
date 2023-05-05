@@ -540,6 +540,7 @@ with tab4_Hypothesis_Testing:
 	<br>
 	In other words, <br> there is a statistically significant association between the Terminal and Flight variables <br>.
 	</h6>
+	</div>
 	''',unsafe_allow_html=True)
 
 with tab5_Regression_Analysis:
