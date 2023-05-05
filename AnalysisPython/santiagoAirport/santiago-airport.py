@@ -374,7 +374,7 @@ with tab3_Time_Series_Analysis:
 		else:
 			kurtosis_descriptive = "normal dispersation"
 
-		st.markdown(f'''<h3>Flights per Hour</h3><h6>Departure Flights<\h6>''',unsafe_allow_html=True)
+		st.markdown(f'''<h3>Flights amount per hour</h3><h6>Departure Flights</h6><br><br>''',unsafe_allow_html=True)
 
 		kpi1, kpi2 = st.columns(2)
 
@@ -425,7 +425,7 @@ with tab3_Time_Series_Analysis:
 		else:
 			kurtosis_descriptive = "normal dispersation"
 
-		st.markdown(f'''<h3>Arrival Flights</h3>''',unsafe_allow_html=True)
+		st.markdown(f'''<h3>Flights amount per hour</h3><h6>Arrival Flights</h6><br><br>''',unsafe_allow_html=True)
 
 		kpi1, kpi2 = st.columns(2)
 
