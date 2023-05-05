@@ -509,6 +509,15 @@ with tab4_Hypothesis_Testing:
 		y=alt.Y('count()', title='',scale=alt.Scale(domain=[0, 500]))
 	).configure_axis(grid=False
 	)
+	
+	text = chart.mark_text(
+		align='left',
+		baseline='middle',
+		dx=3
+	).encode(
+		text='percentage:Q'
+	
+	)
 
 	st.altair_chart(chart, use_container_width=True)
 
