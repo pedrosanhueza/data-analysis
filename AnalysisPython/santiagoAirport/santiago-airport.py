@@ -498,11 +498,11 @@ with tab4_Hypothesis_Testing:
 	<br><br>
 	''',unsafe_allow_html=True)
 	
-	df_arrivals['Terminal'] = df_arrivals['Terminal'].astype(str)
-	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
+	# df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
+	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
 	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
-		x=alt.X('Terminal:N', title='Terminal'),
+		x=alt.X('Terminal:O', title='Terminal'),
 		y=alt.Y('count()', title='Frequency')
 	)
 
