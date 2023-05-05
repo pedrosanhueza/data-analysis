@@ -519,6 +519,25 @@ with tab4_Hypothesis_Testing:
 	with  col3:
 		st.write('')
 
+	st.markdown(f'''
+	<div style="text-align: center;">
+	<br><br>
+	<p>
+		Secondly, examine the relationship between the Terminal and Flight with a contingency table:
+	</p>
+	</div>
+	<br><br>
+	''',unsafe_allow_html=True)
+
+	contingency_table = pd.crosstab(df_arrivals_terminal['Terminal'], df_arrivals_terminal['Flight'])
+	st.table(contingency_table)
+
+
+
+
+
+
+
 with tab5_Regression_Analysis:
 	st.markdown('''
 	<h2>Regression analysis</h2>
