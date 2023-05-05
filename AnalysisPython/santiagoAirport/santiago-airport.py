@@ -273,12 +273,6 @@ with tab2_Descriptive_Statistics:
 
 	# ------- Destination Cities by Flights -------
 
-	st.markdown(f'''
-	<center>
-		<img src="https://images.cdn.centreforaviation.com/stories/ctc/2018/07/SCL001.png" style="width: 50%; height: 5%; object-fit: cover;">
-	<\center>
-	''',unsafe_allow_html=True)
-
 	df_international_flights = df_departures[df_departures['Destination Country'] != 'Chile']
 	international_percentage = len(df_international_flights) / len(df_departures) * 100
 
@@ -298,8 +292,6 @@ with tab2_Descriptive_Statistics:
 		<br>
 	''',unsafe_allow_html=True)
 
-
-
 	df_departures_grouped = df_departures.groupby(['Destination City','Destination Country']).size().reset_index(name='Count')
 	chart = alt.Chart(df_departures_grouped).mark_bar().encode(
 		y=alt.Y('Destination City:N', sort='-x', title=''),
@@ -318,6 +310,12 @@ with tab2_Descriptive_Statistics:
 	)
 
 	st.altair_chart(chart, theme="streamlit", use_container_width=True)
+
+	st.markdown(f'''
+	<center>
+		<img src="https://images.cdn.centreforaviation.com/stories/ctc/2018/07/SCL001.png" style="width: 30%; height: 5%; object-fit: cover;">
+	</center><br><br>
+	''',unsafe_allow_html=True)
 
 with tab3_Time_Series_Analysis:
 	st.markdown('''
