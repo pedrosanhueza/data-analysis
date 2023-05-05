@@ -500,7 +500,7 @@ with tab4_Hypothesis_Testing:
 	
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
 
-	chart = alt.Chart(df_arrivals).mark_bar().encode(
+	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
 		x=alt.X('Terminal:O', title='Terminal'),
 		y=alt.Y('count()', title='Frequency')
 	)
