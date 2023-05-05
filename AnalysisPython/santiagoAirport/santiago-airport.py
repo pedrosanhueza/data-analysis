@@ -477,12 +477,10 @@ with tab3_Time_Series_Analysis:
 	''',unsafe_allow_html=True)
 
 with tab4_Hypothesis_Testing:
-	st.markdown('''
-	<h2>Hypothesis Testing</h2>
-	<p>Test whether the average delay time of different airlines is statistically significant or not.</p>
-	''',unsafe_allow_html=True)
+	st.markdown('''<h2>Hypothesis Testing</h2>''',unsafe_allow_html=True)
 
 	st.markdown(f'''
+	<br><br>
 	<div style="text-align: center;">
 	<h3>
 		Relationship Between the Terminal and Flight
@@ -549,10 +547,71 @@ with tab4_Hypothesis_Testing:
 	with col3:
 		st.write('')
 
-with tab5_Regression_Analysis:
-	st.markdown('''
-	<h2>Regression analysis</h2>
-	<p>Explore the relationship between the departure time and the delay time or the relationship between the airline and the status of the flight.</p>
+# ---
+
+	st.markdown(f'''
+	<br><br>
+	<div style="text-align: center;">
+	<h3>
+		Relationship Between the Arrival Time and Country of Origin
+	</h3>
 	''',unsafe_allow_html=True)
 
-# # ---------------------------------------- KPI 1 ----------------------------------------
+	st.latex(r'''H_0: \text{There is no significant difference between the arriving time and country of origin}''')
+	st.latex(r'''H_a: \text{There is a significant difference between the arriving time and country of origin}''')	
+	
+	
+
+	chart = alt.Chart(df_arrivals_terminal).transform_calculate(Terminal="'Terminal '+datum.Terminal"
+	).mark_bar(
+		size=120
+	).encode(
+		x=alt.X('Terminal:O', title='', axis=alt.Axis(labelAngle=0)),
+		y=alt.Y('count()', title='')
+	).properties(height=500,width=100
+	).configure_axis(grid=False
+	)
+
+	col1, col2, col3 = st.columns([1,1,1])
+	with col1:
+		st.write('')
+	with col2:
+		st.altair_chart(chart, use_container_width=True)
+	with  col3:
+		st.write('')
+
+	st.markdown(f'''
+	<div style="text-align: center;">
+	<h6>
+		Chi-Square Test of Independence
+	</h6>
+	''',unsafe_allow_html=True)
+
+	st.latex(r'''\tilde{\chi}^2=\frac{1}{d}\sum_{k=1}^{n} \frac{(O_k - E_k)^2}{E_k}''')
+	
+	st.code('''
+	contingency_table = pd.crosstab(df_arrivals_terminal['Terminal'], df_arrivals_terminal['Flight'])
+	stat, p, dof, expected = chi2_contingency(contingency_table)
+	print(f'The chi-square test of independence is performed with a p-value of {p}')
+	''',language='python')
+
+	contingency_table = pd.crosstab(df_arrivals_terminal['Terminal'], df_arrivals_terminal['Flight'])
+	stat, p, dof, expected = chi2_contingency(contingency_table)
+	
+	st.latex(r'''\text{The chi-square test of independence is performed with a p-value of } %s \approx 0.00''' %p)
+
+	col1,col2,col3 = st.columns([0.7,1,0.7])
+	with col1:
+		st.write('')
+	with col2:
+		st.markdown(f'''
+		<div style="text-align: center;">
+		<p>
+		The p-value extremely close to zero indicates that the probability of frequencies of flights arriving at each terminal under the assumption of independence between the Terminal and Flight variables is extremely low.
+		<br><br>
+		In other words, <b> there is a statistically significant association</b> between the Terminal and Flight variables.
+		</p>
+		</div>
+		''',unsafe_allow_html=True)
+	with col3:
+		st.write('')
