@@ -498,7 +498,7 @@ with tab4_Hypothesis_Testing:
 	<br><br>
 	''',unsafe_allow_html=True)
 	
-	# df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']=='1') | (df_arrivals['Terminal'] == '2')]
+	df_arrivals.Terminal = df_arrivals.Terminal.astype('int')
 	df_arrivals_terminal = df_arrivals[(df_arrivals['Terminal']==1) | (df_arrivals['Terminal'] == 2)]
 
 	chart = alt.Chart(df_arrivals_terminal).mark_bar().encode(
