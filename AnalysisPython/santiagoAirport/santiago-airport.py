@@ -535,7 +535,10 @@ with tab4_Hypothesis_Testing:
 	<div style="text-align: center;">
 	<br><br>
 	<p>
+		The chi-square test of independence is performed with a p-value of {round(p,2)}.
+		<br>
 		The chi-square test of independence is performed with a p-value of {p}.
+		<br>.
 		<br>
 	</p>
 	</div>
