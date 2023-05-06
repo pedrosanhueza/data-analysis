@@ -70,13 +70,12 @@ else:
 
 # # ---------------------------------------- Tabs ----------------------------------------
 
-tab1_Extraction_Code, tab2_Descriptive_Statistics, tab3_Time_Series_Analysis, tab4_Hypothesis_Testing, tab5_Regression_Analysis, tab6_Conclusion = st.tabs([
+tab1_Extraction_Code, tab2_Descriptive_Statistics, tab3_Time_Series_Analysis, tab4_Hypothesis_Testing, tab5_Regression_Analysis = st.tabs([
     "Data", 
     "Descriptive",
     "Time Series Analysis",
     "Hypothesis Testing",
-    "Regression Analysis",
-    "Conclusion"])
+    "Regression Analysis"])
 
 with tab1_Extraction_Code:
 
