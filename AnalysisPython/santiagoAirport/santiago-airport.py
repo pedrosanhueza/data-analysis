@@ -81,13 +81,15 @@ with tab1_Extraction_Code:
 
 	st.markdown('''
 	<h2>Data Extraction Code</h2>
+	<p>
+		Build the own dataset from the
+	<a href="https://www.santiago-airport.com" target="_blank">
+		airport website
+	</a>.
+	</p>
 		<ol>
-		<li> Loops over all pages from
-		    <a href="https://www.santiago-airport.com" target="_blank">
-			santiago-airport
-			</a>
-			extracting its data.</li>
-		<li> Structures the data into a dataframe. </li>
+		<li> Loops over all pages extracting its data </li>
+		<li> Organizes the data into a dataframe </li>
 		</ol>
 	''',unsafe_allow_html=True)
 
