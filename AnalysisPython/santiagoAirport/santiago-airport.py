@@ -70,12 +70,12 @@ else:
 
 # # ---------------------------------------- Tabs ----------------------------------------
 
-tab1_Extraction_Code, tab2_Descriptive_Statistics, tab3_Time_Series_Analysis, tab4_Hypothesis_Testing, tab5_Regression_Analysis = st.tabs([
+tab1_Extraction_Code, tab2_Descriptive_Statistics, tab3_Time_Series_Analysis, tab4_Hypothesis_Testing, tab5_Conclusion = st.tabs([
     "Data", 
     "Descriptive",
     "Time Series Analysis",
     "Hypothesis Testing",
-    "Regression Analysis"])
+    "Conclusion"])
 
 with tab1_Extraction_Code:
 
@@ -611,3 +611,8 @@ with tab4_Hypothesis_Testing:
 		''',unsafe_allow_html=True)
 	with col3:
 		st.write('')
+
+with tab5_Conclusion:
+	st.write('''
+	<br><br>
+	''',unsafe_allow_html=True)
