@@ -74,26 +74,28 @@ st.markdown('''
 # with st.expander("Python Data Extraction Code 🐍"):
 st.code(script_scrape,language="python")
 
-df = pd.read_csv('AnalysisPython/house.gov-representatives/US_House_of_Representatives.csv')
+try:
+    url = "https://www.house.gov/representatives"
+    headers = {'user-agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"}
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    tables = soup.select('table')
+    rows = []
+    for table in tables[:56]:
+        row = {}
+        row['District']             = [x.text.strip() for x in table.select('td')][0::6]
+        row['Name']                 = [x.text.strip() for x in table.select('td')][1::6]
+        row['Party']                = [x.text.strip() for x in table.select('td')][2::6]
+        row['Office Room']          = [x.text.strip() for x in table.select('td')][3::6]
+        row['Phone']                = [x.text.strip() for x in table.select('td')][4::6]
+        row['Committee Assignment'] = [x.text.strip() for x in table.select('td')][5::6]
+        row['State']                = table.select_one('caption').text.strip()
+        df_state = pd.DataFrame(row)
+        rows.append(df_state)
+    df = pd.concat(rows)
 
-# url = "https://www.house.gov/representatives"
-# headers = {'user-agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"}
-# response = requests.get(url, headers=headers)
-# soup = BeautifulSoup(response.text, 'html.parser')
-# tables = soup.select('table')
-# rows = []
-# for table in tables[:56]:
-#     row = {}
-#     row['District']             = [x.text.strip() for x in table.select('td')][0::6]
-#     row['Name']                 = [x.text.strip() for x in table.select('td')][1::6]
-#     row['Party']                = [x.text.strip() for x in table.select('td')][2::6]
-#     row['Office Room']          = [x.text.strip() for x in table.select('td')][3::6]
-#     row['Phone']                = [x.text.strip() for x in table.select('td')][4::6]
-#     row['Committee Assignment'] = [x.text.strip() for x in table.select('td')][5::6]
-#     row['State']                = table.select_one('caption').text.strip()
-#     df_state = pd.DataFrame(row)
-#     rows.append(df_state)
-# df = pd.concat(rows)
+except:
+    df = pd.read_csv('AnalysisPython/house.gov-representatives/US_House_of_Representatives.csv')
 
 st.markdown('''
 <h2>Data Overview</h2>
