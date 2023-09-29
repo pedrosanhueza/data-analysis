@@ -6,6 +6,10 @@ import matplotlib.pyplot as plt
 import altair as alt
 import plotly.express as px
 
+import os
+
+st.write(os.listdir())
+
 st.markdown('''
 <head>
 	<title>US House of Representatives</title>
