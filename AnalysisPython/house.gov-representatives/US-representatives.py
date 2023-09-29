@@ -111,7 +111,7 @@ party_percentages = round(party_counts / len(df['Party']) * 100,0)
 R = int(party_percentages['R'])
 D = int(party_percentages['D'])
 
-col1, col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.metric("Republicans",f"{R}%")
