@@ -6,10 +6,6 @@ import matplotlib.pyplot as plt
 import altair as alt
 import plotly.express as px
 
-import os
-
-st.write(os.listdir())
-
 st.markdown('''
 <head>
 	<title>US House of Representatives</title>
@@ -78,7 +74,7 @@ st.markdown('''
 # with st.expander("Python Data Extraction Code 🐍"):
 st.code(script_scrape,language="python")
 
-df = pd.read_csv('US-house-of-representatives.csv')
+df = pd.read_csv('AnalysisPython/house.gov-representatives/US-house-of-representatives.csv')
 
 # url = "https://www.house.gov/representatives"
 # headers = {'user-agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"}
