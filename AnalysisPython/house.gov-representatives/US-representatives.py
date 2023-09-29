@@ -190,7 +190,7 @@ state2_name = state_names[1]
 
 total_count = df['State'].count()
 
-col1, col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.metric(f"{state1_name}",f"{state1_count} seats","Highest Amount")
